@@ -3,9 +3,9 @@ import Link from "next/link";
 import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Declaración de Accesibilidad | Feriado Cantina",
+  title: "Accessibility Statement | Feriado Cantina",
   description:
-    "Feriado Cantina se compromete a garantizar la accesibilidad digital para personas con discapacidades. Leé nuestra declaración de accesibilidad y cómo contactarnos para asistencia.",
+    "Feriado Cantina is committed to ensuring digital accessibility for people with disabilities. Read our accessibility statement and how to contact us for assistance.",
   alternates: { canonical: `${siteUrl}/accessibility-statement` },
 };
 
@@ -36,10 +36,10 @@ export default function AccessibilityStatementPage() {
             Legal
           </p>
           <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg mb-4">
-            Declaración de Accesibilidad
+            Accessibility Statement
           </h1>
           <p className="text-lg text-white/80 max-w-2xl mx-auto">
-            Nuestro compromiso para garantizar que nuestro sitio web sea accesible para todos.
+            Our commitment to ensuring our website is accessible to everyone.
           </p>
         </div>
       </section>
@@ -52,132 +52,132 @@ export default function AccessibilityStatementPage() {
             General
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Feriado Cantina se esfuerza por garantizar que sus servicios sean
-            accesibles para personas con discapacidades. Feriado Cantina ha
-            invertido una cantidad significativa de recursos para ayudar a que su
-            sitio web sea más fácil de usar y más accesible para personas con
-            discapacidades, con la firme creencia de que los esfuerzos de
-            accesibilidad web benefician a todos los usuarios y que cada persona
-            tiene derecho a vivir con dignidad, igualdad, comodidad e
-            independencia.
+            Feriado Cantina strives to ensure that its services are
+            accessible to people with disabilities. Feriado Cantina has
+            invested a significant amount of resources to help ensure that its
+            website is made easier to use and more accessible for people with
+            disabilities, with the strong belief that website accessibility
+            efforts assist all users and that every person has the right to live
+            with dignity, equality, comfort and independence.
           </p>
         </section>
 
         {/* Accessibility on the website */}
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-foreground mb-4 pb-2 border-b-2 border-primary/30">
-            Accesibilidad en www.feriadocantina.com
+            Accessibility on www.feriadocantina.com
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            www.feriadocantina.com ofrece el widget de accesibilidad web de
-            UserWay, impulsado por un servidor de accesibilidad dedicado. El
-            software permite a www.feriadocantina.com mejorar su cumplimiento
-            con las Pautas de Accesibilidad para el Contenido Web (WCAG 2.1).
+            www.feriadocantina.com makes UserWay&apos;s Web Accessibility
+            Widget available which is powered by a dedicated accessibility
+            server. The software allows www.feriadocantina.com to improve
+            its compliance with the Web Content Accessibility Guidelines (WCAG
+            2.1).
           </p>
         </section>
 
         {/* Enabling the Accessibility Menu */}
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-foreground mb-4 pb-2 border-b-2 border-primary/30">
-            Activación del menú de accesibilidad
+            Enabling the Accessibility Menu
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            El menú de accesibilidad de www.feriadocantina.com se puede activar
-            haciendo clic en el ícono del menú de accesibilidad que aparece en
-            la esquina de la página. Después de activar el menú de
-            accesibilidad, esperá un momento para que se cargue completamente.
+            The www.feriadocantina.com accessibility menu can be enabled by
+            clicking the accessibility menu icon that appears on the corner of
+            the page. After triggering the accessibility menu, please wait a
+            moment for the accessibility menu to load in its entirety.
           </p>
         </section>
 
         {/* Disclaimer */}
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-foreground mb-4 pb-2 border-b-2 border-primary/30">
-            Descargo de responsabilidad
+            Disclaimer
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            Feriado Cantina continúa sus esfuerzos para mejorar constantemente
-            la accesibilidad de su sitio y servicios, con la creencia de que es
-            nuestra obligación moral colectiva permitir un uso fluido, accesible
-            y sin obstáculos también para quienes tienen discapacidades.
+            Feriado Cantina continues its efforts to constantly improve
+            the accessibility of its site and services in the belief that it is
+            our collective moral obligation to allow seamless, accessible and
+            unhindered use also for those of us with disabilities.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            En un esfuerzo continuo por mejorar y solucionar problemas de
-            accesibilidad, también escaneamos regularmente
-            www.feriadocantina.com con el escáner de accesibilidad de UserWay
-            para identificar y corregir cada posible barrera de accesibilidad en
-            nuestro sitio. A pesar de nuestros esfuerzos por hacer que todas las
-            páginas y contenidos de www.feriadocantina.com sean completamente
-            accesibles, es posible que algunos contenidos aún no se hayan
-            adaptado completamente a los estándares de accesibilidad más
-            estrictos. Esto puede deberse a no haber encontrado o identificado
-            la solución tecnológica más apropiada.
+            In an ongoing effort to continually improve and remediate
+            accessibility issues, we also regularly scan
+            www.feriadocantina.com with UserWay&apos;s Accessibility Scanner
+            to identify and fix every possible accessibility barrier on our
+            site. Despite our efforts to make all pages and content on
+            www.feriadocantina.com fully accessible, some content may not
+            have yet been fully adapted to the strictest accessibility
+            standards. This may be a result of not having found or identified
+            the most appropriate technological solution.
           </p>
         </section>
 
         {/* Third-Party Content */}
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-foreground mb-4 pb-2 border-b-2 border-primary/30">
-            Contenido de terceros
+            Third-Party Content
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            Feriado Cantina puede contener enlaces a sitios web de terceros
-            (&ldquo;Sitios de terceros&rdquo;). Estos enlaces se proporcionan
-            únicamente como conveniencia y no como un respaldo de nuestra parte
-            del contenido de dichos sitios. El contenido de dichos sitios es
-            desarrollado y proporcionado por terceros, no por Feriado Cantina, y
-            no tenemos control sobre ningún contenido o términos legales
-            contenidos en los sitios de terceros. Debés contactar a los
-            administradores de esos sitios si tenés alguna inquietud sobre
-            dichos enlaces o cualquier contenido en sitios de terceros.
+            Feriado Cantina may contain links to third-party websites
+            (&ldquo;Third-Party Sites&rdquo;). These links are provided solely
+            as a convenience to you and not as an endorsement by us of the
+            content on such Third-Party Sites. The content of such Third-Party
+            Sites is developed and provided by others, not by Feriado
+            Cantina, and we have no control over any content or legal terms
+            contained in any Third-Party Sites. You should contact those site
+            administrators if you have any concerns regarding such links or any
+            content located on Third-Party Sites.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Feriado Cantina no garantiza, respalda ni asume ninguna
-            responsabilidad por ningún producto o servicio anunciado u ofrecido
-            por un tercero (&ldquo;Proveedor de servicios de terceros&rdquo;) a
-            través de nuestro sitio web. Si utilizás algún producto o servicio
-            proporcionado por un tercero en conjunto con nuestro sitio web,
-            reconocés y aceptás que (i) sos responsable de comprender los
-            términos y condiciones de uso del producto o servicio del tercero;
-            (ii) no controlamos al tercero ni su producto o servicio; (iii) el
-            uso de su producto o servicio es bajo tu propio riesgo; y (iv) no
-            somos responsables y no podemos ser considerados responsables por el
-            producto o servicio, o las acciones u omisiones del tercero. Sujeto
-            a estos descargos de responsabilidad, podemos utilizar ciertos
-            proveedores de servicios de terceros para recopilar datos y
-            autenticar información sobre vos, tu dispositivo y tu cuenta.
+            Feriado Cantina does not warrant, endorse, guarantee, or
+            assume any responsibility or liability for any product or service
+            advertised or offered by a third party (&ldquo;Third-Party Service
+            Provider&rdquo;) through our Website. If you use any product or
+            service provided by a third party in conjunction with our Website,
+            you acknowledge and agree that (i) you are responsible for
+            understanding the terms and conditions of your use of the
+            third-party product or service; (ii) we do not control the
+            third-party or its product or service; (iii) your use of their
+            product or service is at your own risk; and (iv) we are not
+            responsible and may not be held liable for the product or service,
+            or the actions or omissions, of the third-party. Subject to these
+            disclaimers, we may use certain Third-Party Service Providers to
+            gather data and authenticate information regarding you, your device,
+            and your Account.
           </p>
         </section>
 
         {/* Here For You */}
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-foreground mb-4 pb-2 border-b-2 border-primary/30">
-            Estamos para ayudarte
+            Here For You
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Si tenés dificultades con cualquier contenido en
-            www.feriadocantina.com o necesitás asistencia con alguna parte de
-            nuestro sitio, contactanos durante el horario de atención que se
-            detalla a continuación y con gusto te ayudaremos.
+            If you are experiencing difficulty with any content on
+            www.feriadocantina.com or require assistance with any part of
+            our site, please contact us during normal business hours as detailed
+            below and we will be happy to assist.
           </p>
         </section>
 
         {/* Contact Us */}
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-foreground mb-4 pb-2 border-b-2 border-primary/30">
-            Contactanos
+            Contact Us
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            Si deseás reportar un problema de accesibilidad, tenés preguntas o
-            necesitás asistencia, contactá al equipo de atención al cliente de
-            Feriado Cantina:
+            If you wish to report an accessibility issue, have any questions or
+            need assistance, please contact Feriado Cantina Customer
+            Support as follows:
           </p>
           <div className="flex items-center gap-3 mt-4">
             <span className="font-semibold text-foreground">Email:</span>
             <Link
-              href="mailto:hola@feriadocantina.com"
+              href="mailto:hello@feriadocantina.com"
               className="text-primary hover:underline font-medium"
             >
-              hola@feriadocantina.com
+              hello@feriadocantina.com
             </Link>
           </div>
         </section>
@@ -188,7 +188,7 @@ export default function AccessibilityStatementPage() {
             href="/"
             className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
           >
-            ← Volver al inicio
+            ← Back to Home
           </Link>
         </div>
       </article>

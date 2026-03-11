@@ -3,7 +3,7 @@
 import { useCallback } from 'react';
 import { Share2 } from 'lucide-react';
 
-const FALLBACK_SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://ohmexico.com';
+const FALLBACK_SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://feriadocantina.com';
 
 interface ShareEventButtonProps {
   title: string;
@@ -17,7 +17,7 @@ export function ShareEventButton({ title, slug, className, iconClassName }: Shar
 
   const handleClick = useCallback(async () => {
     const shareData = {
-      title: `${title} | OH México`,
+      title: `${title} | Feriado Cantina`,
       url,
     };
     try {
@@ -38,7 +38,7 @@ export function ShareEventButton({ title, slug, className, iconClassName }: Shar
       className={className}
     >
       <Share2 className={iconClassName ?? 'w-5 h-5'} />
-      <span className="ml-0">Share Event</span>
+      <span className="ml-0">Compartir evento</span>
     </button>
   );
 }

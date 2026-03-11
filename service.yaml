@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: ohmexico-service # Name for the service object
+  name: feriado-cantina-service # Name for the service object
 spec:
   selector:
-    app: ohmexico-frontend  # MUST match the 'app' label in deployment.yaml template.metadata.labels
+    app: feriado-cantina-frontend  # MUST match the 'app' label in deployment.yaml template.metadata.labels
   ports:
     - protocol: TCP
       port: 80       # Port the Load Balancer listens on externally

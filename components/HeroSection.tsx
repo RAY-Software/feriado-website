@@ -3,27 +3,18 @@
 import { useState, useEffect } from "react";
 import { ResponsiveImage } from "@/components/ResponsiveImage";
 
-// Imágenes del carrusel hero (misma función que temple-mexico: cross-fade cada 7.5s)
 const heroImages = [
   {
-    src: "/image/AVICMEDIA-82.jpg",
-    alt: "OH México ambiente y gastronomía",
+    src: "/image/feriado/logo-cantina.png",
+    alt: "Feriado Cantina — cantina de barrio",
   },
   {
-    src: "/image/AVICMEDIA-118.jpg",
-    alt: "OH México experiencia",
+    src: "/image/feriado/sifon-vaso.png",
+    alt: "Vermú Feriado con soda",
   },
   {
-    src: "/image/AVICMEDIA-160.jpg",
-    alt: "OH México momentos",
-  },
-  {
-    src: "/image/AVICMEDIA-184.jpg",
-    alt: "OH México",
-  },
-  {
-    src: "/image/DSC08578-1-1.jpg",
-    alt: "OH México — auténtica cocina mexicana en Miami",
+    src: "/image/feriado/vaso-vermu.png",
+    alt: "Vermú Feriado",
   },
 ];
 
@@ -32,7 +23,6 @@ export function HeroSection() {
   const [prevImageIndex, setPrevImageIndex] = useState<number | null>(null);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  // Carrusel: cambia de imagen cada 7.5 segundos con cross-fade (como temple-mexico)
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => {
@@ -59,55 +49,58 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative h-[80vh] flex items-end overflow-hidden scroll-mt-24"
+      className="relative h-[80vh] flex items-end overflow-hidden scroll-mt-24 bg-feriado-cream"
     >
-      {/* Cross-fade entre imagen anterior y actual (misma lógica que temple-mexico) */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 flex items-center justify-center">
         {prevImageIndex !== null && (
           <ResponsiveImage
             key={`prev-${prevImageIndex}`}
             src={heroImages[prevImageIndex].src}
             alt={heroImages[prevImageIndex].alt}
-            fill
+            width={600}
+            height={600}
             mobileSrc={heroImages[prevImageIndex].src}
-            className="object-cover object-center transition-opacity duration-1000 opacity-100"
+            className="object-contain max-h-[50vh] transition-opacity duration-1000 opacity-100"
           />
         )}
         <ResponsiveImage
           key={`current-${currentImageIndex}`}
           src={heroImages[currentImageIndex].src}
           alt={heroImages[currentImageIndex].alt}
-          fill
+          width={600}
+          height={600}
           mobileSrc={heroImages[currentImageIndex].src}
-          className={`object-cover object-center transition-opacity duration-1000 ${
+          className={`object-contain max-h-[50vh] transition-opacity duration-1000 absolute ${
             isTransitioning ? "opacity-0" : "opacity-100"
           }`}
           loading="eager"
         />
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-t from-graphite-black/70 via-graphite-black/30 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-feriado-cream/90 via-feriado-cream/30 to-transparent" />
       <div className="relative z-10 px-4 sm:px-6 lg:px-8 pb-8 lg:pb-16 max-w-7xl mx-auto w-full">
         <div className="max-w-3xl">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 text-white">
-            Authentic Mexican flavors, right here in Miami Beach.
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 text-foreground">
+            La casa de Feriado Vermú en Coghlan.
           </h1>
-          <p className="text-xl md:text-2xl text-surface-dark-muted mb-6">
-            From authentic Mexican dishes to handcrafted cocktails, experience the vibrant spirit of Mexico in every bite and sip. Serving Miami since 1997.
+          <p className="text-xl md:text-2xl text-muted-foreground mb-6">
+            Comida casera, vermú de barrio y largas sobremesas. Ricos tragos, tortilla babé y buena compañía. Te esperamos.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
               href="#reservar-mesa"
-              className="inline-flex items-center justify-between pl-4 pr-6 py-3 bg-accent hover:bg-[#b86b1f] text-white font-medium transition-colors rounded-xl text-base"
+              className="inline-flex items-center justify-between pl-4 pr-6 py-3 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-medium transition-colors rounded-xl text-base"
             >
-              <span>Book now</span>
+              <span>Reservar mesa</span>
               <span className="ml-2 text-lg font-light">›</span>
             </a>
             <a
-              href="#order-online"
-              className="inline-flex items-center justify-between pl-4 pr-6 py-3 bg-primary hover:bg-[#9a3528] text-primary-foreground font-medium transition-colors rounded-xl text-base"
+              href="https://pedir.tucan.la/menu/Feriadocoghlan/Sal%C3%B3n"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-between pl-4 pr-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground font-medium transition-colors rounded-xl text-base"
             >
-              <span>Order online</span>
+              <span>Pedir online</span>
               <span className="ml-2 text-lg font-light">›</span>
             </a>
           </div>

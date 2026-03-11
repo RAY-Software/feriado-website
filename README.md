@@ -1,11 +1,11 @@
-# OH México Website
+# Feriado Cantina Website
 
-Sitio web de OH México desarrollado con Next.js.
+Sitio web de Feriado Cantina — cantina de barrio en Coghlan, Buenos Aires — desarrollado con Next.js.
 
 ## Estructura del Proyecto
 
 ```
-ohmexico-website/
+feriado-cantina-website/
 ├── app/                          # Next.js App Router
 │   ├── layout.tsx                # Layout raíz con Navbar y Footer
 │   ├── page.tsx                  # Página principal
@@ -43,11 +43,9 @@ ohmexico-website/
 
 ## Locales
 
-| Local           | Dirección                                  | Teléfono         |
-| --------------- | ------------------------------------------ | ---------------- |
-| Española Way    | 1440 Washington Ave, Miami Beach, FL 33139 | (305) 532-0490   |
-| Ocean Drive     | 804 Ocean Dr, Miami Beach, FL 33139        | (786) 883-0709   |
-| Lincoln Road    | 836 Lincoln Rd, Miami Beach, FL 33139      | (305) 535-7400   |
+| Local              | Dirección                     |
+| ------------------ | ----------------------------- |
+| Feriado Cantina    | Coghlan, Buenos Aires         |
 
 ## Funcionalidades
 
@@ -71,7 +69,7 @@ ohmexico-website/
 ### 1. Clonar y entrar al proyecto
 
 ```bash
-cd ohmexico-website
+cd feriado-cantina-website
 ```
 
 ### 2. Usar la versión correcta de Node
@@ -98,7 +96,7 @@ cp .env.example .env
 
 | Variable | Qué es | Ejemplo |
 | --- | --- | --- |
-| `RAYAPP_API_BASE_URL` | URL del backend de Rayapp (reservas, locales, disponibilidad). Sin esto la app no levanta. | `https://api-oo.preprod.rayapp.io` |
+| `RAYAPP_API_BASE_URL` | URL del backend de Rayapp (reservas, locales, disponibilidad). Sin esto la app no levanta. | `https://api.rayapp.io` |
 | `RAYAPP_COMPANY_ID` | ID numérico de la empresa en Rayapp | `1` |
 | `RAYAPP_COMPANY_NAME` | Nombre de la empresa en Rayapp | `temple` |
 

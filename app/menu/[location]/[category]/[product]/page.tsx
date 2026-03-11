@@ -19,14 +19,14 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps) {
   const { location, category, product } = await params;
-  if (!isValidMenuLocation(location)) return { title: 'Menu — OH México' };
+  if (!isValidMenuLocation(location)) return { title: 'Carta — Feriado Cantina' };
   const item = getMenuItemBySlug(location, category, product);
-  if (!item) return { title: 'Menu — OH México' };
+  if (!item) return { title: 'Carta — Feriado Cantina' };
   return {
-    title: `${item.name} — ${MENU_LOCATION_LABELS[location as MenuLocationKey]} — OH México`,
+    title: `${item.name} — ${MENU_LOCATION_LABELS[location as MenuLocationKey]} — Feriado Cantina`,
     description:
       item.description ||
-      `View ${item.name} on the OH México ${MENU_LOCATION_LABELS[location as MenuLocationKey]} menu.`,
+      `Mirá ${item.name} en la carta de Feriado Cantina ${MENU_LOCATION_LABELS[location as MenuLocationKey]}.`,
   };
 }
 
@@ -44,7 +44,7 @@ export default async function MenuProductPage({ params }: PageProps) {
   const relatedItems = getRelatedMenuItems(locationKey, category, product);
 
   const orgSchema = getOrganizationSchema();
-  const restaurantSchemas = getRestaurantSchema(`ohmexico-${location}`);
+  const restaurantSchemas = getRestaurantSchema(`feriadocantina-${location}`);
 
   return (
     <>
@@ -66,13 +66,13 @@ export default async function MenuProductPage({ params }: PageProps) {
           <ol className="flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground">
             <li>
               <Link href="/" className="hover:underline text-foreground">
-                Home
+                Inicio
               </Link>
             </li>
             <li aria-hidden="true">/</li>
             <li>
               <Link href="/menu" className="hover:underline text-foreground">
-                Menu
+                Carta
               </Link>
             </li>
             <li aria-hidden="true">/</li>
@@ -169,7 +169,7 @@ export default async function MenuProductPage({ params }: PageProps) {
         {relatedItems.length > 0 && (
           <section className="mt-10">
             <h2 className="text-2xl font-bold mb-5 text-foreground">
-              More from {categoryLabel}
+              Más de {categoryLabel}
             </h2>
             <div className="flex flex-col gap-4">
               {relatedItems.map((related: MenuItem) => {
@@ -233,14 +233,14 @@ export default async function MenuProductPage({ params }: PageProps) {
             className="inline-flex items-center gap-1 font-medium transition-colors hover:text-primary text-foreground"
           >
             <ChevronLeft className="w-5 h-5" />
-            Back to {categoryLabel}
+            Volver a {categoryLabel}
           </Link>
           <Link
             href="/menu"
             className="inline-flex items-center gap-1 font-medium transition-colors hover:text-primary text-foreground"
           >
             <ChevronLeft className="w-5 h-5" />
-            Full Menu
+            Carta completa
           </Link>
         </div>
       </div>

@@ -19,14 +19,14 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps) {
   const { location, category, product } = await params;
-  if (!isValidMenuLocation(location)) return { title: 'Menu — OH México' };
+  if (!isValidMenuLocation(location)) return { title: 'Carta — Feriado Cantina' };
   const item = getMenuItemBySlug(location, category, product);
-  if (!item) return { title: 'Menu — OH México' };
+  if (!item) return { title: 'Carta — Feriado Cantina' };
   return {
-    title: `${item.name} — ${MENU_LOCATION_LABELS[location as MenuLocationKey]} — OH México`,
+    title: `${item.name} — ${MENU_LOCATION_LABELS[location as MenuLocationKey]} — Feriado Cantina`,
     description:
       item.description ||
-      `View ${item.name} on the OH México ${MENU_LOCATION_LABELS[location as MenuLocationKey]} menu.`,
+      `${item.name} en la carta de Feriado Cantina ${MENU_LOCATION_LABELS[location as MenuLocationKey]}.`,
   };
 }
 
@@ -44,7 +44,7 @@ export default async function MenuProductPage({ params }: PageProps) {
   const relatedItems = getRelatedMenuItems(locationKey, category, product);
 
   const orgSchema = getOrganizationSchema();
-  const restaurantSchemas = getRestaurantSchema(`ohmexico-${location}`);
+  const restaurantSchemas = getRestaurantSchema(`feriado-cantina`);
 
   return (
     <>

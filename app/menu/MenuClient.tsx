@@ -33,7 +33,7 @@ function categoryBtnCls(active: boolean) {
   }`;
 }
 
-const LOCATION_KEYS: MenuLocationKey[] = ['espanola-way', 'lincoln-road', 'ocean-drive'];
+const LOCATION_KEYS: MenuLocationKey[] = ['feriado-cantina'];
 
 type MenuClientProps = {
   initialLocation?: MenuLocationKey;
@@ -46,7 +46,7 @@ export default function MenuClient({
 }: MenuClientProps = {}) {
   const searchParams = useSearchParams();
   const [selectedLocation, setSelectedLocation] = useState<MenuLocationKey>(
-    initialLocation ?? 'espanola-way'
+    initialLocation ?? 'feriado-cantina'
   );
   const [selectedCategory, setSelectedCategory] = useState<string>(
     initialCategory ?? 'all'
@@ -123,10 +123,10 @@ export default function MenuClient({
 
         <div className="mb-10">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-left text-foreground">
-            Our Menu
+            Nuestra Carta
           </h1>
           <p className="text-lg max-w-3xl mb-8 text-left text-muted-foreground">
-            Bold tacos, handcrafted cocktails and the vibrant spirit of Mexico.
+            Ricos tragos, coctelería de autor y los mejores platitos de cantina.
           </p>
 
           {/* Location selector */}

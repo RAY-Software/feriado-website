@@ -7,23 +7,23 @@ import { ResponsiveImage } from "@/components/ResponsiveImage";
 const heroImages = [
   {
     src: "/image/AVICMEDIA-82.jpg",
-    alt: "OH México ambiente y gastronomía",
+    alt: "Feriado Cantina ambiente y gastronomía",
   },
   {
     src: "/image/AVICMEDIA-118.jpg",
-    alt: "OH México experiencia",
+    alt: "Feriado Cantina experiencia",
   },
   {
     src: "/image/AVICMEDIA-160.jpg",
-    alt: "OH México momentos",
+    alt: "Feriado Cantina momentos",
   },
   {
     src: "/image/AVICMEDIA-184.jpg",
-    alt: "OH México",
+    alt: "Feriado Cantina",
   },
   {
     src: "/image/DSC08578-1-1.jpg",
-    alt: "OH México — auténtica cocina mexicana en Miami",
+    alt: "Feriado Cantina — cantina de barrio en Buenos Aires",
   },
 ];
 
@@ -90,24 +90,24 @@ export function HeroSection() {
       <div className="relative z-10 px-4 sm:px-6 lg:px-8 pb-8 lg:pb-16 max-w-7xl mx-auto w-full">
         <div className="max-w-3xl">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 text-white">
-            Authentic Mexican flavors, right here in Miami Beach.
+            Ricos tragos, tortilla babé y largas sobremesas.
           </h1>
           <p className="text-xl md:text-2xl text-surface-dark-muted mb-6">
-            From authentic Mexican dishes to handcrafted cocktails, experience the vibrant spirit of Mexico in every bite and sip. Serving Miami since 1997.
+            La casa de Feriado Vermú. Es donde te juntás con amigos, familia y amores. Es buen comer y buen beber, todos los días, todo el día.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
               href="#reservar-mesa"
-              className="inline-flex items-center justify-between pl-4 pr-6 py-3 bg-accent hover:bg-[#b86b1f] text-white font-medium transition-colors rounded-xl text-base"
+              className="inline-flex items-center justify-between pl-4 pr-6 py-3 bg-accent hover:bg-accent/90 text-white font-medium transition-colors rounded-xl text-base"
             >
-              <span>Book now</span>
+              <span>Reservar</span>
               <span className="ml-2 text-lg font-light">›</span>
             </a>
             <a
-              href="#order-online"
-              className="inline-flex items-center justify-between pl-4 pr-6 py-3 bg-primary hover:bg-[#9a3528] text-primary-foreground font-medium transition-colors rounded-xl text-base"
+              href="https://pedir.tucan.la/menu/Feriadocoghlan/Salón"
+              className="inline-flex items-center justify-between pl-4 pr-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground font-medium transition-colors rounded-xl text-base"
             >
-              <span>Order online</span>
+              <span>Pedir online</span>
               <span className="ml-2 text-lg font-light">›</span>
             </a>
           </div>

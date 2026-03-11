@@ -17,7 +17,7 @@ export function ShareEventButton({ title, slug, className, iconClassName }: Shar
 
   const handleClick = useCallback(async () => {
     const shareData = {
-      title: `${title} | OH México`,
+      title: `${title} | Feriado Cantina`,
       url,
     };
     try {

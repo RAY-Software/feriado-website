@@ -12,48 +12,12 @@ interface Product {
 }
 
 const products: Product[] = [
-  {
-    name: "Tampiqueña Steak",
-    description:
-      "Grilled skirt steak served with enchilada, rice, beans and guacamole — a classic Tampiqueña from northern Mexico.",
-    price: "",
-    image: "/image/Tampiquena-steak2.jpg",
-  },
-  {
-    name: "Seared Tuna Tostada",
-    description:
-      "Crispy tostada topped with seared tuna, avocado and house-made sauces for the perfect bite in every crunch.",
-    price: "",
-    image: "/image/Tostada-de-atun.jpg",
-  },
-  {
-    name: "Molcajete Mixto",
-    description:
-      "Sizzling hot molcajete with a mix of meats, melted cheese and roasted salsa to share at the center of the table.",
-    price: "",
-    image: "/image/molcajete-mixto.jpg",
-  },
-  {
-    name: "Taco Birria",
-    description:
-      "Slow braised beef with melted Mexican cheese, birria broth, onion and cilantro. One of our most beloved tacos.",
-    price: "",
-    image: "/image/tacos-de-birria.jpg",
-  },
-  {
-    name: "Michelada",
-    description:
-      "Classic Mexican beer cocktail with lime, spices and our house mix — the perfect refresher on Miami Beach.",
-    price: "",
-    image: "/image/Oh-Mexico-1.jpg",
-  },
-  {
-    name: "Margaritas",
-    description:
-      "Signature margaritas shaken with fresh lime juice and premium tequila, available in several refreshing flavors.",
-    price: "",
-    image: "/image/Oh-Mexico-13.jpg",
-  },
+  { name: "Tortilla Española", description: "Tortilla babé, nuestra especialidad. Jugosa por dentro, dorada por fuera.", price: "", image: "/image/AVICMEDIA-82.jpg" },
+  { name: "Pizza al Corte", description: "Pizza media masa al corte, estilo cantina. Recién salida del horno.", price: "", image: "/image/AVICMEDIA-118.jpg" },
+  { name: "Vermú Feriado", description: "Nuestro vermú de la casa. Rosado o Rojo, con soda y hielo. Día ganado.", price: "", image: "/image/sifon-vasoicon.png" },
+  { name: "Sanguche de Bondiola", description: "Bondiola braseada con chimichurri y cebolla caramelizada en pan casero.", price: "", image: "/image/AVICMEDIA-160.jpg" },
+  { name: "Pasta Casera", description: "Pastas frescas hechas en casa, con salsas de la abuela.", price: "", image: "/image/AVICMEDIA-184.jpg" },
+  { name: "Coctelería", description: "Tragos de autor, clásicos y creaciones de la casa. Para brindar siempre.", price: "", image: "/image/DSC08578-1-1.jpg" },
 ];
 
 export function FeaturedProducts() {
@@ -73,7 +37,7 @@ export function FeaturedProducts() {
         <div className="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold mb-2 text-foreground">
-              Our favorites
+              Nuestros favoritos
             </h2>
           </div>
 
@@ -83,7 +47,7 @@ export function FeaturedProducts() {
               prefetch={false}
               className="flex items-center justify-between pl-6 pr-5 py-2.5 border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-bold transition-colors duration-300 rounded-xl text-base md:text-lg"
             >
-              <span>View menu</span>
+              <span>Ver carta</span>
               <span className="ml-2 text-xl leading-none">›</span>
             </Link>
           </div>
@@ -115,7 +79,7 @@ export function FeaturedProducts() {
                 <div className="relative h-64 md:h-80 lg:h-96">
                   <ResponsiveImage
                     src={item.image}
-                    alt={`${item.name} - Authentic Mexican Food in Miami`}
+                    alt={`${item.name} - Feriado Cantina - Cocina de cantina en Buenos Aires`}
                     fill
                     mobileSrc={item.image}
                     className="object-cover"
@@ -146,7 +110,7 @@ export function FeaturedProducts() {
                         style={{ textShadow: "0 0 8px rgba(255, 255, 255, 0.3)" }}
                         onClick={(e) => e.stopPropagation()}
                       >
-                        Order now
+                        Pedir
                       </Link>
                     </div>
                   )}

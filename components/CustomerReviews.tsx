@@ -13,48 +13,12 @@ interface Review {
 }
 
 const reviews: Review[] = [
-  {
-    id: 1,
-    name: "Diego G.",
-    rating: 5,
-    text: "Amazing food and atmosphere. The al pastor tacos and micheladas are unbelievable. Every time I come to OH México I leave happy — there's nothing like it.",
-    location: "Miami",
-  },
-  {
-    id: 2,
-    name: "Carmen Z.",
-    rating: 5,
-    text: "The loaded fries with cheese and bacon are incredible. The drinks are perfectly made and the music sets just the right mood. Never left disappointed.",
-    location: "Brickell",
-  },
-  {
-    id: 3,
-    name: "Miguel C.",
-    rating: 5,
-    text: "Best spot for a night out. The quesadillas and cocktails are top-notch. Pet friendly too — huge plus!",
-    location: "Wynwood",
-  },
-  {
-    id: 4,
-    name: "Santiago M.",
-    rating: 5,
-    text: "Great food, great service, never misses. The tequila tacos and the drink selection are outstanding. Highly recommend.",
-    location: "Coral Gables",
-  },
-  {
-    id: 5,
-    name: "Roberto R.",
-    rating: 5,
-    text: "I come here often and it never disappoints. The micheladas are spectacular and the guacamole is next level. Great vibes all around.",
-    location: "South Beach",
-  },
-  {
-    id: 6,
-    name: "Ana L.",
-    rating: 5,
-    text: "Love this place! The food is delicious and the service is always excellent. Happy hour is a must. 100% recommended!",
-    location: "Midtown",
-  },
+  { id: 1, name: "Martín L.", rating: 5, text: "El mejor lugar para tomar un vermú en Coghlan. La tortilla española es espectacular y la atención es de primera. Siempre vuelvo con amigos.", location: "Coghlan" },
+  { id: 2, name: "Lucía R.", rating: 5, text: "La coctelería es increíble y los platitos para picar son deliciosos. El ambiente es súper cálido y barrial. 100% recomendado.", location: "Belgrano" },
+  { id: 3, name: "Nicolás P.", rating: 5, text: "Excelente cantina de barrio. Las pizzas al corte son de lo mejor y los tragos están muy bien preparados. Ideal para sobremesas largas.", location: "Saavedra" },
+  { id: 4, name: "Camila S.", rating: 5, text: "Fuimos un sábado a la noche y la pasamos genial. El Feriado Vermú Rosado con soda está tremendo. El lugar tiene una onda increíble.", location: "Núñez" },
+  { id: 5, name: "Federico M.", rating: 5, text: "Las pastas caseras son una locura y los postres caseros no se quedan atrás. Ambiente perfecto para una cena tranquila.", location: "Villa Urquiza" },
+  { id: 6, name: "Valentina G.", rating: 5, text: "Me encanta este lugar. Pet friendly, buena música y los mejores sanguches de la zona. Ya es nuestro bar de cabecera.", location: "Colegiales" },
 ];
 
 const avatarImages = [
@@ -119,7 +83,7 @@ export default function CustomerReviews() {
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
-            What our guests say
+            Lo que dicen nuestros clientes
           </h2>
         </div>
 

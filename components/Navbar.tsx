@@ -30,7 +30,7 @@ export function Navbar() {
    return (
       <nav
          className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b border-gray-200/60"
-         style={{ backgroundColor: "rgba(255, 255, 255, 0.95)" }}
+         style={{ backgroundColor: "rgba(235, 231, 218, 0.95)" }}
       >
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-[5.5rem]">
@@ -41,11 +41,11 @@ export function Navbar() {
                   onClick={() => scrollTo("home")}
                >
                   <ResponsiveImage
-                     src="/image/image-removebg-preview.png"
-                     alt="OH México"
+                     src="/image/logo-new.png"
+                     alt="Feriado Cantina"
                      width={190}
                      height={64}
-                     mobileSrc="/image/image-removebg-preview.png"
+                     mobileSrc="/image/logo-new.png"
                      className="h-16 w-auto object-contain"
                      loading="eager"
                   />
@@ -57,14 +57,14 @@ export function Navbar() {
                      aria-label="Scroll to home section"
                      className="text-foreground hover:opacity-90 transition-colors text-base font-medium px-4 py-2 cursor-pointer"
                   >
-                     Home
+                     Inicio
                   </button>
                   <Link
-                     href="/locations"
+                     href="/ubicaciones"
                      prefetch={false}
                      className="text-foreground hover:opacity-90 transition-colors text-base font-medium px-4 py-2 cursor-pointer"
                   >
-                     Locations
+                     Ubicaciones
                   </Link>
                   <button
                      type="button"
@@ -72,30 +72,30 @@ export function Navbar() {
                      aria-label="Scroll to menu section"
                      className="text-foreground hover:opacity-90 transition-colors text-base font-medium px-4 py-2 cursor-pointer"
                   >
-                     Menu
+                     Carta
                   </button>
                   <Link
                      href="/order"
                      prefetch={false}
                      className="text-foreground hover:opacity-90 transition-colors text-base font-medium px-4 py-2 cursor-pointer"
                   >
-                     Newsletter
+                     Novedades
                   </Link>
                   <Link
-                     href="/order"
+                     href="https://pedir.tucan.la/menu/Feriadocoghlan/Salón"
                      prefetch={false}
-                     className="flex items-center justify-between pl-3 pr-4 py-1.5 bg-primary hover:bg-[#9a3528] text-primary-foreground rounded-xl transition-colors text-base font-medium cursor-pointer"
+                     className="flex items-center justify-between pl-3 pr-4 py-1.5 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl transition-colors text-base font-medium cursor-pointer"
                   >
-                     <span>Order online</span>
+                     <span>Pedir online</span>
                      <span className="ml-2 text-lg font-light">›</span>
                   </Link>
                   <button
                      type="button"
                      onClick={() => scrollTo("reservar-mesa")}
                      aria-label="Scroll to reservations section"
-                     className="flex items-center justify-between pl-3 pr-4 py-1.5 bg-accent hover:bg-[#b86b1f] text-white rounded-xl transition-colors text-base font-medium cursor-pointer"
+                     className="flex items-center justify-between pl-3 pr-4 py-1.5 bg-accent hover:bg-accent/90 text-white rounded-xl transition-colors text-base font-medium cursor-pointer"
                   >
-                     <span>Book now</span>
+                     <span>Reservar</span>
                      <span className="ml-2 text-lg font-light">›</span>
                   </button>
                </div>
@@ -120,15 +120,15 @@ export function Navbar() {
                      aria-label="Scroll to home section"
                      className="block text-left px-3 py-2 text-foreground hover:opacity-90 text-2xl font-medium transition-colors cursor-pointer"
                   >
-                     Home
+                     Inicio
                   </button>
                   <Link
-                     href="/locations"
+                     href="/ubicaciones"
                      prefetch={false}
                      onClick={() => setIsMenuOpen(false)}
                      className="block text-left px-3 py-2 text-foreground hover:opacity-90 text-2xl font-medium transition-colors cursor-pointer"
                   >
-                     Locations
+                     Ubicaciones
                   </Link>
                   <button
                      type="button"
@@ -136,7 +136,7 @@ export function Navbar() {
                      aria-label="Scroll to menu section"
                      className="block text-left w-fit px-3 py-2 text-foreground hover:opacity-90 text-2xl font-medium transition-colors cursor-pointer"
                   >
-                     Menu
+                     Carta
                   </button>
                   <Link
                      href="/order"
@@ -144,23 +144,23 @@ export function Navbar() {
                      onClick={() => setIsMenuOpen(false)}
                      className="block text-left w-fit px-3 py-2 text-foreground hover:opacity-90 text-2xl font-medium transition-colors cursor-pointer"
                   >
-                     Newsletter
+                     Novedades
                   </Link>
                   <Link
-                     href="/order"
+                     href="https://pedir.tucan.la/menu/Feriadocoghlan/Salón"
                      prefetch={false}
                      onClick={() => setIsMenuOpen(false)}
-                     className="block w-fit px-4 py-2.5 bg-primary hover:bg-[#9a3528] text-primary-foreground rounded-xl transition-colors text-base font-medium cursor-pointer"
+                     className="block w-fit px-4 py-2.5 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl transition-colors text-base font-medium cursor-pointer"
                   >
-                     Order online ›
+                     Pedir online ›
                   </Link>
                   <button
                      type="button"
                      onClick={() => scrollTo("reservar-mesa")}
                      aria-label="Scroll to reservations section"
-                     className="block text-left w-fit px-4 py-2.5 bg-accent hover:bg-[#b86b1f] text-white rounded-xl transition-colors text-base font-medium cursor-pointer"
+                     className="block text-left w-fit px-4 py-2.5 bg-accent hover:bg-accent/90 text-white rounded-xl transition-colors text-base font-medium cursor-pointer"
                   >
-                     Book now ›
+                     Reservar ›
                   </button>
                </div>
             )}

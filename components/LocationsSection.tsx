@@ -65,7 +65,7 @@ export function LocationsSection() {
           icon: {
             path: "M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z",
             scale: 1.5,
-            fillColor: "#B33D26",
+            fillColor: "#E83324",
             fillOpacity: 1,
             strokeColor: "#ffffff",
             strokeWeight: 2,
@@ -116,9 +116,9 @@ export function LocationsSection() {
       setMapError("⚠️ API Key requerida: define NEXT_PUBLIC_GOOGLE_MAPS_API_KEY en .env.local");
       return;
     }
-    (window as any).initGoogleMapOH = () => waitForGoogleMaps(initMap);
+    (window as any).initGoogleMapFeriado = () => waitForGoogleMaps(initMap);
     const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initGoogleMapOH`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initGoogleMapFeriado`;
     script.async = true;
     script.defer = true;
     script.onerror = () => {
@@ -146,7 +146,7 @@ export function LocationsSection() {
         icon: {
           path: "M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z",
           scale: 1.5,
-          fillColor: "#B33D26",
+          fillColor: "#E83324",
           fillOpacity: 1,
           strokeColor: "#ffffff",
           strokeWeight: 2,
@@ -202,7 +202,7 @@ export function LocationsSection() {
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 sm:mb-6">
             <div className="mb-2 sm:mb-0">
               <h2 className="text-2xl md:text-3xl font-bold mb-2 text-foreground">
-                Our locations
+                Nuestra ubicación
               </h2>
             </div>
             <div className="flex space-x-3 self-start sm:self-auto">
@@ -341,7 +341,7 @@ export function LocationsSection() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-4 py-2 text-foreground font-medium hover:text-primary transition-colors border border-pale-chestnut/40 rounded-lg hover:border-primary/40"
                   >
-                    Get directions
+                    Cómo llegar
                     <ChevronRight className="w-4 h-4" />
                   </a>
                 </div>
@@ -351,7 +351,7 @@ export function LocationsSection() {
                 <div className="grid grid-cols-1 gap-6 pb-0">
                   <div>
                     <p className="text-sm text-muted-foreground font-medium mb-2 uppercase tracking-wide">
-                      Address
+                      Dirección
                     </p>
                     <p className="text-base text-foreground font-medium leading-relaxed">
                       {selectedLocation.fullAddress}
@@ -360,7 +360,7 @@ export function LocationsSection() {
                   {selectedLocation.phone && (
                     <div>
                       <p className="text-sm text-muted-foreground font-medium mb-2 uppercase tracking-wide">
-                        Phone
+                        Teléfono
                       </p>
                       <p className="text-base text-foreground">{selectedLocation.phone}</p>
                     </div>
@@ -377,7 +377,7 @@ export function LocationsSection() {
                     href="#reservar-mesa"
                     className="inline-flex items-center justify-between pl-3 pr-4 py-2 bg-primary hover:opacity-90 text-primary-foreground rounded-xl transition-colors text-lg font-medium w-fit"
                   >
-                    Book now
+                    Reservar
                     <ChevronRight className="w-4 h-4 ml-1" />
                   </a>
                 </div>

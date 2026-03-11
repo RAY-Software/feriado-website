@@ -12,10 +12,10 @@ function EventsSectionInner() {
         <div className="mb-12 flex flex-col sm:flex-row sm:items-center sm:justify-between">
           <div className="max-w-2xl">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">
-              Events
+              Eventos
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              Join us at OH México for Happy Hour, live mariachi, authentic Mexican brunch, and more — bold flavors and vibrant vibes at every location.
+              Vení a Feriado Cantina a disfrutar de la Hora Feliz, vermú, coctelería artesanal y más — sabores auténticos y buena onda todos los días.
             </p>
           </div>
 
@@ -24,7 +24,7 @@ function EventsSectionInner() {
               href="/events"
               className="flex items-center justify-between pl-6 pr-5 py-2.5 border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-bold transition-colors duration-300 rounded-xl text-base md:text-lg"
             >
-              <span>All events</span>
+              <span>Ver todos</span>
               <span className="ml-2 text-xl leading-none">›</span>
             </Link>
           </div>

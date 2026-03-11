@@ -3,8 +3,8 @@ import { events } from '@/lib/events-data';
 import { EventCard } from '@/components/events/EventCard';
 
 export const metadata: Metadata = {
-  title: 'Events | OH México',
-  description: 'Discover Happy Hour, Live Mariachi, Brunch and more at OH México. Join us for authentic Mexican vibes across our Miami locations.',
+  title: 'Eventos | Feriado Cantina',
+  description: 'Descubrí la Hora Feliz, Martes de Vermú, Menú del Mediodía y más en Feriado Cantina. Vení a disfrutar de la mejor onda cantinera en Buenos Aires.',
 };
 
 import { getOrganizationSchema, getRestaurantSchema } from '@/lib/schema';
@@ -30,10 +30,10 @@ export default function EventsPage() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="mb-16 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 text-foreground">
-            Events
+            Eventos
           </h1>
           <p className="text-lg md:text-xl max-w-2xl mx-auto md:mx-0 text-muted-foreground">
-            Join us at OH México for Happy Hour, live mariachi, authentic Mexican brunch, and more — bold flavors and vibrant vibes at every location.
+            Vení a Feriado Cantina para la Hora Feliz, Martes de Vermú, Menú del Mediodía y más — sabores de cantina y la mejor onda en cada evento.
           </p>
         </header>
 
@@ -45,8 +45,8 @@ export default function EventsPage() {
           </div>
         ) : (
           <div className="text-center py-24 rounded-2xl border border-graphite-black/20 shadow-sm bg-white">
-            <h3 className="text-xl font-bold mb-3 text-graphite-black">No upcoming events</h3>
-            <p className="text-graphite-black/80 text-lg">Check back soon for new experiences at OH México.</p>
+            <h3 className="text-xl font-bold mb-3 text-graphite-black">No hay eventos próximos</h3>
+            <p className="text-graphite-black/80 text-lg">Pronto más experiencias en Feriado Cantina.</p>
           </div>
         )}
       </div>

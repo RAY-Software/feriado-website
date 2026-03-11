@@ -8,7 +8,7 @@ import { Toaster } from "sonner";
 import { ChatWidget } from "@/components/ChatWidget";
 import { UserWayWidget } from "@/components/UserWayWidget";
 
-/* Tipografía como temple-mexico: IBM Plex Sans para todo (body y headlines) */
+/* Tipografía feriado: IBM Plex Sans para todo (body y headlines) */
 const ibmPlexSans = IBM_Plex_Sans({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
@@ -20,38 +20,38 @@ import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "OH México | Best Authentic Mexican Restaurant in Miami",
+  title: "Feriado Cantina | La casa de Feriado Vermú en Buenos Aires",
   alternates: {
     canonical: `${siteUrl}/`,
   },
   icons: {
-    icon: "/image/ohmexico-logo.png",
-    shortcut: "/image/ohmexico-logo.png",
-    apple: "/image/ohmexico-logo.png",
+    icon: "/image/f-favicon.png",
+    shortcut: "/image/f-favicon.png",
+    apple: "/image/f-favicon.png",
   },
   description:
-    "OH México — Bold tacos, handcrafted cocktails and the vibrant spirit of Mexico. Authentic Mexican cuisine in Miami. Book your table today.",
-  keywords: ["OH México", "Mexican restaurant", "Miami", "authentic Mexican food", "tacos", "cocktails", "birria"],
+    "Feriado Cantina — Ricos tragos, tortilla babé y largas sobremesas. Cantina de barrio en Coghlan, Buenos Aires. Reservá tu mesa.",
+  keywords: ["Feriado Cantina", "Feriado Vermú", "cantina Buenos Aires", "bar Coghlan", "vermú", "coctelería", "reservas"],
   openGraph: {
-    title: "OH México | Best Authentic Mexican Restaurant in Miami",
-    description: "Bold tacos, handcrafted cocktails and the vibrant spirit of Mexico. The best authentic Mexican restaurant in Miami.",
+    title: "Feriado Cantina | La casa de Feriado Vermú en Buenos Aires",
+    description: "Ricos tragos, tortilla babé y largas sobremesas. Cantina de barrio en Coghlan, Buenos Aires.",
     type: "website",
     url: `${siteUrl}/`,
-    siteName: "OH México",
-    locale: "en_US",
+    siteName: "Feriado Cantina",
+    locale: "es_AR",
     images: [
       {
         url: `${siteUrl}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "OH México — Authentic Mexican Restaurant",
+        alt: "Feriado Cantina — La casa de Feriado Vermú",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "OH México | Best Authentic Mexican Restaurant in Miami",
-    description: "Bold tacos, handcrafted cocktails and the vibrant spirit of Mexico. Book your table at OH México.",
+    title: "Feriado Cantina | La casa de Feriado Vermú en Buenos Aires",
+    description: "Ricos tragos, tortilla babé y largas sobremesas. Reservá tu mesa en Feriado Cantina.",
     images: [`${siteUrl}/og-image.png`],
   },
 };
@@ -68,7 +68,7 @@ export default function RootLayout({
   ];
 
   return (
-    <html lang="en" className={ibmPlexSans.variable}>
+    <html lang="es" className={ibmPlexSans.variable}>
       <head>
         <Script id="suppress-non-error-rejections" strategy="beforeInteractive">
           {`(function(){function r(e){if(e.reason!=null&&!(e.reason instanceof Error)){e.preventDefault();e.stopPropagation();e.stopImmediatePropagation();}}window.addEventListener("unhandledrejection",r,true);})();`}

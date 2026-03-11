@@ -4,9 +4,9 @@ import { siteUrl } from '@/lib/site';
 import MenuClient from './MenuClient';
 
 export const metadata: Metadata = {
-  title: 'Our Menu | OH México — Authentic Mexican Restaurant in Miami',
+  title: 'Carta | Feriado Cantina — Cantina de barrio en Buenos Aires',
   description:
-    'Explore the full OH México menu: tacos, molcajetes, guacamole, margaritas, mezcal and more. Three Miami Beach locations: Española Way, Lincoln Road & Ocean Drive.',
+    'Explorá la carta completa de Feriado Cantina: platitos para picar, coctelería de autor, vermú Feriado y más. Av. Cabildo 3702, Coghlan, Buenos Aires.',
   alternates: { canonical: `${siteUrl}/menu` },
 };
 

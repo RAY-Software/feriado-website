@@ -40,7 +40,7 @@ export function UserWayWidget() {
       s.setAttribute("data-account", USERWAY_ACCOUNT);
       s.setAttribute("data-position", "5"); // Bottom Left
       s.setAttribute("data-mobile-position", "5"); // Bottom Left on Mobile
-      s.setAttribute("data-color", "#B33D26"); // Venetian Red
+      s.setAttribute("data-color", "#E83324"); // Rojo Feriado
       s.setAttribute("src", USERWAY_SRC);
       (document.body || document.head).appendChild(s);
 

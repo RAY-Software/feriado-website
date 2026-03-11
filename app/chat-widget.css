@@ -1,4 +1,4 @@
-/* OH México Chat Widget Styles */
+/* Feriado Cantina Chat Widget Styles */
 
 /* Typing indicator */
 .oh-typing-indicator {
@@ -12,9 +12,9 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #B33D26 0%, #CD7925 100%);
+  background: linear-gradient(135deg, #E83324 0%, #FBE451 100%);
   animation: oh-typing-bounce 1.6s infinite ease-in-out;
-  box-shadow: 0 2px 4px rgba(179, 61, 38, 0.3);
+  box-shadow: 0 2px 4px rgba(232, 51, 36, 0.3);
 }
 
 .oh-typing-indicator span:nth-child(1) { animation-delay: 0s; }
@@ -34,14 +34,14 @@
 
 /* Input placeholder */
 .oh-chat-panel input::placeholder {
-  color: rgba(230, 186, 168, 0.4);
+  color: rgba(235, 231, 218, 0.4);
   font-style: italic;
 }
 
 /* Focus ring */
 .oh-chat-panel input:focus {
   outline: none;
-  box-shadow: 0 0 0 2px rgba(179, 61, 38, 0.25);
+  box-shadow: 0 0 0 2px rgba(232, 51, 36, 0.25);
 }
 
 /* Smooth scroll */
@@ -81,7 +81,7 @@
 
 .oh-speech-bubble:hover {
   transform: translateY(-2px) scale(1.02) !important;
-  box-shadow: 0 12px 32px rgba(0,0,0,0.4), 0 8px 16px rgba(179,61,38,0.2) !important;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.4), 0 8px 16px rgba(232,51,36,0.2) !important;
 }
 
 .oh-speech-bubble:active {
@@ -100,12 +100,12 @@
 
 /* Accessibility */
 .oh-chat-bubble:focus {
-  outline: 2px solid #CD7925;
+  outline: 2px solid #FBE451;
   outline-offset: 2px;
 }
 
 .oh-chat-panel button:focus {
-  outline: 2px solid #B33D26;
+  outline: 2px solid #E83324;
   outline-offset: 2px;
 }
 
@@ -115,18 +115,18 @@
   align-items: center;
   gap: 4px;
   font-size: 11px;
-  color: rgba(230, 186, 168, 0.5);
+  color: rgba(235, 231, 218, 0.5);
   text-decoration: none;
   padding: 2px 6px;
-  border: 1px solid rgba(179,61,38,0.25);
+  border: 1px solid rgba(232,51,36,0.25);
   border-radius: 8px;
   font-family: "Darker Grotesque", system-ui, sans-serif;
   transition: background 0.2s, color 0.2s;
 }
 
 .oh-ray-badge:hover {
-  background: rgba(179,61,38,0.15);
-  color: #E6BAA8;
+  background: rgba(232,51,36,0.15);
+  color: #EBE7DA;
 }
 
 .oh-ray-badge img {

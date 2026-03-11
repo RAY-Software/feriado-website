@@ -9,8 +9,8 @@ export function Footer() {
   const pathname = usePathname();
 
   const handleScrollToLocations = () => {
-    if (pathname !== "/locations") {
-      router.push("/locations");
+    if (pathname !== "/ubicaciones") {
+      router.push("/ubicaciones");
       setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 200);
     } else {
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -53,11 +53,11 @@ export function Footer() {
           <div className="grid grid-cols-1 lg:grid-cols-6 gap-8 lg:gap-4 lg:items-start">
             <div className="lg:col-span-1 flex justify-center lg:justify-start">
               <ResponsiveImage
-                src="/image/OH-Mexico.png"
-                alt="OH! Mexico Restaurant & Tequileria"
+                src="/image/logo-new.png"
+                alt="Feriado Cantina"
                 width={260}
                 height={80}
-                mobileSrc="/image/OH-Mexico.png"
+                mobileSrc="/image/logo-new.png"
                 className="h-16 w-auto object-contain lg:h-20 min-w-[200px] lg:min-w-[260px]"
               />
             </div>
@@ -69,14 +69,14 @@ export function Footer() {
                     aria-label="Scroll to home section"
                     className="text-foreground hover:opacity-90 transition-colors font-medium cursor-pointer"
                   >
-                    Home
+                    Inicio
                   </button>
                   <button
                     onClick={handleScrollToLocations}
                     aria-label="Scroll to locations section"
                     className="text-foreground hover:opacity-90 transition-colors font-medium cursor-pointer"
                   >
-                    Locations
+                    Ubicaciones
                   </button>
                 </div>
                 <div className="flex justify-center lg:justify-end items-center">
@@ -85,7 +85,7 @@ export function Footer() {
                     aria-label="Scroll to reservations section"
                     className="relative flex items-center justify-between pl-3 pr-4 py-1.5 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl transition-colors text-base font-medium cursor-pointer"
                   >
-                    <span>Reservations</span>
+                    <span>Reservas</span>
                     <span className="ml-2 text-lg font-light">›</span>
                   </button>
                 </div>
@@ -100,15 +100,7 @@ export function Footer() {
                   Terms & Policies
                 </button>
                 <a
-                  href="https://www.ohmexicorestaurant.com/newsroom/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors text-sm"
-                >
-                  Newsroom
-                </a>
-                <a
-                  href="https://www.ohmexicorestaurant.com/privacy-policy-2/"
+                  href="https://www.feriadovermu.com/privacy-policy"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-foreground transition-colors text-sm"
@@ -123,20 +115,12 @@ export function Footer() {
                   Accessibility Statement
                 </button>
                 <a
-                  href="https://www.verestaurants.com/careers/"
+                  href="https://www.feriadovermu.com/careers"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                 >
                   Careers
-                </a>
-                <a
-                  href="https://www.vidayestilo.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors text-sm"
-                >
-                  Affiliated with Vida y Estilo
                 </a>
               </div>
             </div>
@@ -146,7 +130,7 @@ export function Footer() {
         <div className="mt-4 mx-8 sm:mx-16 lg:mx-24 flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-4">
             <a
-              href="https://www.instagram.com/ohmexico/"
+              href="https://www.instagram.com/feriadocantina/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground hover:opacity-90 transition-colors cursor-pointer"
@@ -158,7 +142,7 @@ export function Footer() {
             </a>
           </div>
           <div className="text-foreground text-sm text-center">
-            © {new Date().getFullYear()} OH MÉXICO. All rights reserved.
+            © {new Date().getFullYear()} FERIADO CANTINA. All rights reserved.
           </div>
           <div className="flex items-center gap-2">
             <a

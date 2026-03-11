@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const event = getEventBySlug(resolvedParams.slug);
 
   if (!event) {
-    return { title: 'Event Not Found | OH México' };
+    return { title: 'Evento no encontrado | Feriado Cantina' };
   }
 
   const excerpt = event.description.length > 160
@@ -34,10 +34,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     : event.description;
 
   return {
-    title: `${event.title} | ${event.location.city} | OH México`,
+    title: `${event.title} | ${event.location.city} | Feriado Cantina`,
     description: excerpt,
     openGraph: {
-      title: `${event.title} | OH México`,
+      title: `${event.title} | Feriado Cantina`,
       description: excerpt,
       url: `${siteUrl}/events/${event.slug}`,
       images: [
@@ -63,9 +63,9 @@ function generateICS(event: EventItem): string {
   const icsContent = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//OH México//Events//EN',
+    'PRODID:-//Feriado Cantina//Eventos//ES',
     'BEGIN:VEVENT',
-    `UID:${event.id}@ohmexico.com`,
+    `UID:${event.id}@feriadovermu.com`,
     `DTSTAMP:${formatDates(new Date().toISOString())}`,
     `DTSTART:${formatDates(event.startDate)}`,
     `DTEND:${formatDates(event.endDate)}`,
@@ -118,7 +118,7 @@ export default async function EventSlugPage({ params }: Props) {
     url: `${siteUrl}/events/${event.slug}`,
     organizer: {
       '@type': 'Organization',
-      name: 'OH México',
+      name: 'Feriado Cantina',
       url: `${siteUrl}/`,
     },
     offers: {
@@ -128,7 +128,7 @@ export default async function EventSlugPage({ params }: Props) {
       ...(event.price != null && { price: event.price, priceCurrency: 'USD' }),
     },
     ...(isLiveMusic && {
-      performer: { '@type': 'PerformingGroup', name: 'OH México Live Mariachi' },
+      performer: { '@type': 'PerformingGroup', name: 'Feriado Cantina Live' },
     }),
   };
 

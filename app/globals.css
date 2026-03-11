@@ -1,13 +1,10 @@
 @import "tailwindcss";
 
-/* Paleta OH México – única fuente de verdad. Usar clases Tailwind (bg-primary, text-foreground, etc.) */
-
+/* Paleta Feriado Cantina – única fuente de verdad */
 /* Primarios */
-/* Venetian Red: #B33D26 | Ocre: #CD7925 | Graphite Black: #27292B */
-/* Secundarios */
-/* B'dazzled Blue: #2C5697 | Soldier Green: #4E5B31 | Pale Chestnut: #E6BAA8 */
+/* Rojo Feriado: #E83324 | Azul Feriado: #2554A7 | Amarillo Feriado: #FBE451 */
+/* Fondo principal: #EBE7DA | Texto: #1a1a1a */
 
-/* Tipografía: Headline = INTENSA BOLD CONDENSED | Body = DARKER GROTESQUE */
 @font-face {
    font-family: "Intensa Bold Condensed";
    src: url("/fonts/IntensaBoldCondensed.woff2") format("woff2");
@@ -17,37 +14,32 @@
 }
 
 :root {
-   /* Tipografía */
-   --font-headline:
-      "Intensa Bold Condensed", var(--font-headline-fallback), sans-serif;
-   /* --font-body viene del layout (Darker Grotesque) */
+   --font-headline: "Intensa Bold Condensed", var(--font-headline-fallback), sans-serif;
 
-   /* Fondo de toda la página (White) y texto principal sobre él */
-   --background: #ffffff; /* White – background replacement */
-   --foreground: #27292b; /* Graphite Black – texto sobre fondo claro */
+   --background: #EBE7DA;
+   --foreground: #1a1a1a;
 
-   /* Superficie oscura (navbar, footer, secciones oscuras) – todo desde variables */
-   --surface-dark: #27292b; /* Graphite Black */
-   --surface-dark-foreground: #e6baa8; /* Pale Chestnut – texto sobre oscuro */
-   --surface-dark-muted: #a89a92; /* Texto secundario sobre superficie oscura */
+   --surface-dark: #1a1a1a;
+   --surface-dark-foreground: #EBE7DA;
+   --surface-dark-muted: #a0a0a0;
 
-   --primary: #b33d26; /* Venetian Red – CTAs principales */
+   --primary: #2554A7;
    --primary-foreground: #ffffff;
-   --accent: #cd7925; /* Ocre – acentos, hover */
-   --accent-foreground: #27292b;
-   --secondary: #2c5697; /* B'dazzled Blue */
-   --secondary-foreground: #ffffff;
-   --tertiary: #4e5b31; /* Soldier Green */
-   --tertiary-foreground: #e6baa8;
-   --muted: #3d3f42; /* Fondos suaves (cards, etc.) */
-   --muted-foreground: #5c5e62; /* Texto secundario sobre fondo claro */
-   /* Nombres de la paleta (uso directo cuando necesites el color exacto) */
-   --venetian-red: #b33d26;
-   --occre: #cd7925;
-   --graphite-black: #27292b;
-   --bdazzled-blue: #2c5697;
-   --soldier-green: #4e5b31;
-   --pale-chestnut: #e6baa8;
+   --accent: #E83324;
+   --accent-foreground: #ffffff;
+   --secondary: #FBE451;
+   --secondary-foreground: #1a1a1a;
+   --tertiary: #2554A7;
+   --tertiary-foreground: #ffffff;
+   --muted: #3d3f42;
+   --muted-foreground: #6b6b6b;
+
+   --venetian-red: #E83324;
+   --occre: #FBE451;
+   --graphite-black: #1a1a1a;
+   --bdazzled-blue: #2554A7;
+   --soldier-green: #2554A7;
+   --pale-chestnut: #EBE7DA;
 }
 
 @theme inline {

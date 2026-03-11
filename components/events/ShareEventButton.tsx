@@ -3,7 +3,7 @@
 import { useCallback } from 'react';
 import { Share2 } from 'lucide-react';
 
-const FALLBACK_SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://ohmexico.com';
+const FALLBACK_SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://feriadovermu.com';
 
 interface ShareEventButtonProps {
   title: string;

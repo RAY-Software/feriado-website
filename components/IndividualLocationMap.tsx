@@ -72,7 +72,7 @@ export default function IndividualLocationMap({ location, className = "" }: Indi
           icon: {
             path: "M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z",
             scale: 1.5,
-            fillColor: "#B33D26",
+            fillColor: "#E83324",
             fillOpacity: 1,
             strokeColor: "#ffffff",
             strokeWeight: 2,
@@ -142,7 +142,7 @@ export default function IndividualLocationMap({ location, className = "" }: Indi
   }, [location]);
 
   return (
-    <div className={`relative bg-gray-100 rounded-2xl overflow-hidden border border-pale-chestnut/30 ${className}`}>
+    <div className={`relative bg-gray-100 rounded-2xl overflow-hidden border border-feriado-blue/10 ${className}`}>
       <div 
         ref={mapRef}
         className="w-full h-full min-h-[300px]"

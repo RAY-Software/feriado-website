@@ -8,7 +8,6 @@ import { Toaster } from "sonner";
 import { ChatWidget } from "@/components/ChatWidget";
 import { UserWayWidget } from "@/components/UserWayWidget";
 
-/* Tipografía como temple-mexico: IBM Plex Sans para todo (body y headlines) */
 const ibmPlexSans = IBM_Plex_Sans({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
@@ -20,39 +19,39 @@ import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "OH México | Best Authentic Mexican Restaurant in Miami",
+  title: "Feriado Cantina | Cantina de Barrio en Coghlan, Buenos Aires",
   alternates: {
     canonical: `${siteUrl}/`,
   },
   icons: {
-    icon: "/image/ohmexico-logo.png",
-    shortcut: "/image/ohmexico-logo.png",
-    apple: "/image/ohmexico-logo.png",
+    icon: "/image/feriado/favicon.png",
+    shortcut: "/image/feriado/favicon.png",
+    apple: "/image/feriado/favicon.png",
   },
   description:
-    "OH México — Bold tacos, handcrafted cocktails and the vibrant spirit of Mexico. Authentic Mexican cuisine in Miami. Book your table today.",
-  keywords: ["OH México", "Mexican restaurant", "Miami", "authentic Mexican food", "tacos", "cocktails", "birria"],
+    "Feriado Cantina — La casa de Feriado Vermú en Coghlan. Comida casera argentina, vermú, tortilla babé, pastas, milanesas y largas sobremesas. Reservá tu mesa.",
+  keywords: ["Feriado Cantina", "cantina Buenos Aires", "vermú", "Coghlan", "comida casera", "bodegón", "Feriado Vermú"],
   openGraph: {
-    title: "OH México | Best Authentic Mexican Restaurant in Miami",
-    description: "Bold tacos, handcrafted cocktails and the vibrant spirit of Mexico. The best authentic Mexican restaurant in Miami.",
+    title: "Feriado Cantina | Cantina de Barrio en Coghlan, Buenos Aires",
+    description: "La casa de Feriado Vermú. Comida casera, vermú de barrio y largas sobremesas en Coghlan.",
     type: "website",
     url: `${siteUrl}/`,
-    siteName: "OH México",
-    locale: "en_US",
+    siteName: "Feriado Cantina",
+    locale: "es_AR",
     images: [
       {
-        url: `${siteUrl}/og-image.png`,
+        url: `${siteUrl}/image/feriado/logo-cantina.png`,
         width: 1200,
         height: 630,
-        alt: "OH México — Authentic Mexican Restaurant",
+        alt: "Feriado Cantina — Cantina de barrio en Coghlan",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "OH México | Best Authentic Mexican Restaurant in Miami",
-    description: "Bold tacos, handcrafted cocktails and the vibrant spirit of Mexico. Book your table at OH México.",
-    images: [`${siteUrl}/og-image.png`],
+    title: "Feriado Cantina | Cantina de Barrio en Coghlan",
+    description: "La casa de Feriado Vermú. Comida casera, vermú y largas sobremesas en Coghlan, Buenos Aires.",
+    images: [`${siteUrl}/image/feriado/logo-cantina.png`],
   },
 };
 
@@ -63,19 +62,13 @@ export default function RootLayout({
 }) {
   const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
   const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
-  const productPreloads = [
-    "/image/AVICMEDIA-82.jpg",
-  ];
 
   return (
-    <html lang="en" className={ibmPlexSans.variable}>
+    <html lang="es" className={ibmPlexSans.variable}>
       <head>
         <Script id="suppress-non-error-rejections" strategy="beforeInteractive">
           {`(function(){function r(e){if(e.reason!=null&&!(e.reason instanceof Error)){e.preventDefault();e.stopPropagation();e.stopImmediatePropagation();}}window.addEventListener("unhandledrejection",r,true);})();`}
         </Script>
-        {productPreloads.map((href, i) => (
-          <link key={`preload-${i}`} rel="preload" as="image" href={href} fetchPriority="high" />
-        ))}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="preconnect" href="https://connect.facebook.net" crossOrigin="anonymous" />
@@ -136,4 +129,3 @@ export default function RootLayout({
     </html>
   );
 }
- 

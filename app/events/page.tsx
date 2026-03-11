@@ -44,9 +44,9 @@ export default function EventsPage() {
             ))}
           </div>
         ) : (
-          <div className="text-center py-24 rounded-2xl border border-graphite-black/20 shadow-sm bg-white">
-            <h3 className="text-xl font-bold mb-3 text-graphite-black">No hay eventos próximos</h3>
-            <p className="text-graphite-black/80 text-lg">Volvé pronto para nuevas experiencias en Feriado Cantina.</p>
+          <div className="text-center py-24 rounded-2xl border border-foreground/20 shadow-sm bg-white">
+            <h3 className="text-xl font-bold mb-3 text-foreground">No hay eventos próximos</h3>
+            <p className="text-foreground/80 text-lg">Volvé pronto para nuevas experiencias en Feriado Cantina.</p>
           </div>
         )}
       </div>

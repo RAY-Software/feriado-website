@@ -12,7 +12,6 @@ export default function AgeVerification() {
   useEffect(() => {
     setIsClient(true);
     
-    // Check localStorage only on client side
     const isVerified = localStorage.getItem("age-verified");
     if (!isVerified) {
       scrollPositionRef.current = window.scrollY;
@@ -51,40 +50,40 @@ export default function AgeVerification() {
   if (!isClient || !isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] bg-surface-dark/95 backdrop-blur-sm">
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-md w-full mx-4 rounded-lg border border-foreground/10 p-8 text-center bg-white shadow-xl">
+    <div className="fixed inset-0 z-[100] bg-foreground/95 backdrop-blur-sm">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-md w-full mx-4 rounded-lg border border-foreground/10 p-8 text-center bg-feriado-cream shadow-xl">
         <div className="flex flex-col items-center justify-center gap-6">
           <ResponsiveImage
-            src="/image/image-removebg-preview.png"
-            alt="OH México"
+            src="/image/feriado/logo-cantina.png"
+            alt="Feriado Cantina"
             width={190}
             height={64}
-            mobileSrc="/image/image-removebg-preview.png"
+            mobileSrc="/image/feriado/logo-cantina.png"
             className="w-40 h-auto object-contain"
           />
           
-          <h2 className="font-headline text-3xl font-bold tracking-wide text-graphite-black uppercase">
-            Are you over 21 years old?
+          <h2 className="font-headline text-3xl font-bold tracking-wide text-foreground uppercase">
+            ¿Sos mayor de 18 años?
           </h2>
           
           <div className="flex gap-4 w-full mt-4">
             <Button
-              className="w-full bg-primary hover:bg-[#9a3528] text-primary-foreground text-lg py-6"
+              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-lg py-6"
               onClick={handleVerify}
             >
-              YES
+              SÍ
             </Button>
             
             <Button
-              className="w-full bg-transparent hover:bg-black/5 text-graphite-black border border-graphite-black/20 text-lg py-6"
+              className="w-full bg-transparent hover:bg-black/5 text-foreground border border-foreground/20 text-lg py-6"
               onClick={handleReject}
             >
               NO
             </Button>
           </div>
           
-          <p className="text-sm text-graphite-black/70 mt-4 font-body leading-relaxed">
-            This website contains information about alcoholic beverages. You must be of legal drinking age to enter this site.
+          <p className="text-sm text-foreground/70 mt-4 font-body leading-relaxed">
+            Este sitio web contiene información sobre bebidas alcohólicas. Debés ser mayor de edad para ingresar.
           </p>
         </div>
       </div>

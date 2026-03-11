@@ -14,7 +14,7 @@ export function EventCard({ event }: EventCardProps) {
       : event.description;
 
   return (
-    <article className="group relative flex flex-col rounded-2xl overflow-hidden border border-graphite-black/20 shadow-sm hover:shadow-lg transition-all duration-300 bg-white">
+    <article className="group relative flex flex-col rounded-2xl overflow-hidden border border-foreground/20 shadow-sm hover:shadow-lg transition-all duration-300 bg-white">
       <Link
         href={`/events/${event.slug}`}
         className="absolute inset-0 z-10"
@@ -33,15 +33,15 @@ export function EventCard({ event }: EventCardProps) {
       </div>
 
       <div className="flex flex-col flex-1 p-5 gap-3">
-        <h3 className="text-lg font-bold leading-snug text-graphite-black group-hover:text-primary transition-colors duration-200">
+        <h3 className="text-lg font-bold leading-snug text-foreground group-hover:text-primary transition-colors duration-200">
           {event.title}
         </h3>
 
-        <p className="text-sm font-semibold text-graphite-black/80">
+        <p className="text-sm font-semibold text-foreground/80">
           {event.schedule}
         </p>
 
-        <p className="text-sm leading-relaxed flex-1 text-graphite-black/80">
+        <p className="text-sm leading-relaxed flex-1 text-foreground/80">
           {excerpt}
         </p>
 

@@ -193,7 +193,7 @@ export function BookingForm() {
         ...(motive ? { motive: Number(motive) } : {}),
         source: 'WEBSITE',
         specialRequests,
-        companyIdentifier: 'OH Mexico',
+        companyIdentifier: 'Feriado Cantina',
       };
 
       fetch('/api/booking', {
@@ -207,9 +207,9 @@ export function BookingForm() {
         })
         .then(() => {
           const locName = locations.find(l => l.id.toString() === locationId)?.name || '';
-          const formattedDate = date?.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+          const formattedDate = date?.toLocaleDateString('es-AR', { month: 'long', day: 'numeric', year: 'numeric' });
           setModalType('success');
-          setModalMessage(`Booking confirmed for ${formattedDate} at ${time} at ${locName}.\nWe'll send you the details by email. Thank you!`);
+          setModalMessage(`Reserva confirmada para el ${formattedDate} a las ${time} en ${locName}.\nTe enviaremos los detalles por email. ¡Gracias!`);
           setShowModal(true);
           trackEvent('booking_confirmed', {
             locationId: Number(locationId),
@@ -237,7 +237,7 @@ export function BookingForm() {
         })
         .catch(() => {
           setModalType('error');
-          setModalMessage('There was an error submitting your booking. Please try again.');
+          setModalMessage('Hubo un error al enviar tu reserva. Por favor, intentá de nuevo.');
           setShowModal(true);
         })
         .finally(() => setIsSubmitting(false));
@@ -257,10 +257,10 @@ export function BookingForm() {
 
   return (
     <div className="max-w-lg mx-auto w-full text-base">
-      <div className="bg-[rgb(250,249,246)] rounded-lg p-7 md:p-8 shadow-lg border border-gray-200/80">
+      <div className="bg-feriado-cream rounded-lg p-7 md:p-8 shadow-lg border border-gray-200/80">
         <div className="text-center mb-6">
-          <h3 className="text-2xl font-bold mb-2 text-foreground">Book your table</h3>
-          <p className="text-muted-foreground text-base md:text-lg">Fill in your details and experience OH México</p>
+          <h3 className="text-2xl font-bold mb-2 text-foreground">Reservá tu mesa</h3>
+          <p className="text-muted-foreground text-base md:text-lg">Completá tus datos y viví la experiencia Feriado</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -268,22 +268,22 @@ export function BookingForm() {
             {/* Location */}
             <div className="md:col-span-2">
               <Select value={locationId} onValueChange={setLocationId}>
-                <SelectTrigger className="w-full bg-[rgb(250,249,246)] border border-gray-200 rounded-lg h-12 text-foreground text-base md:text-lg">
+                <SelectTrigger className="w-full bg-feriado-cream border border-gray-200 rounded-lg h-12 text-foreground text-base md:text-lg">
                   {selectedLocation ? (
                     <div className="flex items-center">
-                      <MapPin className="mr-2 h-5 w-5 text-[#c0392b]" />
+                      <MapPin className="mr-2 h-5 w-5 text-feriado-red" />
                       {selectedLocation.name}
                     </div>
                   ) : (
-                    <SelectValue placeholder="Select location" />
+                    <SelectValue placeholder="Seleccionar ubicación" />
                   )}
                 </SelectTrigger>
-                <SelectContent className="bg-[rgb(250,249,246)] border border-gray-200 max-h-60 overflow-y-auto text-base">
+                <SelectContent className="bg-feriado-cream border border-gray-200 max-h-60 overflow-y-auto text-base">
                   {locations.map(loc => (
                     <SelectItem key={loc.id} value={loc.id.toString()} textValue={loc.name} className="hover:bg-accent/10 focus:bg-accent/10 text-foreground text-base data-[highlighted]:bg-accent/10 data-[highlighted]:text-accent data-[state=checked]:bg-accent/10 data-[state=checked]:text-accent">
                       <div className="flex flex-col">
                         <div className="flex items-center">
-                          <MapPin className="mr-2 h-5 w-5 text-[#c0392b]" />
+                          <MapPin className="mr-2 h-5 w-5 text-feriado-red" />
                           {loc.name}
                         </div>
                         {loc.address && (
@@ -299,23 +299,23 @@ export function BookingForm() {
             {/* First & Last Name */}
             <Input
               type="text"
-              placeholder="First name *"
+              placeholder="Nombre *"
               value={firstName}
               onChange={e => {
                 setFirstName(e.target.value);
                 validateField('firstName', e.target.value);
               }}
-              className={`w-full bg-[rgb(250,249,246)] border border-gray-200 rounded-lg h-12 text-foreground text-base md:text-lg placeholder:text-muted-foreground ${errors.firstName ? 'border-red-500' : ''}`}
+              className={`w-full bg-feriado-cream border border-gray-200 rounded-lg h-12 text-foreground text-base md:text-lg placeholder:text-muted-foreground ${errors.firstName ? 'border-red-500' : ''}`}
             />
             <Input
               type="text"
-              placeholder="Last name *"
+              placeholder="Apellido *"
               value={lastName}
               onChange={e => {
                 setLastName(e.target.value);
                 validateField('lastName', e.target.value);
               }}
-              className={`w-full bg-[rgb(250,249,246)] border border-gray-200 rounded-lg h-12 text-foreground text-base md:text-lg placeholder:text-muted-foreground ${errors.lastName ? 'border-red-500' : ''}`}
+              className={`w-full bg-feriado-cream border border-gray-200 rounded-lg h-12 text-foreground text-base md:text-lg placeholder:text-muted-foreground ${errors.lastName ? 'border-red-500' : ''}`}
             />
             {errors.firstName && <p className="text-red-400 text-base">{errors.firstName}</p>}
             {errors.lastName && <p className="text-red-400 text-base">{errors.lastName}</p>}
@@ -323,14 +323,14 @@ export function BookingForm() {
             {/* Phone */}
             <Input
               type="tel"
-              placeholder="Phone *"
+              placeholder="Teléfono *"
               value={phone}
               onChange={e => {
                 const numeric = e.target.value.replace(/\D/g, '');
                 setPhone(numeric);
                 validateField('phone', numeric);
               }}
-              className={`w-full bg-[rgb(250,249,246)] border border-gray-200 rounded-lg h-12 text-foreground text-base md:text-lg placeholder:text-muted-foreground ${errors.phone ? 'border-red-500' : ''}`}
+              className={`w-full bg-feriado-cream border border-gray-200 rounded-lg h-12 text-foreground text-base md:text-lg placeholder:text-muted-foreground ${errors.phone ? 'border-red-500' : ''}`}
             />
 
             {/* Email */}
@@ -342,22 +342,22 @@ export function BookingForm() {
                 setEmail(e.target.value);
                 validateField('email', e.target.value);
               }}
-              className={`w-full bg-[rgb(250,249,246)] border border-gray-200 rounded-lg h-12 text-foreground text-base md:text-lg placeholder:text-muted-foreground md:col-span-1 ${errors.email ? 'border-red-500' : ''}`}
+              className={`w-full bg-feriado-cream border border-gray-200 rounded-lg h-12 text-foreground text-base md:text-lg placeholder:text-muted-foreground md:col-span-1 ${errors.email ? 'border-red-500' : ''}`}
             />
             {errors.phone && <p className="text-red-400 text-base">{errors.phone}</p>}
             {errors.email && <p className="text-red-400 text-base md:col-span-2">{errors.email}</p>}
 
             {/* Guests */}
             <Select value={guests} onValueChange={setGuests}>
-              <SelectTrigger className="w-full bg-[rgb(250,249,246)] border border-gray-200 rounded-lg h-12 text-foreground text-base md:text-lg">
-                <SelectValue placeholder="Guests" />
+              <SelectTrigger className="w-full bg-feriado-cream border border-gray-200 rounded-lg h-12 text-foreground text-base md:text-lg">
+                <SelectValue placeholder="Comensales" />
               </SelectTrigger>
-              <SelectContent className="bg-[rgb(250,249,246)] border border-gray-200 text-base">
+              <SelectContent className="bg-feriado-cream border border-gray-200 text-base">
                 {Array.from({ length: 40 }, (_, i) => i + 1).map(num => (
                   <SelectItem key={num} value={num.toString()} className="hover:bg-accent/10 focus:bg-accent/10 text-foreground text-base data-[highlighted]:bg-accent/10 data-[highlighted]:text-accent data-[state=checked]:bg-accent/10 data-[state=checked]:text-accent">
                     <div className="flex items-center">
-                      <Users className="mr-2 h-5 w-5 text-[#c0392b]" />
-                      {num} {num === 1 ? 'Guest' : 'Guests'}
+                      <Users className="mr-2 h-5 w-5 text-feriado-red" />
+                      {num} {num === 1 ? 'Persona' : 'Personas'}
                     </div>
                   </SelectItem>
                 ))}
@@ -366,10 +366,10 @@ export function BookingForm() {
 
             {/* Motive */}
             <Select value={motive} onValueChange={setMotive}>
-              <SelectTrigger className="w-full bg-[rgb(250,249,246)] border border-gray-200 rounded-lg h-12 text-foreground text-base md:text-lg">
-                <SelectValue placeholder="Occasion" />
+              <SelectTrigger className="w-full bg-feriado-cream border border-gray-200 rounded-lg h-12 text-foreground text-base md:text-lg">
+                <SelectValue placeholder="Ocasión" />
               </SelectTrigger>
-              <SelectContent className="bg-[rgb(250,249,246)] border border-gray-200 text-base">
+              <SelectContent className="bg-feriado-cream border border-gray-200 text-base">
                 {motives.map(m => (
                   <SelectItem key={m.id} value={m.id.toString()} className="hover:bg-accent/10 focus:bg-accent/10 text-foreground text-base data-[highlighted]:bg-accent/10 data-[highlighted]:text-accent data-[state=checked]:bg-accent/10 data-[state=checked]:text-accent">
                     <div className="flex items-center">
@@ -386,14 +386,14 @@ export function BookingForm() {
               <Button
                 type="button"
                 variant="outline"
-                className="w-full justify-start bg-[rgb(250,249,246)] border border-gray-200 rounded-lg h-12 text-foreground text-base md:text-lg"
+                className="w-full justify-start bg-feriado-cream border border-gray-200 rounded-lg h-12 text-foreground text-base md:text-lg"
                 onClick={() => setShowCalendar(!showCalendar)}
               >
-                <CalendarIcon className="mr-2 h-5 w-5 text-[#c0392b]" />
-                {date ? date.toLocaleDateString('en-US') : 'Date'}
+                <CalendarIcon className="mr-2 h-5 w-5 text-feriado-red" />
+                {date ? date.toLocaleDateString('es-AR') : 'Fecha'}
               </Button>
               {showCalendar && (
-                <div className="absolute top-full mt-2 z-50 min-w-[320px] w-fit bg-[rgb(250,249,246)] border border-gray-200 rounded-lg p-3 shadow-xl">
+                <div className="absolute top-full mt-2 z-50 min-w-[320px] w-fit bg-feriado-cream border border-gray-200 rounded-lg p-3 shadow-xl">
                   <Calendar
                     locale={enUS}
                     mode="single"
@@ -422,12 +422,12 @@ export function BookingForm() {
 
             {/* Time selector */}
             <Select value={time} onValueChange={setTime}>
-              <SelectTrigger className="w-full bg-[rgb(250,249,246)] border border-gray-200 rounded-lg h-12 text-foreground text-base md:text-lg">
-                <SelectValue placeholder="Time" />
+              <SelectTrigger className="w-full bg-feriado-cream border border-gray-200 rounded-lg h-12 text-foreground text-base md:text-lg">
+                <SelectValue placeholder="Hora" />
               </SelectTrigger>
-              <SelectContent className="bg-[rgb(250,249,246)] border border-gray-200 text-base">
+              <SelectContent className="bg-feriado-cream border border-gray-200 text-base">
                 {loadingSlots && (
-                  <SelectItem value="loading" disabled className="text-muted-foreground text-base">Loading...</SelectItem>
+                  <SelectItem value="loading" disabled className="text-muted-foreground text-base">Cargando...</SelectItem>
                 )}
                 {!loadingSlots && availableSlots.map(slot => (
                   <SelectItem key={slot} value={slot} className="hover:bg-accent/10 focus:bg-accent/10 text-foreground text-base data-[highlighted]:bg-accent/10 data-[highlighted]:text-accent data-[state=checked]:bg-accent/10 data-[state=checked]:text-accent">{slot}</SelectItem>
@@ -436,11 +436,11 @@ export function BookingForm() {
                   <SelectItem value="none" disabled className="text-muted-foreground text-base">
                     {hasAllSlotPrereqs ? (
                       <span className="block text-left">
-                        <span className="block">No times available for that party size</span>
-                        <span className="block">at this location on this date.</span>
+                        <span className="block">No hay horarios disponibles para ese grupo</span>
+                        <span className="block">en esta ubicación para esta fecha.</span>
                       </span>
                     ) : (
-                      'Select location, date and guests to see available times'
+                      'Seleccioná ubicación, fecha y comensales para ver horarios'
                     )}
                   </SelectItem>
                 )}
@@ -449,18 +449,18 @@ export function BookingForm() {
 
             {/* Special Requests */}
             <Textarea
-              placeholder="Special requests or comments"
+              placeholder="Pedidos especiales o comentarios"
               value={specialRequests}
               onChange={e => setSpecialRequests(e.target.value)}
-              className="w-full bg-[rgb(250,249,246)] border border-gray-200 rounded-lg md:col-span-2 text-foreground min-h-[100px] text-base md:text-lg placeholder:text-muted-foreground"
+              className="w-full bg-feriado-cream border border-gray-200 rounded-lg md:col-span-2 text-foreground min-h-[100px] text-base md:text-lg placeholder:text-muted-foreground"
             />
 
             <Button
               type="submit"
-              className="w-full bg-[#c0392b] hover:bg-[#a93226] text-white rounded-lg h-12 text-base md:text-lg font-semibold md:col-span-2 disabled:opacity-50"
+              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg h-12 text-base md:text-lg font-semibold md:col-span-2 disabled:opacity-50"
               disabled={!locationId || !firstName || !lastName || !phone || !email || !date || !time || !motive || isSubmitting}
             >
-              {isSubmitting ? 'SENDING...' : 'Confirm booking'}
+              {isSubmitting ? 'ENVIANDO...' : 'Confirmar reserva'}
             </Button>
           </div>
         </form>
@@ -468,12 +468,12 @@ export function BookingForm() {
 
       {/* Modal */}
       <Dialog open={showModal} onOpenChange={setShowModal}>
-        <DialogContent className="sm:max-w-md bg-[rgb(250,249,246)] border-gray-200 text-foreground rounded-lg text-base [&>button]:text-foreground">
+        <DialogContent className="sm:max-w-md bg-feriado-cream border-gray-200 text-foreground rounded-lg text-base [&>button]:text-foreground">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2 text-foreground text-xl font-bold">
               {modalType === 'success'
-                ? <><CheckCircle className="h-6 w-6 text-teal-600" />Booking Confirmed</>
-                : <><XCircle className="h-6 w-6 text-red-500" />Error</>
+                ? <><CheckCircle className="h-6 w-6 text-feriado-blue" />Reserva Confirmada</>
+                : <><XCircle className="h-6 w-6 text-feriado-red" />Error</>
               }
             </DialogTitle>
             <DialogDescription className="text-foreground mt-3 text-base md:text-lg">{modalMessage}</DialogDescription>
@@ -481,7 +481,7 @@ export function BookingForm() {
           <div className="flex justify-end mt-6">
             <Button
               onClick={() => setShowModal(false)}
-              className="bg-[#c0392b] hover:bg-[#a93226] text-white px-6 py-2 rounded-lg text-base font-medium"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2 rounded-lg text-base font-medium"
             >
               OK
             </Button>

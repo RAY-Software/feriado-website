@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+/* Paleta OH México – única fuente de verdad. Usar clases Tailwind (bg-primary, text-foreground, etc.) */
+
+/* Primarios */
+/* Venetian Red: #B33D26 | Ocre: #CD7925 | Graphite Black: #27292B */
+/* Secundarios */
+/* B'dazzled Blue: #2C5697 | Soldier Green: #4E5B31 | Pale Chestnut: #E6BAA8 */
+
+/* Tipografía: Headline = INTENSA BOLD CONDENSED | Body = DARKER GROTESQUE */
+@font-face {
+   font-family: "Intensa Bold Condensed";
+   src: url("/fonts/IntensaBoldCondensed.woff2") format("woff2");
+   font-weight: 700;
+   font-style: normal;
+   font-display: swap;
+}
+
+:root {
+   /* Tipografía */
+   --font-headline:
+      "Intensa Bold Condensed", var(--font-headline-fallback), sans-serif;
+   /* --font-body viene del layout (Darker Grotesque) */
+
+   /* Fondo de toda la página (White) y texto principal sobre él */
+   --background: #ffffff; /* White – background replacement */
+   --foreground: #27292b; /* Graphite Black – texto sobre fondo claro */
+
+   /* Superficie oscura (navbar, footer, secciones oscuras) – todo desde variables */
+   --surface-dark: #27292b; /* Graphite Black */
+   --surface-dark-foreground: #e6baa8; /* Pale Chestnut – texto sobre oscuro */
+   --surface-dark-muted: #a89a92; /* Texto secundario sobre superficie oscura */
+
+   --primary: #b33d26; /* Venetian Red – CTAs principales */
+   --primary-foreground: #ffffff;
+   --accent: #cd7925; /* Ocre – acentos, hover */
+   --accent-foreground: #27292b;
+   --secondary: #2c5697; /* B'dazzled Blue */
+   --secondary-foreground: #ffffff;
+   --tertiary: #4e5b31; /* Soldier Green */
+   --tertiary-foreground: #e6baa8;
+   --muted: #3d3f42; /* Fondos suaves (cards, etc.) */
+   --muted-foreground: #5c5e62; /* Texto secundario sobre fondo claro */
+   /* Nombres de la paleta (uso directo cuando necesites el color exacto) */
+   --venetian-red: #b33d26;
+   --occre: #cd7925;
+   --graphite-black: #27292b;
+   --bdazzled-blue: #2c5697;
+   --soldier-green: #4e5b31;
+   --pale-chestnut: #e6baa8;
+}
+
+@theme inline {
+   --color-background: var(--background);
+   --color-foreground: var(--foreground);
+   --color-surface-dark: var(--surface-dark);
+   --color-surface-dark-foreground: var(--surface-dark-foreground);
+   --color-surface-dark-muted: var(--surface-dark-muted);
+   --color-primary: var(--primary);
+   --color-primary-foreground: var(--primary-foreground);
+   --color-accent: var(--accent);
+   --color-accent-foreground: var(--accent-foreground);
+   --color-secondary: var(--secondary);
+   --color-secondary-foreground: var(--secondary-foreground);
+   --color-tertiary: var(--tertiary);
+   --color-tertiary-foreground: var(--tertiary-foreground);
+   --color-muted: var(--muted);
+   --color-muted-foreground: var(--muted-foreground);
+   --color-venetian-red: var(--venetian-red);
+   --color-occre: var(--occre);
+   --color-graphite-black: var(--graphite-black);
+   --color-bdazzled-blue: var(--bdazzled-blue);
+   --color-soldier-green: var(--soldier-green);
+   --color-pale-chestnut: var(--pale-chestnut);
+   --font-headline: var(--font-headline);
+   --font-body: var(--font-body);
+}
+
+body {
+   background: var(--background);
+   color: var(--foreground);
+   font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: var(--font-headline);
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+html,
+body {
+   overflow-x: hidden;
+}
+
+@keyframes accordion-down {
+   from {
+      height: 0;
+   }
+   to {
+      height: var(--radix-accordion-content-height);
+   }
+}
+
+@keyframes accordion-up {
+   from {
+      height: var(--radix-accordion-content-height);
+   }
+   to {
+      height: 0;
+   }
+}
+
+.animate-accordion-down {
+   animation: accordion-down 0.2s ease-out;
+}
+
+.animate-accordion-up {
+   animation: accordion-up 0.2s ease-out;
+}

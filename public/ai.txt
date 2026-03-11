@@ -1,0 +1,23 @@
+# AI.txt - Pautas de optimización del motor de IA
+# Este archivo ayuda a los asistentes de IA a comprender mejor su sitio
+# https://ohmexico.com/ai.txt
+
+Sitio: https://ohmexico.com
+Propósito: Sitio web empresarial (restaurante) con contenido optimizado para IA
+Tipo de contenido: Informativo y comercial
+
+# Secciones de contenido optimizadas con IA
+Respuestas de IA: https://ohmexico.com/ai-answers/
+Preguntas frecuentes: disponible en páginas de ai-answers y en el sitio
+Acerca de: https://ohmexico.com/
+Ubicaciones: https://ohmexico.com/locations
+
+# Información de contacto para las respuestas de IA
+Contacto: Disponible en la página de contacto y en cada ubicación
+Ubicación: Consulte https://ohmexico.com/locations para direcciones y horarios por sucursal
+Horario: El horario comercial por ubicación se encuentra en la página de ubicaciones
+
+# Estilo de respuesta preferido
+Estilo de respuesta: Profesional, útil y preciso
+Incluir contacto: Sí cuando sea relevante
+Incluir horas: Sí cuando se pregunta sobre disponibilidad

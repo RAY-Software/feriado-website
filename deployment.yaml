@@ -1,0 +1,74 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ohmexico-frontend
+  namespace: ohmexico
+  labels:
+    app: ohmexico-frontend
+spec:
+  replicas: 1 # Or your desired number of replicas
+  selector:
+    matchLabels:
+      app: ohmexico-frontend
+  strategy: # Add a strategy for rolling updates
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0 # Max number of pods that can be unavailable during the update
+      maxSurge: 1
+
+  template:
+    metadata:
+      labels:
+        app: ohmexico-frontend
+    spec:
+      containers:
+      - name: ohmexico-container
+        image: "<IMAGE_FRONTEND>"
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000 # Next.js default port
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 15
+          periodSeconds: 10
+          timeoutSeconds: 3
+          failureThreshold: 3
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 30
+          periodSeconds: 20
+          timeoutSeconds: 3
+          failureThreshold: 3
+        env:
+        - name: TZ
+          value: "America/Buenos_Aires"
+        - name: NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
+          value: "<NEXT_PUBLIC_GOOGLE_MAPS_API_KEY>"
+        - name: NEXT_PUBLIC_GA_ID
+          value: "<NEXT_PUBLIC_GA_ID>"
+        - name: NEXT_PUBLIC_META_PIXEL_ID
+          value: "<NEXT_PUBLIC_META_PIXEL_ID>"
+        - name: NEXT_PUBLIC_RAYAPP_COMPANY_ID
+          value: "<NEXT_PUBLIC_RAYAPP_COMPANY_ID>"
+        - name: NEXT_PUBLIC_SITE_URL
+          value: "<NEXT_PUBLIC_SITE_URL>"
+        - name: RAYAPP_API_BASE_URL
+          value: "<RAYAPP_API_BASE_URL>"
+        - name: RAYAPP_COMPANY_ID
+          value: "<RAYAPP_COMPANY_ID>"
+        - name: RAYAPP_COMPANY_NAME
+          value: "<RAYAPP_COMPANY_NAME>"
+        - name: N8N_WEBHOOK_URL
+          value: "<N8N_WEBHOOK_URL>"
+        # Add resource requests and limits (good practice)
+        resources:
+          requests:
+            cpu: "10m"
+            memory: "150Mi"
+          limits:
+            cpu: "50m"
+            memory: "512Mi"

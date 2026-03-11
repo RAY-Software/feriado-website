@@ -1,0 +1,42 @@
+# Robots.txt for OH México
+# https://ohmexico.com/robots.txt
+# Covers all public sections of the site.
+
+User-agent: *
+Allow: /
+
+# Main pages
+Allow: /
+Allow: /locations
+Allow: /locations/
+Allow: /menu
+Allow: /menu/
+Allow: /accessibility-statement
+
+# Events
+Allow: /events
+Allow: /events/
+
+# AI Answers (AI-optimized content)
+Allow: /ai-answers/
+Allow: /ai-answers/reservas-oh-mexico
+Allow: /ai-answers/que-es-oh-mexico
+Allow: /ai-answers/ubicaciones-oh-mexico
+Allow: /ai-answers/pet-friendly
+Allow: /ai-answers/opciones-dieteticas
+Allow: /ai-answers/menu-oh-mexico
+
+# Block internal routes with no SEO value
+Disallow: /api/
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /privado/
+Disallow: /buscar/
+
+# Allow assets
+Allow: /*.js$
+Allow: /*.css$
+Allow: /_next/
+
+# Sitemap (includes all site URLs)
+Sitemap: https://ohmexico.com/sitemap.xml

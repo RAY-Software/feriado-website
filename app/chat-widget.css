@@ -1,0 +1,143 @@
+/* OH México Chat Widget Styles */
+
+/* Typing indicator */
+.oh-typing-indicator {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.oh-typing-indicator span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #B33D26 0%, #CD7925 100%);
+  animation: oh-typing-bounce 1.6s infinite ease-in-out;
+  box-shadow: 0 2px 4px rgba(179, 61, 38, 0.3);
+}
+
+.oh-typing-indicator span:nth-child(1) { animation-delay: 0s; }
+.oh-typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+.oh-typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes oh-typing-bounce {
+  0%, 60%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.6;
+  }
+  30% {
+    transform: translateY(-8px) scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* Input placeholder */
+.oh-chat-panel input::placeholder {
+  color: rgba(230, 186, 168, 0.4);
+  font-style: italic;
+}
+
+/* Focus ring */
+.oh-chat-panel input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(179, 61, 38, 0.25);
+}
+
+/* Smooth scroll */
+.oh-chat-panel #oh-chatlog {
+  scroll-behavior: smooth;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .oh-chat-bubble {
+    right: 16px !important;
+    bottom: 16px !important;
+    width: 56px !important;
+    height: 56px !important;
+  }
+
+  .oh-chat-bubble img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .oh-chat-panel {
+    right: 16px !important;
+    bottom: 84px !important;
+    width: calc(100vw - 32px) !important;
+    height: calc(100vh - 140px) !important;
+    max-height: 600px;
+  }
+}
+
+/* Speech bubble */
+.oh-speech-bubble {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.oh-speech-bubble:hover {
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.4), 0 8px 16px rgba(179,61,38,0.2) !important;
+}
+
+.oh-speech-bubble:active {
+  transform: translateY(0) scale(1) !important;
+}
+
+@media (max-width: 768px) {
+  .oh-speech-bubble {
+    right: 84px !important;
+    bottom: 36px !important;
+    max-width: 200px !important;
+    font-size: 13px !important;
+    padding: 10px 14px !important;
+  }
+}
+
+/* Accessibility */
+.oh-chat-bubble:focus {
+  outline: 2px solid #CD7925;
+  outline-offset: 2px;
+}
+
+.oh-chat-panel button:focus {
+  outline: 2px solid #B33D26;
+  outline-offset: 2px;
+}
+
+/* RAY badge */
+.oh-ray-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: rgba(230, 186, 168, 0.5);
+  text-decoration: none;
+  padding: 2px 6px;
+  border: 1px solid rgba(179,61,38,0.25);
+  border-radius: 8px;
+  font-family: "Darker Grotesque", system-ui, sans-serif;
+  transition: background 0.2s, color 0.2s;
+}
+
+.oh-ray-badge:hover {
+  background: rgba(179,61,38,0.15);
+  color: #E6BAA8;
+}
+
+.oh-ray-badge img {
+  height: 13px;
+}
+
+@media (max-width: 768px) {
+  .oh-ray-badge {
+    font-size: 10px;
+  }
+  .oh-ray-badge img {
+    height: 11px;
+  }
+}

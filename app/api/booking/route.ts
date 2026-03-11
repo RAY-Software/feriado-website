@@ -63,7 +63,7 @@ export async function POST(req: NextRequest) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          source: 'ohmexico-api',
+          source: 'feriado-api',
           requestId,
           booking: validatedData,
           rayappResponse: rayappData,

@@ -7,7 +7,7 @@
   function init() {
     let chatHasBeenOpened = false;
 
-    // Chat bubble con logo de OH México
+    // Chat bubble con logo de Feriado Cantina
     const bubble = document.createElement('div');
     bubble.className = 'oh-chat-bubble';
     bubble.style.cssText = 'position:fixed;right:20px;bottom:20px;width:64px;height:64px;border-radius:50%;background:#B33D26;box-shadow:0 12px 32px rgba(179,61,38,0.4),0 4px 12px rgba(0,0,0,0.2);display:flex;align-items:center;justify-content:center;cursor:pointer;overflow:hidden;z-index:2147483647;transition:all 0.3s cubic-bezier(0.4,0,0.2,1);transform:scale(1);border:2px solid rgba(255,255,255,0.2)';
@@ -24,8 +24,8 @@
     });
 
     const bubbleImg = document.createElement('img');
-    bubbleImg.src = '/image/OH-Mexico.png';
-    bubbleImg.alt = 'OH México Chat';
+    bubbleImg.src = '/image/icon-footer.png';
+    bubbleImg.alt = 'Feriado Cantina Chat';
     bubbleImg.style.cssText = 'width:34px;height:34px;object-fit:contain';
     bubble.appendChild(bubbleImg);
     document.body.appendChild(bubble);
@@ -34,7 +34,7 @@
     const speechBubble = document.createElement('div');
     speechBubble.className = 'oh-speech-bubble';
     speechBubble.style.cssText = 'position:fixed;right:100px;bottom:40px;background:#E6BAA8;color:#27292B;padding:12px 16px;border-radius:16px;border-bottom-right-radius:4px;box-shadow:0 8px 24px rgba(0,0,0,0.4),0 4px 12px rgba(0,0,0,0.2);font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:14px;font-weight:600;max-width:250px;z-index:2147483646;opacity:0;transform:translateY(10px) scale(0.9);transition:all 0.4s cubic-bezier(0.4,0,0.2,1);pointer-events:none;border:1px solid rgba(179,61,38,0.2)';
-    speechBubble.textContent = "Hi! I'm Sara, how can I help you?";
+    speechBubble.textContent = "¡Hola! Soy Sara, ¿en qué puedo ayudarte?";
 
     const arrow = document.createElement('div');
     arrow.style.cssText = 'position:absolute;right:-8px;bottom:20px;width:0;height:0;border-left:8px solid #E6BAA8;border-top:8px solid transparent;border-bottom:8px solid transparent;filter:drop-shadow(2px 0px 2px rgba(0,0,0,0.2))';
@@ -87,11 +87,11 @@
     header.innerHTML = `
       <div style="display:flex;align-items:center;gap:12px">
         <div style="width:36px;height:36px;background:#B33D26;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(179,61,38,0.4)">
-          <img src="/image/OH-Mexico.png" alt="OH México" style="width:20px;height:20px;object-fit:contain">
+          <img src="/image/icon-footer.png" alt="Feriado Cantina" style="width:20px;height:20px;object-fit:contain">
         </div>
         <div>
           <div style="color:#27292B;font-size:16px;font-weight:700;line-height:1.2">Sara</div>
-          <div style="color:#CD7925;font-size:12px;font-weight:500">OH México</div>
+          <div style="color:#CD7925;font-size:12px;font-weight:500">Feriado Cantina</div>
         </div>
       </div>
       <div style="display:flex;align-items:center">
@@ -116,7 +116,7 @@
 
     // Mensaje de bienvenida
     setTimeout(() => {
-      addMsg("Hi! I'm Sara 👋 How can I help you? Ask me about our menu, locations, hours, reservations or anything about OH México.", 'bot');
+      addMsg("¡Hola! Soy Sara 👋 ¿En qué puedo ayudarte? Preguntame sobre nuestro menú, ubicación, horarios, reservas o cualquier cosa sobre Feriado Cantina.", 'bot');
     }, 500);
 
     panel.appendChild(chatlogDiv);
@@ -129,7 +129,7 @@
       <input
         id="oh-faqinput"
         autocomplete="off"
-        placeholder="Ask me something about OH México..."
+        placeholder="Preguntame sobre Feriado Cantina..."
         style="flex:1;padding:14px 16px;border:1px solid rgba(179,61,38,0.25);border-radius:12px;font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:14px;background:rgb(250,249,246);color:#27292B;transition:all 0.2s;outline:none"
         onfocus="this.style.border='1px solid #B33D26';this.style.boxShadow='0 0 0 2px rgba(179,61,38,0.2)'"
         onblur="this.style.border='1px solid rgba(179,61,38,0.25)';this.style.boxShadow='none'"
@@ -173,7 +173,7 @@
         const avatar = document.createElement('div');
         avatar.style.cssText = 'width:26px;height:26px;background:#B33D26;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-right:10px;flex-shrink:0;margin-top:2px;box-shadow:0 2px 6px rgba(179,61,38,0.3)';
         const avatarImg = document.createElement('img');
-        avatarImg.src = '/image/OH-Mexico.png';
+        avatarImg.src = '/image/icon-footer.png';
         avatarImg.alt = 'Sara';
         avatarImg.style.cssText = 'width:14px;height:14px;object-fit:contain';
         avatar.appendChild(avatarImg);

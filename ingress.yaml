@@ -1,16 +1,16 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ohmexico-preprod-ingress
-  namespace: ohmexico
+  name: feriado-preprod-ingress
+  namespace: feriado
   annotations:
     kubernetes.io/ingress.class: "gce"
     networking.gke.io/v1beta1.FrontendConfig: "http-to-https-redirect"
-    networking.gke.io/managed-certificates: "ohmexico-preprod-managed-cert" # Define the ManagedCertificate name
+    networking.gke.io/managed-certificates: "feriado-preprod-managed-cert" # Define the ManagedCertificate name
 spec:
   rules:
-  # Regla para el host de preproducción de Oh México
-  - host: ohmexico.preprod.rayapp.io
+  # Regla para el host de preproducción de Feriado Cantina
+  - host: feriado.preprod.rayapp.io
     http:
       paths:
       # Ruta por defecto para todo el tráfico en este host (frontend)
@@ -18,7 +18,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: ohmexico-service
+            name: feriado-service
             port:
               number: 80 # Asegúrate de que sea el puerto correcto de tu servicio frontend para el Ingress
 ---
@@ -26,11 +26,11 @@ apiVersion: networking.gke.io/v1
 kind: ManagedCertificate
 metadata:
   annotations:
-  name: ohmexico-preprod-managed-cert
-  namespace: ohmexico
+  name: feriado-preprod-managed-cert
+  namespace: feriado
 spec:
   domains:
-  - ohmexico.preprod.rayapp.io
+  - feriado.preprod.rayapp.io
 ---
 apiVersion: networking.gke.io/v1beta1
 kind: FrontendConfig

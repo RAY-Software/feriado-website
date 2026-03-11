@@ -1,11 +1,11 @@
-# OH México Website
+# Feriado Cantina Website
 
-Sitio web de OH México desarrollado con Next.js.
+Sitio web de Feriado Cantina (by Feriado Vermú) desarrollado con Next.js.
 
 ## Estructura del Proyecto
 
 ```
-ohmexico-website/
+feriado-cantina-website/
 ├── app/                          # Next.js App Router
 │   ├── layout.tsx                # Layout raíz con Navbar y Footer
 │   ├── page.tsx                  # Página principal
@@ -25,15 +25,15 @@ ohmexico-website/
 │   ├── HeroSection.tsx           # Carrusel hero
 │   ├── BookingForm.tsx           # Formulario de reservas (conectado a Rayapp API)
 │   ├── FeaturedProducts.tsx      # Productos destacados
-│   ├── FeaturedBeers.tsx         # Cervezas destacadas
-│   ├── LocationsSection.tsx      # Sección de locales
+│   ├── FeaturedBeers.tsx         # Bebidas destacadas
+│   ├── LocationsSection.tsx      # Sección de ubicación
 │   ├── CustomerReviews.tsx       # Reseñas de clientes
 │   └── ChatWidget.tsx            # Widget de chat
 ├── lib/                          # Utilidades
 │   ├── utils.ts                  # Tailwind utilities
 │   ├── analytics.ts              # Google Analytics
 │   ├── rayapp-config.ts          # Configuración API Rayapp
-│   └── location-data.ts          # Datos de locales
+│   └── location-data.ts          # Datos de ubicación
 ├── public/                       # Assets estáticos
 │   ├── chat-widget.js            # Script del chat widget
 │   ├── chat-widget.css           # Estilos del chat widget
@@ -41,21 +41,19 @@ ohmexico-website/
 └── package.json                  # Dependencias
 ```
 
-## Locales
+## Ubicación
 
-| Local           | Dirección                                  | Teléfono         |
-| --------------- | ------------------------------------------ | ---------------- |
-| Española Way    | 1440 Washington Ave, Miami Beach, FL 33139 | (305) 532-0490   |
-| Ocean Drive     | 804 Ocean Dr, Miami Beach, FL 33139        | (786) 883-0709   |
-| Lincoln Road    | 836 Lincoln Rd, Miami Beach, FL 33139      | (305) 535-7400   |
+| Local            | Dirección                                          |
+| ---------------- | -------------------------------------------------- |
+| Feriado Cantina  | Av. Cabildo 3702, Coghlan, Buenos Aires, Argentina |
 
 ## Funcionalidades
 
 - Hero section con carrusel de imágenes
 - Formulario de reservas conectado a la API de Rayapp
-- Productos y cervezas destacadas
+- Productos y bebidas destacadas
 - Reseñas de clientes
-- Sección de locales con Google Maps
+- Sección de ubicación con Google Maps
 - FAQ accordion
 - Chat widget (conectado a n8n)
 - SEO con structured data (JSON-LD) y sitemap
@@ -71,7 +69,7 @@ ohmexico-website/
 ### 1. Clonar y entrar al proyecto
 
 ```bash
-cd ohmexico-website
+cd feriado-cantina-website
 ```
 
 ### 2. Usar la versión correcta de Node
@@ -98,7 +96,7 @@ cp .env.example .env
 
 | Variable | Qué es | Ejemplo |
 | --- | --- | --- |
-| `RAYAPP_API_BASE_URL` | URL del backend de Rayapp (reservas, locales, disponibilidad). Sin esto la app no levanta. | `https://api-oo.preprod.rayapp.io` |
+| `RAYAPP_API_BASE_URL` | URL del backend de Rayapp (reservas, locales, disponibilidad). Sin esto la app no levanta. | `https://api.rayapp.io` |
 | `RAYAPP_COMPANY_ID` | ID numérico de la empresa en Rayapp | `1` |
 | `RAYAPP_COMPANY_NAME` | Nombre de la empresa en Rayapp | `temple` |
 
@@ -106,7 +104,7 @@ cp .env.example .env
 
 | Variable | Qué es |
 | --- | --- |
-| `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` | API key de Google Maps para el mapa de locales |
+| `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` | API key de Google Maps para el mapa de ubicación |
 | `NEXT_PUBLIC_GA_ID` | Measurement ID de Google Analytics (GA4) |
 | `ZAPIER_BOOKING_WEBHOOK_URL` | Webhook de Zapier para notificaciones de reservas |
 | `N8N_WEBHOOK_URL` | Webhook de n8n para el chat widget |

@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ohmexico-frontend
-  namespace: ohmexico
+  name: feriado-frontend
+  namespace: feriado
   labels:
-    app: ohmexico-frontend
+    app: feriado-frontend
 spec:
   replicas: 1 # Or your desired number of replicas
   selector:
     matchLabels:
-      app: ohmexico-frontend
+      app: feriado-frontend
   strategy: # Add a strategy for rolling updates
     type: RollingUpdate
     rollingUpdate:
@@ -19,10 +19,10 @@ spec:
   template:
     metadata:
       labels:
-        app: ohmexico-frontend
+        app: feriado-frontend
     spec:
       containers:
-      - name: ohmexico-container
+      - name: feriado-container
         image: "<IMAGE_FRONTEND>"
         imagePullPolicy: Always
         ports:

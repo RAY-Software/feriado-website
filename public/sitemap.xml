@@ -5,465 +5,165 @@
 
   <!-- Página principal -->
   <url>
-    <loc>https://ohmexico.com/</loc>
+    <loc>https://feriadovermu.com/</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Menú principal y categorías por sucursal -->
+  <!-- Menú principal y categorías -->
   <url>
-    <loc>https://ohmexico.com/menu</loc>
+    <loc>https://feriadovermu.com/menu</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/menu/espanola-way/tortilla-soup</loc>
+    <loc>https://feriadovermu.com/menu/feriado-cantina/tortilla-soup</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/menu/espanola-way/guacamole</loc>
+    <loc>https://feriadovermu.com/menu/feriado-cantina/guacamole</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/menu/espanola-way/appetizers</loc>
+    <loc>https://feriadovermu.com/menu/feriado-cantina/appetizers</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/menu/espanola-way/salads</loc>
+    <loc>https://feriadovermu.com/menu/feriado-cantina/salads</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/menu/espanola-way/seafood</loc>
+    <loc>https://feriadovermu.com/menu/feriado-cantina/seafood</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/menu/espanola-way/tostadas</loc>
+    <loc>https://feriadovermu.com/menu/feriado-cantina/tostadas</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/menu/espanola-way/tacos</loc>
+    <loc>https://feriadovermu.com/menu/feriado-cantina/tacos</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/menu/espanola-way/specialties</loc>
+    <loc>https://feriadovermu.com/menu/feriado-cantina/specialties</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/menu/espanola-way/from-the-border</loc>
+    <loc>https://feriadovermu.com/menu/feriado-cantina/from-the-border</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/menu/espanola-way/salsas</loc>
+    <loc>https://feriadovermu.com/menu/feriado-cantina/salsas</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/menu/espanola-way/sides</loc>
+    <loc>https://feriadovermu.com/menu/feriado-cantina/sides</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/menu/espanola-way/desserts</loc>
+    <loc>https://feriadovermu.com/menu/feriado-cantina/desserts</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/menu/espanola-way/coffee-tea</loc>
+    <loc>https://feriadovermu.com/menu/feriado-cantina/coffee-tea</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/menu/espanola-way/margaritas</loc>
+    <loc>https://feriadovermu.com/menu/feriado-cantina/margaritas</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/menu/espanola-way/micheladas</loc>
+    <loc>https://feriadovermu.com/menu/feriado-cantina/micheladas</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/menu/espanola-way/mocktails</loc>
+    <loc>https://feriadovermu.com/menu/feriado-cantina/mocktails</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/menu/espanola-way/tequila-pops</loc>
+    <loc>https://feriadovermu.com/menu/feriado-cantina/tequila-pops</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/menu/espanola-way/cantaritos</loc>
+    <loc>https://feriadovermu.com/menu/feriado-cantina/cantaritos</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/menu/espanola-way/beer</loc>
+    <loc>https://feriadovermu.com/menu/feriado-cantina/beer</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/menu/espanola-way/mezcal</loc>
+    <loc>https://feriadovermu.com/menu/feriado-cantina/mezcal</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/menu/espanola-way/sodas</loc>
+    <loc>https://feriadovermu.com/menu/feriado-cantina/sodas</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/menu/espanola-way/tequila-blanco</loc>
+    <loc>https://feriadovermu.com/menu/feriado-cantina/tequila-blanco</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/menu/espanola-way/tequila-reposado</loc>
+    <loc>https://feriadovermu.com/menu/feriado-cantina/tequila-reposado</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/menu/espanola-way/tequila-anejo</loc>
+    <loc>https://feriadovermu.com/menu/feriado-cantina/tequila-anejo</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/menu/espanola-way/happy-hour</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/lincoln-road/tortilla-soup</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/lincoln-road/guacamole</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/lincoln-road/appetizers</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/lincoln-road/salads</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/lincoln-road/seafood</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/lincoln-road/tostadas</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/lincoln-road/tacos</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/lincoln-road/specialties</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/lincoln-road/from-the-border</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/lincoln-road/salsas</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/lincoln-road/sides</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/lincoln-road/desserts</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/lincoln-road/coffee-tea</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/lincoln-road/margaritas</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/lincoln-road/micheladas</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/lincoln-road/mocktails</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/lincoln-road/tequila-pops</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/lincoln-road/cantaritos</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/lincoln-road/beer</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/lincoln-road/mezcal</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/lincoln-road/sodas</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/lincoln-road/tequila-blanco</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/lincoln-road/tequila-reposado</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/lincoln-road/tequila-anejo</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/lincoln-road/happy-hour</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/ocean-drive/tortilla-soup</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/ocean-drive/guacamole</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/ocean-drive/appetizers</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/ocean-drive/salads</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/ocean-drive/seafood</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/ocean-drive/tostadas</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/ocean-drive/tacos</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/ocean-drive/specialties</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/ocean-drive/from-the-border</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/ocean-drive/salsas</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/ocean-drive/sides</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/ocean-drive/desserts</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/ocean-drive/coffee-tea</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/ocean-drive/margaritas</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/ocean-drive/micheladas</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/ocean-drive/mocktails</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/ocean-drive/tequila-pops</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/ocean-drive/cantaritos</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/ocean-drive/beer</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/ocean-drive/mezcal</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/ocean-drive/sodas</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/ocean-drive/tequila-blanco</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/ocean-drive/tequila-reposado</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/ocean-drive/tequila-anejo</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ohmexico.com/menu/ocean-drive/happy-hour</loc>
+    <loc>https://feriadovermu.com/menu/feriado-cantina/happy-hour</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -471,25 +171,25 @@
 
   <!-- Eventos: página principal y eventos individuales -->
   <url>
-    <loc>https://ohmexico.com/events</loc>
+    <loc>https://feriadovermu.com/events</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/events/happy-hour</loc>
+    <loc>https://feriadovermu.com/events/happy-hour</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/events/lunch-special</loc>
+    <loc>https://feriadovermu.com/events/lunch-special</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/events/taco-tuesday</loc>
+    <loc>https://feriadovermu.com/events/taco-tuesday</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -497,29 +197,15 @@
 
   <!-- Página principal de ubicaciones -->
   <url>
-    <loc>https://ohmexico.com/locations</loc>
+    <loc>https://feriadovermu.com/ubicaciones</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Ubicaciones individuales - Miami Beach -->
+  <!-- Ubicación - Feriado Cantina Buenos Aires -->
   <url>
-    <loc>https://ohmexico.com/locations/ohmexico-espanola-way</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://ohmexico.com/locations/ohmexico-lincoln</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://ohmexico.com/locations/ohmexico-ocean</loc>
+    <loc>https://feriadovermu.com/ubicaciones/feriado-cantina</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -527,43 +213,43 @@
 
   <!-- AI-optimized Q&A content -->
   <url>
-    <loc>https://ohmexico.com/ai-answers/</loc>
+    <loc>https://feriadovermu.com/ai-answers/</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/ai-answers/que-es-oh-mexico</loc>
+    <loc>https://feriadovermu.com/ai-answers/que-es-feriado</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/ai-answers/ubicaciones-oh-mexico</loc>
+    <loc>https://feriadovermu.com/ai-answers/ubicaciones-feriado</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/ai-answers/reservas-oh-mexico</loc>
+    <loc>https://feriadovermu.com/ai-answers/reservas-feriado</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/ai-answers/pet-friendly</loc>
+    <loc>https://feriadovermu.com/ai-answers/pet-friendly</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/ai-answers/menu-oh-mexico</loc>
+    <loc>https://feriadovermu.com/ai-answers/menu-feriado</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://ohmexico.com/ai-answers/opciones-dieteticas</loc>
+    <loc>https://feriadovermu.com/ai-answers/opciones-dieteticas</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -571,7 +257,7 @@
 
   <!-- Legal pages -->
   <url>
-    <loc>https://ohmexico.com/accessibility-statement</loc>
+    <loc>https://feriadovermu.com/accessibility-statement</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

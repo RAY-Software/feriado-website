@@ -4,7 +4,7 @@
 
 ### Project overview
 
-OH México is a Next.js 16 restaurant website (single app, not a monorepo) for a Mexican restaurant chain with three Miami Beach locations. It uses the App Router, React 19, Tailwind CSS v4, and connects to an external Rayapp API for reservations.
+Feriado Cantina is a Next.js 16 restaurant website (single app, not a monorepo) for an Argentine cantina in Buenos Aires (Av. Cabildo 3702, Coghlan). It uses the App Router, React 19, Tailwind CSS v4, and connects to an external Rayapp API for reservations.
 
 ### Prerequisites
 

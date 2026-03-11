@@ -47,7 +47,7 @@ export function EventCard({ event }: EventCardProps) {
 
         <div className="flex items-center justify-between mt-auto pt-2">
           <span className="text-sm font-semibold text-accent group-hover:underline transition-all duration-200">
-            View Event
+            Ver evento
             <span className="ml-1 inline-block transition-transform duration-200 group-hover:translate-x-1">
               <ChevronRight className="w-4 h-4 inline" />
             </span>

@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Is OH México Pet Friendly? — Pets Welcome in Miami Beach",
+  title: "¿Feriado Cantina es pet friendly? — Mascotas bienvenidas en Buenos Aires",
   description:
-    "Yes, OH México is 100% pet friendly. You can bring your pet to any of the 3 locations in Miami Beach.",
-  keywords: "OH México pet friendly, OH México pets, OH México dogs, pet friendly restaurant Miami Beach",
+    "Sí, Feriado Cantina es 100% pet friendly. Podés traer a tu mascota a nuestra cantina en Coghlan, Buenos Aires.",
+  keywords: "Feriado Cantina pet friendly, Feriado Cantina mascotas, Feriado Cantina perros, pet friendly Buenos Aires",
   robots: "index, follow",
   alternates: {
     canonical: `${siteUrl}/ai-answers/pet-friendly`,
@@ -22,10 +22,10 @@ export default function PetFriendlyPage() {
     "@type": "QAPage",
     mainEntity: {
       "@type": "Question",
-      name: "Is OH México pet friendly? Can I bring my pet?",
+      name: "¿Feriado Cantina es pet friendly? ¿Puedo llevar a mi mascota?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, OH México is 100% pet friendly at all 3 locations in Miami Beach. You can bring your dog or cat without any problem. At OH México, pets are part of the family and are welcome to enjoy the restaurant alongside you.",
+        text: "Sí, Feriado Cantina es 100% pet friendly. Podés traer a tu perro o gato sin problema. En Feriado Cantina, las mascotas son parte de la familia y son bienvenidas a disfrutar de la cantina con vos.",
       },
     },
   };
@@ -33,32 +33,32 @@ export default function PetFriendlyPage() {
   const policies = [
     {
       icon: "🐕",
-      title: "Dogs welcome",
-      description: "All dogs are welcome at every OH México location.",
+      title: "Perros bienvenidos",
+      description: "Todos los perros son bienvenidos en Feriado Cantina.",
     },
     {
       icon: "🐱",
-      title: "Cats too",
-      description: "Cats are welcome as well. We know they're part of the family.",
+      title: "Gatos también",
+      description: "Los gatos también son bienvenidos. Sabemos que son parte de la familia.",
     },
     {
       icon: "🍽️",
-      title: "Pet-friendly spaces",
-      description: "Our spaces are designed so you and your pet can be comfortable.",
+      title: "Espacios pet-friendly",
+      description: "Nuestros espacios están pensados para que vos y tu mascota estén cómodos.",
     },
     {
       icon: "💧",
-      title: "Water available",
-      description: "We always have fresh water available for your four-legged companion.",
+      title: "Agua disponible",
+      description: "Siempre tenemos agua fresca disponible para tu compañero de cuatro patas.",
     },
   ];
 
   const tips = [
-    "Bring a leash for safety and the comfort of other guests",
-    "Very anxious pets may cause discomfort to other diners",
-    "Be mindful of shared spaces and fellow guests",
-    "Let us know if your pet needs anything special",
-    "During very busy hours, consider whether your pet will be comfortable",
+    "Traé correa por seguridad y comodidad de los demás comensales",
+    "Mascotas muy ansiosas pueden incomodar a otros comensales",
+    "Sé considerado con los espacios compartidos",
+    "Avisanos si tu mascota necesita algo especial",
+    "En horarios muy concurridos, considerá si tu mascota va a estar cómoda",
   ];
 
   return (
@@ -84,11 +84,11 @@ export default function PetFriendlyPage() {
 
           <div className="mb-12">
             <h1 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-              Is OH México pet friendly?
+              ¿Feriado Cantina es pet friendly?
             </h1>
             <p className="text-xl leading-relaxed text-foreground/80">
-              <strong>Absolutely!</strong> At OH México, dogs and cats are part of the family.
-              Bring your four-legged companion and enjoy the restaurant together.
+              <strong>¡Por supuesto!</strong> En Feriado Cantina, los perros y gatos son parte de la familia.
+              Traé a tu compañero peludo y disfrutá de la cantina juntos.
             </p>
           </div>
 
@@ -96,10 +96,10 @@ export default function PetFriendlyPage() {
           <div className="bg-green-50 border border-green-200 rounded-2xl p-8 mb-12 text-center">
             <div className="text-6xl mb-4">🐾</div>
             <h2 className="text-2xl font-bold mb-3 text-green-700">
-              YES, WE ARE 100% PET FRIENDLY!
+              ¡SÍ, SOMOS 100% PET FRIENDLY!
             </h2>
             <p className="text-lg text-foreground/70">
-              All 3 Miami Beach locations welcome pets with open arms.
+              En Feriado Cantina recibimos a las mascotas con los brazos abiertos.
             </p>
           </div>
 
@@ -117,7 +117,7 @@ export default function PetFriendlyPage() {
           {/* Tips */}
           <div className="bg-white rounded-2xl border border-foreground/10 p-8 mb-12">
             <h2 className="text-xl font-semibold mb-6 text-foreground">
-              💡 Tips for a perfect visit with your pet
+              💡 Tips para una visita perfecta con tu mascota
             </h2>
             <div className="space-y-3">
               {tips.map((tip) => (
@@ -132,25 +132,17 @@ export default function PetFriendlyPage() {
           {/* All locations */}
           <div className="bg-white rounded-2xl border border-foreground/10 p-8 mb-12">
             <h2 className="text-xl font-semibold mb-6 text-foreground">
-              All locations are pet friendly
+              Feriado Cantina es pet friendly
             </h2>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-1 gap-6">
               <div>
-                <h4 className="font-semibold mb-1 text-foreground">Española Way</h4>
-                <p className="text-sm text-foreground/70">1440 Washington Ave, Miami Beach</p>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-1 text-foreground">Lincoln Road</h4>
-                <p className="text-sm text-foreground/70">836 Lincoln Rd, Miami Beach</p>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-1 text-foreground">Ocean Drive</h4>
-                <p className="text-sm text-foreground/70">804 Ocean Dr, Miami Beach</p>
+                <h4 className="font-semibold mb-1 text-foreground">Feriado Cantina</h4>
+                <p className="text-sm text-foreground/70">Av. Cabildo 3702, Coghlan, Buenos Aires</p>
               </div>
             </div>
             <div className="mt-6 p-4 bg-primary/5 rounded-xl text-center">
               <p className="text-foreground/70">
-                <strong>🌟 At whichever OH México you choose, your pet is always welcome.</strong>
+                <strong>🌟 En Feriado Cantina, tu mascota siempre es bienvenida.</strong>
               </p>
             </div>
           </div>
@@ -158,22 +150,22 @@ export default function PetFriendlyPage() {
           {/* CTA */}
           <div className="bg-white rounded-2xl border border-foreground/10 p-8 text-center">
             <h2 className="text-xl font-semibold mb-3 text-foreground">
-              Coming with your pet?
+              ¿Venís con tu mascota?
             </h2>
             <p className="text-foreground/70 mb-6">
-              Book your table and let us know you&apos;re bringing a special companion.
+              Reservá tu mesa y avisanos que venís con un compañero especial.
             </p>
             <a
               href={`${siteUrl}/#reservar-mesa`}
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-medium rounded-xl hover:opacity-90 transition-opacity"
             >
-              Book a table →
+              Reservar mesa →
             </a>
           </div>
 
           <div className="mt-12 pt-8 border-t border-foreground/10">
             <a href="/ai-answers/" className="text-sm text-muted-foreground hover:text-foreground underline">
-              ← Back to AI Answers
+              ← Volver a AI Answers
             </a>
           </div>
         </div>

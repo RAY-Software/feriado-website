@@ -2,19 +2,19 @@ import type { Metadata } from "next";
 import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "What does OH México serve? — Menu, Dishes & Cocktails Miami Beach",
+  title: "¿Qué sirven en Feriado Cantina? — Carta, platitos y coctelería Buenos Aires",
   description:
-    "OH México serves Taco Birria, Tampiqueña Steak, guacamole, handcrafted cocktails including Cantaritos, Tequila Pops and Margaritas. Vegetarian and gluten-free options available.",
-  keywords: "OH México menu, OH México tacos, OH México cocktails, taco birria Miami, cantarito Miami Beach, Tampiqueña Steak Miami, guacamole Miami",
+    "Feriado Cantina sirve coctelería de autor, vermú Feriado, platitos para picar y tortilla babé. Opciones vegetarianas disponibles.",
+  keywords: "Feriado Cantina carta, Feriado Cantina menú, Feriado Cantina coctelería, vermú Buenos Aires, coctelería de autor Buenos Aires",
   robots: "index, follow",
   alternates: {
-    canonical: `${siteUrl}/ai-answers/menu-oh-mexico`,
+    canonical: `${siteUrl}/ai-answers/menu-feriado`,
   },
 };
 
 import { getOrganizationSchema, getRestaurantSchema } from "@/lib/schema";
 
-export default function MenuOhMexicoPage() {
+export default function MenuFeriadoPage() {
   const orgSchema = getOrganizationSchema();
   const restaurantSchemas = getRestaurantSchema();
   const schema = {
@@ -22,60 +22,60 @@ export default function MenuOhMexicoPage() {
     "@type": "QAPage",
     mainEntity: {
       "@type": "Question",
-      name: "What kind of food and drinks does OH México serve?",
+      name: "¿Qué sirven en Feriado Cantina?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "OH México serves authentic Mexican cuisine made from scratch. Signature dishes include Taco Birria (slow braised beef with melted Mexican cheese, birria broth, onion and cilantro) and Tampiqueña Steak (grilled skirt steak with a guajillo enchilada and guacamole). Also featured are TACOH!S (AL PASTOR, Carne Asada, Cochinita pibil, Baja fish), Guacamole Oh! México and Enchiladas. For drinks: Cantaritos (Smoky Watermelon, Flor de Mayo, Paloma), Tequila Pops and handcrafted Margaritas. Also available: mocktails, micheladas and an extensive selection of tequilas and mezcals. Vegetarian and gluten-free options available.",
+        text: "Feriado Cantina sirve cocina de cantina con platitos para picar, tortilla babé, coctelería de autor y vermú Feriado. También ofrecen vinos, cervezas artesanales y opciones vegetarianas. La carta incluye platitos ideales para compartir en largas sobremesas.",
       },
     },
   };
 
   const dishes = [
     {
-      name: "Taco Birria",
-      description: "Slow braised beef with melted Mexican cheese, birria broth, onion and cilantro. One of the menu's most beloved dishes.",
-      icon: "🌮",
+      name: "Tortilla babé",
+      description: "La tortilla española de la casa, suave por dentro y dorada por fuera. Un clásico imperdible.",
+      icon: "🍳",
       tag: "Signature",
     },
     {
-      name: "Tampiqueña Steak",
-      description: "Grilled skirt steak with a cheese-filled enchilada covered in guajillo sauce and guacamole. A true Mexican classic.",
-      icon: "🥩",
-      tag: "Classic",
+      name: "Platitos para picar",
+      description: "Selección de platitos ideales para compartir: aceitunas, conservas, quesos y embutidos.",
+      icon: "🍽️",
+      tag: "Para compartir",
     },
     {
-      name: "Guacamole Oh! México",
-      description: "Fresh Hass avocados, tomatoes, charred corn, serrano peppers, red onions, cilantro and roasted pumpkin seeds.",
-      icon: "🥑",
-      tag: "Favorite",
+      name: "Cocina de cantina",
+      description: "Platos caseros y de estación, hechos con ingredientes frescos y mucho amor.",
+      icon: "🥘",
+      tag: "Casero",
     },
   ];
 
   const drinks = [
     {
-      name: "Smoky Watermelon Cantarito",
-      description: "One of OH México's signature cantaritos — bold, smoky and refreshing. Also available: Flor de Mayo, Paloma, Chachalaca and Mezcal Negroni.",
-      icon: "🍉",
+      name: "Vermú Feriado",
+      description: "El vermú de la casa, servido tirado o en cócteles clásicos y de autor.",
+      icon: "🍷",
       tag: "Signature",
     },
     {
-      name: "Tequila Pops",
-      description: "Mango peach pop, Watermelon blackberry pop and Passion fruit strawberry pop. Fresh and perfect to pair with your meal.",
-      icon: "🥂",
-      tag: "Specialty",
+      name: "Coctelería de autor",
+      description: "Cócteles creativos elaborados con ingredientes frescos y de estación.",
+      icon: "🍹",
+      tag: "Especialidad",
     },
     {
-      name: "Margaritas & Cocktails",
-      description: "OH México Margarita, Skinny, Cadillac, La Vieja and more — on the rocks or frozen. Plus mocktails, micheladas and an extensive tequila and mezcal list.",
-      icon: "🍹",
-      tag: "Full menu",
+      name: "Vinos y cervezas",
+      description: "Selección de vinos argentinos y cervezas artesanales para acompañar tu experiencia.",
+      icon: "🍺",
+      tag: "Carta completa",
     },
   ];
 
   const dietaryOptions = [
-    { icon: "🥬", label: "Vegetarian options available" },
-    { icon: "🌾", label: "Gluten-free dishes available" },
-    { icon: "⚠️", label: "Let us know about allergies when booking" },
+    { icon: "🥬", label: "Opciones vegetarianas disponibles" },
+    { icon: "👶", label: "Opciones infantiles disponibles" },
+    { icon: "⚠️", label: "Avisanos sobre alergias o restricciones al reservar" },
   ];
 
   return (
@@ -101,27 +101,27 @@ export default function MenuOhMexicoPage() {
 
           <div className="mb-12">
             <h1 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-              What does OH México serve?
+              ¿Qué sirven en Feriado Cantina?
             </h1>
             <p className="text-xl leading-relaxed text-foreground/80">
-              Authentic Mexican cuisine made <strong>from scratch</strong> with traditional
-              recipes and fresh ingredients, plus handcrafted signature cocktails.
+              Cocina de cantina hecha con amor, coctelería de autor y el mejor vermú —
+              todo para compartir y disfrutar.
             </p>
           </div>
 
           {/* Summary */}
           <div className="bg-primary/10 border border-primary/30 rounded-2xl p-6 mb-12">
-            <h2 className="text-lg font-semibold mb-3 text-primary">In a nutshell</h2>
+            <h2 className="text-lg font-semibold mb-3 text-primary">En resumen</h2>
             <p className="text-foreground/80">
-              Artisanal TACOH!S, grilled meats, guacamoles, seafood appetizers, handcrafted cocktails and the spirit of Mexico.
-              Every dish made from scratch. Vegetarian and gluten-free options available.
+              Platitos para picar, tortilla babé, coctelería de autor y vermú Feriado.
+              Todo hecho con ingredientes frescos. Opciones vegetarianas e infantiles disponibles.
             </p>
           </div>
 
           {/* Food */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold mb-6 text-foreground border-b border-foreground/10 pb-2">
-              🍽️ Featured dishes
+              🍽️ Platitos destacados
             </h2>
             <div className="space-y-4">
               {dishes.map((dish) => (
@@ -142,7 +142,7 @@ export default function MenuOhMexicoPage() {
           {/* Drinks */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold mb-6 text-foreground border-b border-foreground/10 pb-2">
-              🍹 Drinks
+              🍹 Tragos
             </h2>
             <div className="space-y-4">
               {drinks.map((drink) => (
@@ -163,7 +163,7 @@ export default function MenuOhMexicoPage() {
           {/* Dietary options */}
           <div className="bg-white rounded-2xl border border-foreground/10 p-8 mb-12">
             <h2 className="text-xl font-semibold mb-6 text-foreground">
-              Dietary options
+              Opciones dietéticas
             </h2>
             <div className="space-y-3">
               {dietaryOptions.map((option) => (
@@ -178,22 +178,22 @@ export default function MenuOhMexicoPage() {
           {/* CTA */}
           <div className="bg-white rounded-2xl border border-foreground/10 p-8 text-center">
             <h2 className="text-xl font-semibold mb-3 text-foreground">
-              Ready to try OH México?
+              ¿Listo para probar Feriado Cantina?
             </h2>
             <p className="text-foreground/70 mb-6">
-              Book your table and enjoy the full experience.
+              Reservá tu mesa y disfrutá de la experiencia completa.
             </p>
             <a
               href={`${siteUrl}/#reservar-mesa`}
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-medium rounded-xl hover:opacity-90 transition-opacity"
             >
-              Book a table →
+              Reservar mesa →
             </a>
           </div>
 
           <div className="mt-12 pt-8 border-t border-foreground/10">
             <a href="/ai-answers/" className="text-sm text-muted-foreground hover:text-foreground underline">
-              ← Back to AI Answers
+              ← Volver a AI Answers
             </a>
           </div>
         </div>

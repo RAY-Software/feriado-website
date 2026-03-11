@@ -4,19 +4,18 @@ import { siteUrl } from "./site";
 export const getOrganizationSchema = () => ({
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "OH México",
+  name: "Feriado Cantina",
   url: `${siteUrl}/`,
-  logo: `${siteUrl}/image/ohmexico-logo.png`,
+  logo: `${siteUrl}/image/logo-new.png`,
   sameAs: [
-    "https://www.instagram.com/ohmexico/",
-    "https://www.facebook.com/ohmexico/",
+    "https://www.instagram.com/feriadocantina/",
   ],
 });
 
 export const getWebSiteSchema = () => ({
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "OH México",
+  name: "Feriado Cantina",
   url: `${siteUrl}/`,
   potentialAction: {
     "@type": "ReserveAction",
@@ -43,19 +42,19 @@ export const getRestaurantSchema = (locId?: string) => {
   return selectedLocations.map((loc) => ({
     "@context": "https://schema.org",
     "@type": "Restaurant",
-    "@id": `${siteUrl}/locations/${loc.id}`,
+    "@id": `${siteUrl}/ubicaciones/${loc.id}`,
     name: loc.name,
-    description: `Authentic Mexican restaurant in Miami Beach at ${loc.shortName}. Enjoy bold tacos, handcrafted cocktails, and the vibrant spirit of Mexico.`,
-    url: `${siteUrl}/locations/${loc.id}`,
-    logo: `${siteUrl}/image/ohmexico-logo.png`,
+    description: "Cantina de barrio en Coghlan, Buenos Aires. Vermú, coctelería, platitos para picar y largas sobremesas. La casa de Feriado Vermú.",
+    url: `${siteUrl}/ubicaciones/${loc.id}`,
+    logo: `${siteUrl}/image/logo-new.png`,
     telephone: loc.phone,
-    image: `${siteUrl}/image/ohmexico-logo.png`,
-    servesCuisine: ["Mexican", "Latin American"],
+    image: `${siteUrl}/image/logo-new.png`,
+    servesCuisine: ["Argentina", "Cantina", "Coctelería"],
     priceRange: "$$",
     hasMap: loc.googleMapsUrl,
     hasMenu: `${siteUrl}/menu`,
     paymentAccepted: ["Cash", "Credit Card", "Debit Card"],
-    currenciesAccepted: "USD",
+    currenciesAccepted: "ARS",
     smokingAllowed: false,
     address: {
       "@type": "PostalAddress",
@@ -63,7 +62,7 @@ export const getRestaurantSchema = (locId?: string) => {
       addressLocality: loc.city,
       addressRegion: loc.state,
       postalCode: loc.zipCode,
-      addressCountry: "US",
+      addressCountry: "AR",
     },
     geo: {
       "@type": "GeoCoordinates",
@@ -81,7 +80,6 @@ export const getRestaurantSchema = (locId?: string) => {
       name: a.name,
       value: a.value,
     })),
-    // Simplified reviews/rating for the global schema to keep it concise
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",

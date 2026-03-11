@@ -16,12 +16,10 @@ export interface MenuCategory {
   image?: string;
 }
 
-export type MenuLocationKey = 'espanola-way' | 'lincoln-road' | 'ocean-drive';
+export type MenuLocationKey = 'feriado-cantina';
 
 export const MENU_LOCATION_LABELS: Record<MenuLocationKey, string> = {
-  'espanola-way': 'Española Way',
-  'lincoln-road': 'Lincoln Road',
-  'ocean-drive': 'Ocean Drive',
+  'feriado-cantina': 'Feriado Cantina',
 };
 
 // ─── SHARED FOOD CATEGORIES (same for all 3 locations) ───────────────────────
@@ -56,28 +54,12 @@ const DRINKS_CATEGORIES: MenuCategory[] = [
   { id: 'tequila-anejo', label: 'Tequila Añejo', description: 'Aged 1–3+ years, extra smooth.', image: '/image/AVICMEDIA-82.jpg' },
 ];
 
-const DRINK_CATEGORIES_OCEAN_DRIVE: MenuCategory[] = DRINKS_CATEGORIES.map((c) =>
-  c.id === 'tequila-blanco' ? { ...c, label: 'Tequila Blanco' } : c
-);
-
 // ─── CATEGORIES PER LOCATION ─────────────────────────────────────────────────
 export const menuCategoriesByLocation: Record<MenuLocationKey, MenuCategory[]> = {
-  'espanola-way': [
+  'feriado-cantina': [
     { id: 'all', label: 'All' },
     ...FOOD_CATEGORIES,
     ...DRINKS_CATEGORIES,
-    { id: 'happy-hour', label: 'Happy Hour', description: 'Mon–Fri 4–7 pm specials.' },
-  ],
-  'lincoln-road': [
-    { id: 'all', label: 'All' },
-    ...FOOD_CATEGORIES,
-    ...DRINKS_CATEGORIES,
-    { id: 'happy-hour', label: 'Happy Hour', description: 'Mon–Fri 4–7 pm specials.' },
-  ],
-  'ocean-drive': [
-    { id: 'all', label: 'All' },
-    ...FOOD_CATEGORIES,
-    ...DRINK_CATEGORIES_OCEAN_DRIVE,
     { id: 'happy-hour', label: 'Happy Hour', description: 'Mon–Fri 4–7 pm specials.' },
   ],
 };
@@ -106,9 +88,7 @@ const MENU_FILTER_GROUPS: MenuFilterGroup[] = [
 ];
 
 export const menuFilterGroupsByLocation: Record<MenuLocationKey, MenuFilterGroup[]> = {
-  'espanola-way': MENU_FILTER_GROUPS,
-  'lincoln-road': MENU_FILTER_GROUPS,
-  'ocean-drive': MENU_FILTER_GROUPS,
+  'feriado-cantina': MENU_FILTER_GROUPS,
 };
 
 export function getCategoryIdsForFilterGroup(filterGroupId: string): string[] {
@@ -137,7 +117,7 @@ const SHARED_FOOD_ITEMS: MenuItem[] = [
   },
   {
     categoryId: 'guacamole',
-    name: 'Oh! Mexico Guacamole',
+    name: 'Guacamole Feriado',
     description: 'Fresh hass avocados, tomatoes, charred corn, serrano peppers, red onions, cilantro & roasted pumpkin seeds.',
     price: '18',
     image: '/image/AVICMEDIA-82.jpg',
@@ -403,7 +383,7 @@ const SHARED_FOOD_ITEMS: MenuItem[] = [
   },
   {
     categoryId: 'from-the-border',
-    name: 'Oh! Mexico Burrito',
+    name: 'Burrito Feriado',
     description: 'Flour tortilla wrap filled with green and red peppers, lettuce, onion, cheese, sour cream, white rice & refried black beans.\nGrilled chicken $22 · Steak $25.',
     price: '',
     image: '/image/AVICMEDIA-82.jpg',
@@ -494,12 +474,12 @@ const SHARED_FOOD_ITEMS: MenuItem[] = [
   },
 ];
 
-// ─── SHARED DRINK ITEMS (same for Española Way & Lincoln Road) ────────────────
-const SHARED_DRINKS_ESPA_LINCOLN: MenuItem[] = [
+// ─── DRINK ITEMS ──────────────────────────────────────────────────────────────
+const DRINK_ITEMS: MenuItem[] = [
   // Margaritas
   {
     categoryId: 'margaritas',
-    name: 'Oh! Mexico Margarita',
+    name: 'Margarita Feriado',
     description: 'Astral Blanco Tequila, triple sec, fresh lime juice, nectar agave, salt, Tajín & lime slice.',
     price: '20',
     image: '/image/Oh-Mexico-13.jpg',
@@ -690,7 +670,7 @@ const SHARED_DRINKS_ESPA_LINCOLN: MenuItem[] = [
   { categoryId: 'beer', name: 'Lagunitas IPA', description: 'IPA 6.2%', price: '10', image: '/image/Oh-Mexico-1.jpg' },
   { categoryId: 'beer', name: 'Blue Moon', description: 'Wheat-Ale 5.4%', price: '10', image: '/image/Oh-Mexico-1.jpg' },
   { categoryId: 'beer', name: 'Heineken', description: 'Pilsner 5.2%', price: '10', image: '/image/Oh-Mexico-1.jpg' },
-  // Mezcal (Española Way & Lincoln Road)
+  // Mezcal
   { categoryId: 'mezcal', name: 'Casamigos Mezcal', description: '', price: '24' },
   { categoryId: 'mezcal', name: 'Chichicapa', description: '', price: '16' },
   { categoryId: 'mezcal', name: 'Ilegal Añejo', description: '', price: '19' },
@@ -719,7 +699,7 @@ const SHARED_DRINKS_ESPA_LINCOLN: MenuItem[] = [
   { categoryId: 'sodas', name: 'Tamarindo', description: '', price: '6' },
   { categoryId: 'sodas', name: 'Acqua Panna', description: 'Large bottle.', price: '8' },
   { categoryId: 'sodas', name: 'Topo Chico', description: 'Small bottle.', price: '5' },
-  // Tequila Silver (Española Way & Lincoln Road)
+  // Tequila Silver
   { categoryId: 'tequila-blanco', name: '512 Silver', description: '', price: '16' },
   { categoryId: 'tequila-blanco', name: '1800 Silver', description: '', price: '16' },
   { categoryId: 'tequila-blanco', name: 'Avion Silver', description: '', price: '16' },
@@ -755,7 +735,7 @@ const SHARED_DRINKS_ESPA_LINCOLN: MenuItem[] = [
   { categoryId: 'tequila-blanco', name: 'Teremana Silver', description: '', price: '17' },
   { categoryId: 'tequila-blanco', name: 'Tesoro Silver', description: '', price: '16' },
   { categoryId: 'tequila-blanco', name: 'Casa Dragones Silver', description: '', price: '18' },
-  // Tequila Reposado (Española Way & Lincoln Road)
+  // Tequila Reposado
   { categoryId: 'tequila-reposado', name: '512 Reposado', description: '', price: '17' },
   { categoryId: 'tequila-reposado', name: '1800 Reposado', description: '', price: '17' },
   { categoryId: 'tequila-reposado', name: 'Avion Reposado', description: '', price: '18' },
@@ -792,7 +772,7 @@ const SHARED_DRINKS_ESPA_LINCOLN: MenuItem[] = [
   { categoryId: 'tequila-reposado', name: 'Milagro Seleccion Reposado', description: '', price: '20' },
   { categoryId: 'tequila-reposado', name: 'Corralejo Reposado', description: '', price: '17' },
   { categoryId: 'tequila-reposado', name: 'Casamigos Cristalino Reposado', description: '', price: '28' },
-  // Tequila Añejo (Española Way & Lincoln Road)
+  // Tequila Añejo
   { categoryId: 'tequila-anejo', name: '512 Añejo', description: '', price: '19' },
   { categoryId: 'tequila-anejo', name: '1800 Añejo', description: '', price: '18' },
   { categoryId: 'tequila-anejo', name: '1800 Cristalino', description: '', price: '24' },
@@ -849,171 +829,26 @@ const SHARED_DRINKS_ESPA_LINCOLN: MenuItem[] = [
   { categoryId: 'tequila-anejo', name: 'Dulce Vida 5 Años', description: '', price: '' },
 ];
 
-// ─── HAPPY HOUR ITEMS (Española Way) ─────────────────────────────────────────
-const HAPPY_HOUR_ESPANOLA: MenuItem[] = [
+// ─── HAPPY HOUR ITEMS ─────────────────────────────────────────────────────────
+const HAPPY_HOUR_ITEMS: MenuItem[] = [
   { categoryId: 'happy-hour', name: 'Tacos (Happy Hour)', description: 'Veggie · Pastor · Baja Chicken. Daily 3–7 pm.', price: '4' },
   { categoryId: 'happy-hour', name: 'Mexican Beers (Happy Hour)', description: 'XX Lager · XX Ambar · Tecate · Heineken. Daily 3–7 pm.', price: '6' },
   { categoryId: 'happy-hour', name: 'Classic Margarita (Happy Hour)', description: 'Daily 3–7 pm.', price: '8' },
   { categoryId: 'happy-hour', name: 'Tequila & Vodka Shots (Happy Hour)', description: 'Daily 3–7 pm.', price: '8' },
   { categoryId: 'happy-hour', name: 'Tequila Pops (Happy Hour)', description: 'Mango Peach · Passion Fruit Strawberry · Watermelon Blackberry. Daily 3–7 pm.', price: '8' },
-  { categoryId: 'happy-hour', name: 'Margaritas Mon–Fri', description: 'Oh! Mexico · Jalapeño · Kiwi · Cucumber · Strawberry · Watermelon. Mon–Fri 4–7 pm.', price: '8' },
+  { categoryId: 'happy-hour', name: 'Margaritas Mon–Fri', description: 'Feriado · Jalapeño · Kiwi · Cucumber · Strawberry · Watermelon. Mon–Fri 4–7 pm.', price: '8' },
   { categoryId: 'happy-hour', name: 'Classic Cocktails Mon–Fri', description: 'Mojito · Cuba Libre · Gin Tonic. Mon–Fri 4–7 pm.', price: '8' },
   { categoryId: 'happy-hour', name: 'Tequila Pops Mon–Fri', description: 'Mango Peach · Passion Fruit Strawberry · Watermelon Blackberry. Mon–Fri 4–7 pm.', price: '8' },
   { categoryId: 'happy-hour', name: 'Beers Mon–Fri', description: 'Tecate · Pacifico · Heineken. Mon–Fri 4–7 pm.', price: '6' },
-  { categoryId: 'happy-hour', name: 'Classic Guacamole (Happy Hour)', description: 'Mexican Bites. Mon–Fri 4–7 pm.', price: '8' },
-];
-
-// ─── HAPPY HOUR ITEMS (Lincoln Road) ─────────────────────────────────────────
-const HAPPY_HOUR_LINCOLN: MenuItem[] = [
-  { categoryId: 'happy-hour', name: 'Tacos (Happy Hour)', description: 'Veggie · Pastor · Baja Chicken. Daily 3–7 pm.', price: '4' },
-  { categoryId: 'happy-hour', name: 'Classic Margarita (Happy Hour)', description: 'Daily 3–7 pm.', price: '8' },
-  { categoryId: 'happy-hour', name: 'Mexican Beers (Happy Hour)', description: 'XX Lager · XX Ambar · Tecate · Heineken. Daily 3–7 pm.', price: '6' },
-  { categoryId: 'happy-hour', name: 'Tequila & Vodka Shots (Happy Hour)', description: 'Daily 3–7 pm.', price: '8' },
-  { categoryId: 'happy-hour', name: 'Tequila Pops (Happy Hour)', description: 'Mango Peach · Pasion Fruit Strawberry · Watermelon Blackberry. Daily 3–7 pm.', price: '8' },
-  { categoryId: 'happy-hour', name: 'Margaritas Mon–Fri', description: 'Oh! Mexico · Jalapeño · Kiwi · Cucumber · Strawberry · Watermelon. Mon–Fri 4–7 pm.', price: '8' },
-  { categoryId: 'happy-hour', name: 'Classic Cocktails Mon–Fri', description: 'Mojito · Cuba Libre · Gin Tonic. Mon–Fri 4–7 pm.', price: '8' },
-  { categoryId: 'happy-hour', name: 'Tequila Pops Mon–Fri', description: 'Mango Peach · Passion Fruit Strawberry · Watermelon Blackberry. Mon–Fri 4–7 pm.', price: '8' },
-  { categoryId: 'happy-hour', name: 'Beers Mon–Fri', description: 'Tecate · Pacifico · Heineken. Mon–Fri 4–7 pm.', price: '6' },
-  { categoryId: 'happy-hour', name: 'Classic Guacamole (Happy Hour)', description: 'Mexican Bites. Mon–Fri 4–7 pm.', price: '8' },
-];
-
-// ─── OCEAN DRIVE SPECIFIC DRINKS ─────────────────────────────────────────────
-const OCEAN_DRIVE_DRINKS: MenuItem[] = [
-  // Margaritas (same as shared)
-  ...SHARED_DRINKS_ESPA_LINCOLN.filter((i) => i.categoryId === 'margaritas'),
-  // Micheladas (same)
-  ...SHARED_DRINKS_ESPA_LINCOLN.filter((i) => i.categoryId === 'micheladas'),
-  // Mocktails (Ocean Drive has 4 items, same names but in different order)
-  { categoryId: 'mocktails', name: 'Blueberry Mint Lemonade', description: 'Blueberries, mint leaves, agave nectar, lemon juice, coconut water.', price: '13', image: '/image/AVICMEDIA-82.jpg' },
-  { categoryId: 'mocktails', name: 'Dragon Fruit Mule', description: 'Dragon fruit pure, lime juice, infused sugar cane, ginger beer.', price: '13', image: '/image/AVICMEDIA-82.jpg' },
-  { categoryId: 'mocktails', name: 'Spicy Watermelon Lemonade', description: 'Fresh watermelon juice, jalapeños, cilantro, lemon juice, agave.', price: '13', image: '/image/AVICMEDIA-82.jpg' },
-  { categoryId: 'mocktails', name: 'Pineapple Jalapeño', description: 'The margarita you love without alcohol. Smoke pineapple juice, jalapeños, agave nectar, fresh lime juice.', price: '13', image: '/image/AVICMEDIA-82.jpg' },
-  // Cantaritos
-  { categoryId: 'cantaritos', name: 'Flor de Mayo', description: 'Ojo de Tigre Mezcal, fresh mango fruit, agave nectar, fresh lime juice, cranberry juice & fresh mint.', price: '18' },
-  { categoryId: 'cantaritos', name: 'Smoky Watermelon', description: 'El Silencio Mezcal, fresh watermelon, fresh cucumber, jalapenos, agave & chili Tajin.', price: '18' },
-  { categoryId: 'cantaritos', name: 'Paloma', description: 'Jimador Silver or El Silencio Mezcal, fresh lime juice & grapefruit juice soda.', price: '18' },
-  { categoryId: 'cantaritos', name: 'Chachalaca', description: 'Ojo de Tigre Mezcal, Combier, pineapple juice, fresh orange juice, fresh lime juice & cranberry juice.', price: '18' },
-  { categoryId: 'cantaritos', name: 'Mezcal Negroni', description: 'El Silencio Mezcal, Campari & sweet vermouth.', price: '18' },
-  // Tequila Pops (same)
-  ...SHARED_DRINKS_ESPA_LINCOLN.filter((i) => i.categoryId === 'tequila-pops'),
-  // Beer (same)
-  ...SHARED_DRINKS_ESPA_LINCOLN.filter((i) => i.categoryId === 'beer'),
-  // Mezcal (Ocean Drive — different list)
-  { categoryId: 'mezcal', name: 'Ojo de Tigre', description: '', price: '16' },
-  { categoryId: 'mezcal', name: 'El Silencio', description: '', price: '17' },
-  { categoryId: 'mezcal', name: 'Del Maguey Vida', description: '', price: '16' },
-  { categoryId: 'mezcal', name: 'Amaras Cupreata', description: '', price: '21' },
-  { categoryId: 'mezcal', name: 'Illegal Joven', description: '', price: '17' },
-  { categoryId: 'mezcal', name: 'Illegal Reposado', description: '', price: '18' },
-  { categoryId: 'mezcal', name: 'Illegal Añejo', description: '', price: '19' },
-  { categoryId: 'mezcal', name: '400 Conejos Espadín', description: '', price: '18' },
-  { categoryId: 'mezcal', name: '400 Conejos Cuishe', description: '', price: '16' },
-  { categoryId: 'mezcal', name: 'Union Mezcal', description: '', price: '16' },
-  { categoryId: 'mezcal', name: 'Akul Espadín', description: '', price: '16' },
-  { categoryId: 'mezcal', name: 'Akul Cirial', description: '', price: '22' },
-  { categoryId: 'mezcal', name: 'Sacrvm Ensamble', description: '', price: '16' },
-  { categoryId: 'mezcal', name: 'Montelobos', description: '', price: '21' },
-  { categoryId: 'mezcal', name: 'Casamigos Mezcal', description: '', price: '24' },
-  { categoryId: 'mezcal', name: 'Sotol Por Siempre', description: 'Sotol.', price: '17' },
-  { categoryId: 'mezcal', name: 'Nocheluna Sotol', description: 'Sotol.', price: '22' },
-  // Sodas & Water (same)
-  ...SHARED_DRINKS_ESPA_LINCOLN.filter((i) => i.categoryId === 'sodas'),
-  // Tequila Blanco (Ocean Drive)
-  { categoryId: 'tequila-blanco', name: '512 Blanco', description: '', price: '16' },
-  { categoryId: 'tequila-blanco', name: '1800 Blanco', description: '', price: '16' },
-  { categoryId: 'tequila-blanco', name: 'Casamigos Blanco', description: '', price: '17' },
-  { categoryId: 'tequila-blanco', name: 'Cazadores Blanco', description: '', price: '16' },
-  { categoryId: 'tequila-blanco', name: 'Don Julio Blanco', description: '', price: '16' },
-  { categoryId: 'tequila-blanco', name: 'Herradura Blanco', description: '', price: '16' },
-  { categoryId: 'tequila-blanco', name: 'Tromba Blanco', description: '', price: '17' },
-  { categoryId: 'tequila-blanco', name: 'Patrón Blanco', description: '', price: '17' },
-  { categoryId: 'tequila-blanco', name: 'Clase Azul Blanco', description: '', price: '55' },
-  { categoryId: 'tequila-blanco', name: 'El Jimador Blanco', description: '', price: '16' },
-  { categoryId: 'tequila-blanco', name: 'José Cuervo Tradicional Blanco', description: '', price: '16' },
-  { categoryId: 'tequila-blanco', name: 'Maestro Dobel Blanco', description: '', price: '16' },
-  { categoryId: 'tequila-blanco', name: 'Ocho Blanco', description: '', price: '16' },
-  { categoryId: 'tequila-blanco', name: 'Espolón Blanco', description: '', price: '16' },
-  { categoryId: 'tequila-blanco', name: 'Milagro Blanco', description: '', price: '17' },
-  { categoryId: 'tequila-blanco', name: 'Siete Leguas Blanco', description: '', price: '16' },
-  { categoryId: 'tequila-blanco', name: 'Teremana Blanco', description: '', price: '17' },
-  { categoryId: 'tequila-blanco', name: 'Sauza Blue Agave Blanco', description: '', price: '16' },
-  { categoryId: 'tequila-blanco', name: 'Casa Dragones Blanco', description: '', price: '18' },
-  // Tequila Reposado (Ocean Drive)
-  { categoryId: 'tequila-reposado', name: '512 Reposado', description: '', price: '17' },
-  { categoryId: 'tequila-reposado', name: '1800 Reposado', description: '', price: '17' },
-  { categoryId: 'tequila-reposado', name: 'Casamigos Reposado', description: '', price: '20' },
-  { categoryId: 'tequila-reposado', name: 'Cazadores Reposado', description: '', price: '17' },
-  { categoryId: 'tequila-reposado', name: 'Caza Dragones Reposado', description: '', price: '21' },
-  { categoryId: 'tequila-reposado', name: 'Don Julio Reposado', description: '', price: '17' },
-  { categoryId: 'tequila-reposado', name: 'Herradura Reposado', description: '', price: '17' },
-  { categoryId: 'tequila-reposado', name: 'Tromba Reposado', description: '', price: '18' },
-  { categoryId: 'tequila-reposado', name: 'Patrón Reposado', description: '', price: '18' },
-  { categoryId: 'tequila-reposado', name: 'Clase Azul Reposado', description: '', price: '65' },
-  { categoryId: 'tequila-reposado', name: 'El Jimador Reposado', description: '', price: '17' },
-  { categoryId: 'tequila-reposado', name: 'Ocho Reposado', description: '', price: '18' },
-  { categoryId: 'tequila-reposado', name: 'Espolón Reposado', description: '', price: '17' },
-  { categoryId: 'tequila-reposado', name: 'Milagro Reposado', description: '', price: '18' },
-  { categoryId: 'tequila-reposado', name: 'Siete Leguas Reposado', description: '', price: '17' },
-  { categoryId: 'tequila-reposado', name: 'Teremana Reposado', description: '', price: '18' },
-  { categoryId: 'tequila-reposado', name: 'KOMOS Rosa', description: '', price: '30' },
-  // Tequila Añejo (Ocean Drive)
-  { categoryId: 'tequila-anejo', name: '512 Añejo', description: '', price: '19' },
-  { categoryId: 'tequila-anejo', name: '1800 Añejo', description: '', price: '18' },
-  { categoryId: 'tequila-anejo', name: '1800 Cristalino', description: '', price: '24' },
-  { categoryId: 'tequila-anejo', name: '1800 Milenio', description: '', price: '60' },
-  { categoryId: 'tequila-anejo', name: 'Casamigos Añejo', description: '', price: '24' },
-  { categoryId: 'tequila-anejo', name: 'Casa Dragones Añejo', description: '', price: '28' },
-  { categoryId: 'tequila-anejo', name: 'Casa Dragones Joven', description: '', price: '25' },
-  { categoryId: 'tequila-anejo', name: 'Don Julio Añejo', description: '', price: '20' },
-  { categoryId: 'tequila-anejo', name: 'Don Julio 1942', description: '', price: '50' },
-  { categoryId: 'tequila-anejo', name: 'Don Julio 70', description: '', price: '30' },
-  { categoryId: 'tequila-anejo', name: 'Herradura Añejo', description: '', price: '18' },
-  { categoryId: 'tequila-anejo', name: 'Herradura Ultra Añejo', description: '', price: '25' },
-  { categoryId: 'tequila-anejo', name: 'Herradura Seleccion Supreme', description: '', price: '110' },
-  { categoryId: 'tequila-anejo', name: 'Tromba Añejo', description: '', price: '21' },
-  { categoryId: 'tequila-anejo', name: 'Patrón Añejo', description: '', price: '19' },
-  { categoryId: 'tequila-anejo', name: 'Rey Sol', description: '', price: '70' },
-  { categoryId: 'tequila-anejo', name: 'Clase Azul Añejo', description: '', price: '135' },
-  { categoryId: 'tequila-anejo', name: 'El Jimador Añejo', description: '', price: '18' },
-  { categoryId: 'tequila-anejo', name: 'Ocho Añejo', description: '', price: '20' },
-  { categoryId: 'tequila-anejo', name: 'Espolon Añejo', description: '', price: '19' },
-  { categoryId: 'tequila-anejo', name: 'Milagro Añejo', description: '', price: '19' },
-  { categoryId: 'tequila-anejo', name: 'Siete Leguas Añejo', description: '', price: '18' },
-  { categoryId: 'tequila-anejo', name: 'Komos Añejo Cristalino', description: '', price: '35' },
-  { categoryId: 'tequila-anejo', name: 'Teremana Añejo', description: '', price: '19' },
-  { categoryId: 'tequila-anejo', name: 'Sauza Blue Agave Añejo', description: '', price: '18' },
-];
-
-// ─── HAPPY HOUR (Ocean Drive) ─────────────────────────────────────────────────
-const HAPPY_HOUR_OCEAN: MenuItem[] = [
-  { categoryId: 'happy-hour', name: 'Tacos (Happy Hour)', description: 'Veggie · Pastor · Baja Chicken. Daily 3–7 pm.', price: '4' },
-  { categoryId: 'happy-hour', name: 'Classic Margarita (Happy Hour)', description: 'Daily 3–7 pm.', price: '9' },
-  { categoryId: 'happy-hour', name: 'Tequila & Vodka Shots (Happy Hour)', description: 'Daily 3–7 pm.', price: '9' },
-  { categoryId: 'happy-hour', name: 'Tequila Pops (Happy Hour)', description: 'Mango Peach · Pasion Fruit Strawberry · Watermelon Blackberry. Daily 3–7 pm.', price: '9' },
-  { categoryId: 'happy-hour', name: 'Mexican Beers (Happy Hour)', description: 'XX Lager · XX Ambar · Tecate · Heineken. Daily 3–7 pm.', price: '7' },
-  { categoryId: 'happy-hour', name: 'Margaritas Mon–Fri', description: 'Oh! Mexico · Jalapeño · Kiwi · Cucumber · Strawberry · Watermelon. Mon–Fri 4–7 pm.', price: '' },
-  { categoryId: 'happy-hour', name: 'Classic Cocktails Mon–Fri', description: 'Mojito · Cuba Libre · Gin Tonic. Mon–Fri 4–7 pm.', price: '' },
-  { categoryId: 'happy-hour', name: 'Tequila Pops Mon–Fri', description: 'Mango Peach · Passion Fruit Strawberry · Watermelon Blackberry. Mon–Fri 4–7 pm.', price: '' },
-  { categoryId: 'happy-hour', name: 'Beers Mon–Fri', description: 'Tecate · Pacifico · Heineken. Mon–Fri 4–7 pm.', price: '7' },
   { categoryId: 'happy-hour', name: 'Classic Guacamole (Happy Hour)', description: 'Mexican Bites. Mon–Fri 4–7 pm.', price: '8' },
 ];
 
 // ─── MENU ITEMS BY LOCATION ───────────────────────────────────────────────────
 export const menuItemsByLocation: Record<MenuLocationKey, MenuItem[]> = {
-  'espanola-way': [
+  'feriado-cantina': [
     ...SHARED_FOOD_ITEMS,
-    ...SHARED_DRINKS_ESPA_LINCOLN,
-    ...HAPPY_HOUR_ESPANOLA,
-  ],
-  'lincoln-road': [
-    ...SHARED_FOOD_ITEMS,
-    ...SHARED_DRINKS_ESPA_LINCOLN,
-    ...HAPPY_HOUR_LINCOLN,
-  ],
-  'ocean-drive': [
-    ...SHARED_FOOD_ITEMS,
-    ...OCEAN_DRIVE_DRINKS,
-    ...HAPPY_HOUR_OCEAN,
+    ...DRINK_ITEMS,
+    ...HAPPY_HOUR_ITEMS,
   ],
 };
 
@@ -1055,7 +890,7 @@ export function getMenuItemBySlug(
 
 /** Valid location segment for URL */
 export function isValidMenuLocation(location: string): location is MenuLocationKey {
-  return location === 'espanola-way' || location === 'lincoln-road' || location === 'ocean-drive';
+  return location === 'feriado-cantina';
 }
 
 /** Returns the display label for a category */

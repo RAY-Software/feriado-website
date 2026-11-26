@@ -18,14 +18,14 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps) {
   const { location, category } = await params;
-  if (!isValidMenuLocation(location)) return { title: 'Menu — OH México' };
+  if (!isValidMenuLocation(location)) return { title: 'Carta — Feriado Cantina' };
   const cat = getCategoryByLocationAndId(location as MenuLocationKey, category);
-  if (!cat) return { title: 'Menu — OH México' };
+  if (!cat) return { title: 'Carta — Feriado Cantina' };
   return {
-    title: `${cat.label} — ${MENU_LOCATION_LABELS[location as MenuLocationKey]} Menu — OH México`,
+    title: `${cat.label} — ${MENU_LOCATION_LABELS[location as MenuLocationKey]} Carta — Feriado Cantina`,
     description:
       cat.description ||
-      `Browse our ${cat.label} at OH México ${MENU_LOCATION_LABELS[location as MenuLocationKey]}.`,
+      `Mirá nuestra carta de ${cat.label} en Feriado Cantina ${MENU_LOCATION_LABELS[location as MenuLocationKey]}.`,
   };
 }
 
@@ -41,7 +41,7 @@ export default async function MenuCategoryPage({ params }: PageProps) {
   const locationLabel = MENU_LOCATION_LABELS[locationKey];
 
   const orgSchema = getOrganizationSchema();
-  const restaurantSchemas = getRestaurantSchema(`ohmexico-${location}`);
+  const restaurantSchemas = getRestaurantSchema(`feriadocantina-${location}`);
 
   return (
     <>
@@ -63,13 +63,13 @@ export default async function MenuCategoryPage({ params }: PageProps) {
           <ol className="flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground">
             <li>
               <Link href="/" className="hover:underline text-foreground">
-                Home
+                Inicio
               </Link>
             </li>
             <li aria-hidden="true">/</li>
             <li>
               <Link href="/menu" className="hover:underline text-foreground">
-                Menu
+                Carta
               </Link>
             </li>
             <li aria-hidden="true">/</li>
@@ -133,7 +133,7 @@ export default async function MenuCategoryPage({ params }: PageProps) {
         )}
 
         <p className="text-xs font-medium text-muted-foreground mb-6 uppercase tracking-wide">
-          {items.length} {items.length === 1 ? 'item' : 'items'}
+          {items.length} {items.length === 1 ? 'plato' : 'platos'}
         </p>
 
         {/* Product list */}
@@ -199,7 +199,7 @@ export default async function MenuCategoryPage({ params }: PageProps) {
             className="inline-flex items-center gap-1 font-medium transition-colors hover:text-primary text-foreground"
           >
             <ChevronLeft className="w-5 h-5" />
-            Back to full menu
+            Volver a la carta completa
           </Link>
         </div>
       </div>

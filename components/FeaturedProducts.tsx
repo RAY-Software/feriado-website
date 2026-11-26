@@ -13,46 +13,46 @@ interface Product {
 
 const products: Product[] = [
   {
-    name: "Tampiqueña Steak",
+    name: "Tortilla Babé",
     description:
-      "Grilled skirt steak served with enchilada, rice, beans and guacamole — a classic Tampiqueña from northern Mexico.",
+      "Nuestra tortilla de papas cremosa por dentro, doradita por fuera. El plato estrella de Feriado Cantina.",
     price: "",
-    image: "/image/Tampiquena-steak2.jpg",
+    image: "/image/feriado/aceituna.png",
   },
   {
-    name: "Seared Tuna Tostada",
+    name: "Milanesa Napolitana",
     description:
-      "Crispy tostada topped with seared tuna, avocado and house-made sauces for the perfect bite in every crunch.",
+      "Milanesa de ternera con salsa de tomate, jamón y queso gratinado. Un clásico argentino como tiene que ser.",
     price: "",
-    image: "/image/Tostada-de-atun.jpg",
+    image: "/image/feriado/silla.png",
   },
   {
-    name: "Molcajete Mixto",
+    name: "Pizza Media Masa",
     description:
-      "Sizzling hot molcajete with a mix of meats, melted cheese and roasted salsa to share at the center of the table.",
+      "Pizza al corte de media masa, crocante y generosa. Mozzarella, tomate y la que más te guste.",
     price: "",
-    image: "/image/molcajete-mixto.jpg",
+    image: "/image/feriado/disco.png",
   },
   {
-    name: "Taco Birria",
+    name: "Vermú Feriado",
     description:
-      "Slow braised beef with melted Mexican cheese, birria broth, onion and cilantro. One of our most beloved tacos.",
+      "Nuestro vermú de la casa: Feriado Rosado o Rojo, con soda, hielo y rodaja de naranja. Perfecto para la sobremesa.",
     price: "",
-    image: "/image/tacos-de-birria.jpg",
+    image: "/image/feriado/sifon-vaso.png",
   },
   {
-    name: "Michelada",
+    name: "Pastas Caseras",
     description:
-      "Classic Mexican beer cocktail with lime, spices and our house mix — the perfect refresher on Miami Beach.",
+      "Sorrentinos, tallarines, ravioles y más. Hechas en casa con las mejores salsas. Especial los jueves.",
     price: "",
-    image: "/image/Oh-Mexico-1.jpg",
+    image: "/image/feriado/vaso-vermu.png",
   },
   {
-    name: "Margaritas",
+    name: "Picada de la Casa",
     description:
-      "Signature margaritas shaken with fresh lime juice and premium tequila, available in several refreshing flavors.",
+      "Aceitunas, quesos, fiambres y pan casero. La compañera ideal del vermú de barrio.",
     price: "",
-    image: "/image/Oh-Mexico-13.jpg",
+    image: "/image/feriado/frase-casa.png",
   },
 ];
 
@@ -66,14 +66,13 @@ export function FeaturedProducts() {
   return (
     <section
       id="menu"
-      className="pt-8 pb-24 relative overflow-hidden scroll-mt-24"
-      style={{ backgroundColor: "rgb(255 255 255)" }}
+      className="pt-8 pb-24 relative overflow-hidden scroll-mt-24 bg-background"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold mb-2 text-foreground">
-              Our favorites
+              Nuestros favoritos
             </h2>
           </div>
 
@@ -83,7 +82,7 @@ export function FeaturedProducts() {
               prefetch={false}
               className="flex items-center justify-between pl-6 pr-5 py-2.5 border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-bold transition-colors duration-300 rounded-xl text-base md:text-lg"
             >
-              <span>View menu</span>
+              <span>Ver menú</span>
               <span className="ml-2 text-xl leading-none">›</span>
             </Link>
           </div>
@@ -101,7 +100,7 @@ export function FeaturedProducts() {
                 onKeyDown={(e) =>
                   (e.key === "Enter" || e.key === " ") && handleProductClick(index)
                 }
-                className={`relative cursor-pointer rounded-xl overflow-hidden ${
+                className={`relative cursor-pointer rounded-xl overflow-hidden bg-white ${
                   hasSelection ? "" : "hover:scale-[1.02]"
                 }`}
                 style={{
@@ -112,18 +111,18 @@ export function FeaturedProducts() {
                 }}
                 onClick={() => handleProductClick(index)}
               >
-                <div className="relative h-64 md:h-80 lg:h-96">
+                <div className="relative h-64 md:h-80 lg:h-96 flex items-center justify-center p-4 bg-feriado-cream">
                   <ResponsiveImage
                     src={item.image}
-                    alt={`${item.name} - Authentic Mexican Food in Miami`}
-                    fill
+                    alt={`${item.name} - Feriado Cantina`}
+                    width={400}
+                    height={400}
                     mobileSrc={item.image}
-                    className="object-cover"
+                    className="object-contain max-h-full"
                     loading="lazy"
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent pointer-events-none" />
-                <div className="absolute inset-0 bg-primary/10 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
                 <div
                   className={`absolute inset-0 flex flex-col justify-end ${
@@ -137,17 +136,18 @@ export function FeaturedProducts() {
 
                   {isSelected && (
                     <div className="transition-opacity duration-200 opacity-100">
-                      <p className="text-foreground text-[10px] md:text-xs mb-1 leading-tight drop-shadow-md">
+                      <p className="text-white text-[10px] md:text-xs mb-1 leading-tight drop-shadow-md">
                         {item.description}
                       </p>
-                      <Link
-                        href="/menu"
-                        className="inline-block w-full bg-primary hover:bg-venetian-red text-primary-foreground font-medium text-center py-1.5 px-3 rounded-md transition-colors duration-200 text-xs md:text-sm drop-shadow-sm"
-                        style={{ textShadow: "0 0 8px rgba(255, 255, 255, 0.3)" }}
+                      <a
+                        href="https://pedir.tucan.la/menu/Feriadocoghlan/Sal%C3%B3n"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-center py-1.5 px-3 rounded-md transition-colors duration-200 text-xs md:text-sm drop-shadow-sm"
                         onClick={(e) => e.stopPropagation()}
                       >
-                        Order now
-                      </Link>
+                        Pedir ahora
+                      </a>
                     </div>
                   )}
                 </div>
@@ -157,8 +157,8 @@ export function FeaturedProducts() {
         </div>
       </div>
 
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-feriado-blue/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-feriado-red/5 rounded-full blur-3xl pointer-events-none" />
     </section>
   );
 }

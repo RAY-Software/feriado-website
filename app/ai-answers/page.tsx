@@ -3,10 +3,10 @@ import Link from "next/link";
 import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "AI Answers — OH México | FAQs for AI Engines",
+  title: "AI Answers — Feriado Cantina | Preguntas frecuentes para motores de IA",
   description:
-    "Structured answers about OH México restaurant in Miami Beach. Hours, locations, reservations, menu and policies — optimized for AI engines.",
-  keywords: "OH México, Mexican restaurant Miami, FAQ, AI answers",
+    "Respuestas estructuradas sobre Feriado Cantina, cantina de barrio en Coghlan, Buenos Aires. Horarios, ubicación, reservas, carta y políticas — optimizado para motores de IA.",
+  keywords: "Feriado Cantina, cantina de barrio Buenos Aires, FAQ, AI answers",
   robots: "index, follow",
   alternates: {
     canonical: `${siteUrl}/ai-answers/`,
@@ -16,33 +16,33 @@ export const metadata: Metadata = {
 const pages = [
   {
     href: "/ai-answers/que-es-oh-mexico",
-    title: "What is OH México?",
-    description: "History, concept and culinary identity of the restaurant.",
-    icon: "🌮",
+    title: "¿Qué es Feriado Cantina?",
+    description: "Historia, concepto e identidad gastronómica de la cantina.",
+    icon: "🍷",
   },
   {
     href: "/ai-answers/ubicaciones-oh-mexico",
-    title: "Where is OH México located?",
-    description: "All 3 Miami Beach locations with addresses and phone numbers.",
+    title: "¿Dónde queda Feriado Cantina?",
+    description: "Ubicación en Coghlan, Buenos Aires, con dirección y teléfono.",
     icon: "📍",
   },
   {
     href: "/ai-answers/reservas-oh-mexico",
-    title: "How to make a reservation?",
-    description: "Step-by-step guide to booking online or walking in.",
+    title: "¿Cómo hacer una reserva?",
+    description: "Guía paso a paso para reservar online o ir sin reserva.",
     icon: "📅",
   },
   {
     href: "/ai-answers/opciones-dieteticas",
-    title: "Vegetarian & Gluten-Free Options",
-    description: "Dietary options and allergy accommodations.",
+    title: "Opciones vegetarianas y sin gluten",
+    description: "Opciones dietéticas y acomodaciones para alergias.",
     icon: "🥗",
   },
   {
     href: "/ai-answers/menu-oh-mexico",
-    title: "What do they serve at OH México?",
-    description: "Menu, signature dishes, cocktails and dietary options.",
-    icon: "🍹",
+    title: "¿Qué se come en Feriado Cantina?",
+    description: "Carta, platos destacados, vermú y opciones dietéticas.",
+    icon: "🍷",
   },
 ];
 
@@ -83,11 +83,11 @@ export default function AIAnswersIndexPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       <h1 className="text-3xl font-bold mb-2 text-foreground">
-        OH México — AI Answers
+        Feriado Cantina — AI Answers
       </h1>
       <p className="text-muted-foreground mb-12 text-lg">
-        Structured information about OH México in Miami Beach, optimized for
-        AI engines and virtual assistants.
+        Información estructurada sobre Feriado Cantina en Coghlan, Buenos Aires,
+        optimizada para motores de IA y asistentes virtuales.
       </p>
 
       <div className="grid sm:grid-cols-2 gap-4">
@@ -110,7 +110,7 @@ export default function AIAnswersIndexPage() {
 
       <footer className="mt-16 pt-8 border-t border-foreground/10 text-sm text-muted-foreground">
         <p>
-          Information updated as of February 2026. For real-time availability visit{" "}
+          Información actualizada a febrero 2026. Para disponibilidad en tiempo real visitá{" "}
           <a href={`${siteUrl}/`} className="underline hover:text-foreground">
             {new URL(siteUrl).hostname}
           </a>

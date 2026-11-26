@@ -3,9 +3,9 @@ import Link from "next/link";
 import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Accessibility Statement | OH México Restaurant",
+  title: "Accessibility Statement | Feriado Cantina",
   description:
-    "OH México Restaurant is committed to ensuring digital accessibility for people with disabilities. Read our accessibility statement and how to contact us for assistance.",
+    "Feriado Cantina is committed to ensuring digital accessibility for people with disabilities. Read our accessibility statement and how to contact us for assistance.",
   alternates: { canonical: `${siteUrl}/accessibility-statement` },
 };
 
@@ -52,8 +52,8 @@ export default function AccessibilityStatementPage() {
             General
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Oh! Mexico Restaurant strives to ensure that its services are
-            accessible to people with disabilities. Oh! Mexico Restaurant has
+            Feriado Cantina strives to ensure that its services are
+            accessible to people with disabilities. Feriado Cantina has
             invested a significant amount of resources to help ensure that its
             website is made easier to use and more accessible for people with
             disabilities, with the strong belief that website accessibility
@@ -65,12 +65,12 @@ export default function AccessibilityStatementPage() {
         {/* Accessibility on the website */}
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-foreground mb-4 pb-2 border-b-2 border-primary/30">
-            Accessibility on www.ohmexicorestaurant.com
+            Accessibility on www.feriadocantina.com
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            www.ohmexicorestaurant.com makes UserWay&apos;s Web Accessibility
+            www.feriadocantina.com makes UserWay&apos;s Web Accessibility
             Widget available which is powered by a dedicated accessibility
-            server. The software allows www.ohmexicorestaurant.com to improve
+            server. The software allows www.feriadocantina.com to improve
             its compliance with the Web Content Accessibility Guidelines (WCAG
             2.1).
           </p>
@@ -82,7 +82,7 @@ export default function AccessibilityStatementPage() {
             Enabling the Accessibility Menu
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            The www.ohmexicorestaurant.com accessibility menu can be enabled by
+            The www.feriadocantina.com accessibility menu can be enabled by
             clicking the accessibility menu icon that appears on the corner of
             the page. After triggering the accessibility menu, please wait a
             moment for the accessibility menu to load in its entirety.
@@ -95,7 +95,7 @@ export default function AccessibilityStatementPage() {
             Disclaimer
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            Oh! Mexico Restaurant continues its efforts to constantly improve
+            Feriado Cantina continues its efforts to constantly improve
             the accessibility of its site and services in the belief that it is
             our collective moral obligation to allow seamless, accessible and
             unhindered use also for those of us with disabilities.
@@ -103,10 +103,10 @@ export default function AccessibilityStatementPage() {
           <p className="text-muted-foreground leading-relaxed">
             In an ongoing effort to continually improve and remediate
             accessibility issues, we also regularly scan
-            www.ohmexicorestaurant.com with UserWay&apos;s Accessibility Scanner
+            www.feriadocantina.com with UserWay&apos;s Accessibility Scanner
             to identify and fix every possible accessibility barrier on our
             site. Despite our efforts to make all pages and content on
-            www.ohmexicorestaurant.com fully accessible, some content may not
+            www.feriadocantina.com fully accessible, some content may not
             have yet been fully adapted to the strictest accessibility
             standards. This may be a result of not having found or identified
             the most appropriate technological solution.
@@ -119,18 +119,18 @@ export default function AccessibilityStatementPage() {
             Third-Party Content
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            Oh! Mexico Restaurant may contain links to third-party websites
+            Feriado Cantina may contain links to third-party websites
             (&ldquo;Third-Party Sites&rdquo;). These links are provided solely
             as a convenience to you and not as an endorsement by us of the
             content on such Third-Party Sites. The content of such Third-Party
-            Sites is developed and provided by others, not by Oh! Mexico
-            Restaurant, and we have no control over any content or legal terms
+            Sites is developed and provided by others, not by Feriado
+            Cantina, and we have no control over any content or legal terms
             contained in any Third-Party Sites. You should contact those site
             administrators if you have any concerns regarding such links or any
             content located on Third-Party Sites.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Oh! Mexico Restaurant does not warrant, endorse, guarantee, or
+            Feriado Cantina does not warrant, endorse, guarantee, or
             assume any responsibility or liability for any product or service
             advertised or offered by a third party (&ldquo;Third-Party Service
             Provider&rdquo;) through our Website. If you use any product or
@@ -155,7 +155,7 @@ export default function AccessibilityStatementPage() {
           </h2>
           <p className="text-muted-foreground leading-relaxed">
             If you are experiencing difficulty with any content on
-            www.ohmexicorestaurant.com or require assistance with any part of
+            www.feriadocantina.com or require assistance with any part of
             our site, please contact us during normal business hours as detailed
             below and we will be happy to assist.
           </p>
@@ -168,16 +168,16 @@ export default function AccessibilityStatementPage() {
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
             If you wish to report an accessibility issue, have any questions or
-            need assistance, please contact Oh! Mexico Restaurant Customer
+            need assistance, please contact Feriado Cantina Customer
             Support as follows:
           </p>
           <div className="flex items-center gap-3 mt-4">
             <span className="font-semibold text-foreground">Email:</span>
             <Link
-              href="mailto:hello@ohmexicorestaurant.com"
+              href="mailto:hello@feriadocantina.com"
               className="text-primary hover:underline font-medium"
             >
-              hello@ohmexicorestaurant.com
+              hello@feriadocantina.com
             </Link>
           </div>
         </section>

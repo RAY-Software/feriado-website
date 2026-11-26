@@ -1,14 +1,13 @@
-# Robots.txt for OH México
-# https://ohmexico.com/robots.txt
-# Covers all public sections of the site.
+# Robots.txt for Feriado Cantina
+# https://feriadocantina.com/robots.txt
 
 User-agent: *
 Allow: /
 
 # Main pages
 Allow: /
-Allow: /locations
-Allow: /locations/
+Allow: /ubicaciones
+Allow: /ubicaciones/
 Allow: /menu
 Allow: /menu/
 Allow: /accessibility-statement
@@ -17,14 +16,14 @@ Allow: /accessibility-statement
 Allow: /events
 Allow: /events/
 
-# AI Answers (AI-optimized content)
+# AI Answers
 Allow: /ai-answers/
-Allow: /ai-answers/reservas-oh-mexico
-Allow: /ai-answers/que-es-oh-mexico
-Allow: /ai-answers/ubicaciones-oh-mexico
+Allow: /ai-answers/reservas-feriado-cantina
+Allow: /ai-answers/que-es-feriado-cantina
+Allow: /ai-answers/ubicaciones-feriado-cantina
 Allow: /ai-answers/pet-friendly
 Allow: /ai-answers/opciones-dieteticas
-Allow: /ai-answers/menu-oh-mexico
+Allow: /ai-answers/menu-feriado-cantina
 
 # Block internal routes with no SEO value
 Disallow: /api/
@@ -38,5 +37,5 @@ Allow: /*.js$
 Allow: /*.css$
 Allow: /_next/
 
-# Sitemap (includes all site URLs)
-Sitemap: https://ohmexico.com/sitemap.xml
+# Sitemap
+Sitemap: https://feriadocantina.com/sitemap.xml

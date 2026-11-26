@@ -9,10 +9,6 @@ declare const google: any;
 export function LocationsSection() {
   const [selectedLocation, setSelectedLocation] = useState<Location>(locations[0]);
 
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [showScrollFade, setShowScrollFade] = useState(false);
-  const [showLeftFade, setShowLeftFade] = useState(false);
-
   const mapRef = useRef<HTMLDivElement | null>(null);
   const mapInstanceRef = useRef<google.maps.Map | null>(null);
   const markerRef = useRef<google.maps.Marker | null>(null);
@@ -65,7 +61,7 @@ export function LocationsSection() {
           icon: {
             path: "M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z",
             scale: 1.5,
-            fillColor: "#B33D26",
+            fillColor: "#E83324",
             fillOpacity: 1,
             strokeColor: "#ffffff",
             strokeWeight: 2,
@@ -116,9 +112,9 @@ export function LocationsSection() {
       setMapError("⚠️ API Key requerida: define NEXT_PUBLIC_GOOGLE_MAPS_API_KEY en .env.local");
       return;
     }
-    (window as any).initGoogleMapOH = () => waitForGoogleMaps(initMap);
+    (window as any).initGoogleMapFeriado = () => waitForGoogleMaps(initMap);
     const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initGoogleMapOH`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initGoogleMapFeriado`;
     script.async = true;
     script.defer = true;
     script.onerror = () => {
@@ -146,7 +142,7 @@ export function LocationsSection() {
         icon: {
           path: "M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z",
           scale: 1.5,
-          fillColor: "#B33D26",
+          fillColor: "#E83324",
           fillOpacity: 1,
           strokeColor: "#ffffff",
           strokeWeight: 2,
@@ -158,112 +154,20 @@ export function LocationsSection() {
     }
   }, [selectedLocation]);
 
-  const checkScrollFade = () => {
-    const container = scrollContainerRef.current;
-    if (!container) return;
-    const hasRight = container.scrollLeft + container.clientWidth < container.scrollWidth - 5;
-    const hasLeft = container.scrollLeft > 5;
-    setShowScrollFade(hasRight);
-    setShowLeftFade(hasLeft);
-  };
-
-  useEffect(() => {
-    checkScrollFade();
-    const container = scrollContainerRef.current;
-    if (!container) return;
-    container.addEventListener("scroll", checkScrollFade);
-    window.addEventListener("resize", checkScrollFade);
-    return () => {
-      container.removeEventListener("scroll", checkScrollFade);
-      window.removeEventListener("resize", checkScrollFade);
-    };
-  }, [locations.length]);
-
-  const goToPrevious = () => {
-    const currentIndex = locations.findIndex((loc) => loc.id === selectedLocation.id);
-    const previousIndex = currentIndex > 0 ? currentIndex - 1 : locations.length - 1;
-    setSelectedLocation(locations[previousIndex]);
-  };
-
-  const goToNext = () => {
-    const currentIndex = locations.findIndex((loc) => loc.id === selectedLocation.id);
-    const nextIndex = currentIndex < locations.length - 1 ? currentIndex + 1 : 0;
-    setSelectedLocation(locations[nextIndex]);
-  };
-
-  const selectLocation = (location: Location) => {
-    setSelectedLocation(location);
-  };
-
   return (
-    <section id="locations" className="py-16 lg:py-24 bg-white scroll-mt-24">
+    <section id="locations" className="py-16 lg:py-24 bg-background scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative mb-1">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 sm:mb-6">
             <div className="mb-2 sm:mb-0">
               <h2 className="text-2xl md:text-3xl font-bold mb-2 text-foreground">
-                Our locations
+                Nuestra ubicación
               </h2>
             </div>
-            <div className="flex space-x-3 self-start sm:self-auto">
-              <button
-                onClick={goToPrevious}
-                className="p-3 rounded-full bg-accent hover:bg-accent/90 text-white transition-colors duration-200 shadow-md"
-                aria-label="Previous location"
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
-              <button
-                onClick={goToNext}
-                className="p-3 rounded-full bg-accent hover:bg-accent/90 text-white transition-colors duration-200 shadow-md"
-                aria-label="Next location"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
-            </div>
-          </div>
-
-          <div className="relative">
-            <div
-              ref={scrollContainerRef}
-              className="locations-scroll flex overflow-x-auto gap-3 pb-3 scrollbar-hide"
-            >
-              {locations.map((location) => (
-                <button
-                  key={location.id}
-                  data-location-id={location.id}
-                  onClick={() => selectLocation(location)}
-                  className={`flex-shrink-0 px-5 py-3 rounded-full text-lg font-medium whitespace-nowrap leading-none transition-all duration-300 ${
-                    selectedLocation.id === location.id
-                      ? "bg-primary text-primary-foreground shadow-lg"
-                      : "bg-white/90 text-foreground border border-gray-200 hover:border-primary/40 hover:text-foreground"
-                  }`}
-                >
-                  {location.shortName}
-                </button>
-              ))}
-            </div>
-
-            {showLeftFade && (
-              <div className="absolute top-0 left-0 bottom-3 w-12 pointer-events-none">
-                <div
-                  className="w-full h-full"
-                  style={{ background: "linear-gradient(to left, transparent 0%, rgb(255 255 255) 80%)" }}
-                />
-              </div>
-            )}
-            {showScrollFade && (
-              <div className="absolute top-0 right-0 bottom-3 w-12 pointer-events-none">
-                <div
-                  className="w-full h-full"
-                  style={{ background: "linear-gradient(to right, transparent 0%, rgb(255 255 255) 80%)" }}
-                />
-              </div>
-            )}
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-pale-chestnut/30">
+        <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-feriado-blue/10">
           <div className="grid grid-cols-1 lg:grid-cols-8 gap-0 lg:gap-2 lg:py-2 lg:pr-2">
             <div className="relative h-64 lg:h-[380px] lg:col-span-3 min-h-[250px] bg-gray-100 transition-all duration-500 order-2 lg:order-1 lg:rounded-l-2xl overflow-hidden">
               <div
@@ -277,9 +181,9 @@ export function LocationsSection() {
                   <div className="text-center text-muted-foreground p-6 max-w-xs mx-auto">
                     {mapError ? (
                       <>
-                        <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center">
+                        <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-feriado-red/20 flex items-center justify-center">
                           <svg
-                            className="w-8 h-8 text-primary"
+                            className="w-8 h-8 text-feriado-red"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -292,7 +196,7 @@ export function LocationsSection() {
                             />
                           </svg>
                         </div>
-                        <p className="text-sm text-primary mb-4 whitespace-pre-line">{mapError}</p>
+                        <p className="text-sm text-feriado-red mb-4 whitespace-pre-line">{mapError}</p>
                         {mapError.includes("API Key") && (
                           <div className="text-xs text-muted-foreground space-y-2 text-left">
                             <p className="font-semibold">Setup steps:</p>
@@ -315,8 +219,8 @@ export function LocationsSection() {
                       </>
                     ) : (
                       <>
-                        <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-                        <p className="text-sm">Loading map...</p>
+                        <div className="w-8 h-8 border-2 border-feriado-blue border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+                        <p className="text-sm">Cargando mapa...</p>
                       </>
                     )}
                   </div>
@@ -339,9 +243,9 @@ export function LocationsSection() {
                     href={selectedLocation.googleMapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 text-foreground font-medium hover:text-primary transition-colors border border-pale-chestnut/40 rounded-lg hover:border-primary/40"
+                    className="inline-flex items-center gap-2 px-4 py-2 text-foreground font-medium hover:text-primary transition-colors border border-feriado-blue/20 rounded-lg hover:border-primary/40"
                   >
-                    Get directions
+                    Cómo llegar
                     <ChevronRight className="w-4 h-4" />
                   </a>
                 </div>
@@ -351,7 +255,7 @@ export function LocationsSection() {
                 <div className="grid grid-cols-1 gap-6 pb-0">
                   <div>
                     <p className="text-sm text-muted-foreground font-medium mb-2 uppercase tracking-wide">
-                      Address
+                      Dirección
                     </p>
                     <p className="text-base text-foreground font-medium leading-relaxed">
                       {selectedLocation.fullAddress}
@@ -360,7 +264,7 @@ export function LocationsSection() {
                   {selectedLocation.phone && (
                     <div>
                       <p className="text-sm text-muted-foreground font-medium mb-2 uppercase tracking-wide">
-                        Phone
+                        Teléfono
                       </p>
                       <p className="text-base text-foreground">{selectedLocation.phone}</p>
                     </div>
@@ -368,7 +272,7 @@ export function LocationsSection() {
                 </div>
               </div>
 
-              <div className="px-6 lg:px-8 pt-3 pb-5 border-t border-pale-chestnut/20 bg-pale-chestnut/10 rounded-b-2xl">
+              <div className="px-6 lg:px-8 pt-3 pb-5 border-t border-feriado-blue/10 bg-feriado-cream/50 rounded-b-2xl">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                   <p className="text-base text-foreground font-medium whitespace-pre-line">
                     {selectedLocation.hours}
@@ -377,7 +281,7 @@ export function LocationsSection() {
                     href="#reservar-mesa"
                     className="inline-flex items-center justify-between pl-3 pr-4 py-2 bg-primary hover:opacity-90 text-primary-foreground rounded-xl transition-colors text-lg font-medium w-fit"
                   >
-                    Book now
+                    Reservar
                     <ChevronRight className="w-4 h-4 ml-1" />
                   </a>
                 </div>

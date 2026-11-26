@@ -21,7 +21,7 @@ function locationBtnCls(active: boolean) {
   return `flex-shrink-0 px-5 py-3 rounded-full text-base font-semibold whitespace-nowrap leading-none transition-all duration-300 ${
     active
       ? 'bg-primary text-white shadow-lg'
-      : 'bg-[#27292B] text-[#E6BAA8] hover:bg-[#3d3f42]'
+      : 'bg-feriado-blue text-white hover:bg-feriado-blue/90'
   }`;
 }
 
@@ -29,7 +29,7 @@ function categoryBtnCls(active: boolean) {
   return `flex-shrink-0 px-4 py-2.5 rounded-full text-sm font-medium whitespace-nowrap leading-none transition-all duration-300 ${
     active
       ? 'bg-accent text-white shadow-md'
-      : 'bg-[#f4f0eb] text-[#27292B] border border-[#e0d9d0] hover:bg-[#e8e2d8]'
+      : 'bg-feriado-cream text-foreground border border-feriado-blue/10 hover:bg-feriado-cream/80'
   }`;
 }
 
@@ -134,7 +134,7 @@ export default function MenuClient({
             className="flex flex-wrap justify-start gap-3 mb-5 p-4 rounded-2xl"
             style={{ backgroundColor: '#f4f0eb' }}
           >
-            <span className="self-center text-sm font-semibold text-[#27292B] mr-1">
+            <span className="self-center text-sm font-semibold text-foreground mr-1">
               Location:
             </span>
             {LOCATION_KEYS.map((key) => (

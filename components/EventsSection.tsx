@@ -7,15 +7,15 @@ import { EventCard } from '@/components/events/EventCard';
 
 function EventsSectionInner() {
   return (
-    <section id="events" className="pt-16 pb-24 relative overflow-hidden scroll-mt-24 bg-white">
+    <section id="events" className="pt-16 pb-24 relative overflow-hidden scroll-mt-24 bg-background">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="mb-12 flex flex-col sm:flex-row sm:items-center sm:justify-between">
           <div className="max-w-2xl">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">
-              Events
+              Eventos
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              Join us at OH México for Happy Hour, live mariachi, authentic Mexican brunch, and more — bold flavors and vibrant vibes at every location.
+              Vení a Feriado Cantina: Happy Hour, Jueves al Dente con pastas caseras, y Vermú de Barrio los fines de semana. Buena comida y buena compañía.
             </p>
           </div>
 
@@ -24,7 +24,7 @@ function EventsSectionInner() {
               href="/events"
               className="flex items-center justify-between pl-6 pr-5 py-2.5 border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-bold transition-colors duration-300 rounded-xl text-base md:text-lg"
             >
-              <span>All events</span>
+              <span>Todos los eventos</span>
               <span className="ml-2 text-xl leading-none">›</span>
             </Link>
           </div>
@@ -37,8 +37,8 @@ function EventsSectionInner() {
         </div>
       </div>
 
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-feriado-blue/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-feriado-red/10 rounded-full blur-[100px] pointer-events-none" />
     </section>
   );
 }

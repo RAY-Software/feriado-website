@@ -9,8 +9,8 @@ export function Footer() {
   const pathname = usePathname();
 
   const handleScrollToLocations = () => {
-    if (pathname !== "/locations") {
-      router.push("/locations");
+    if (pathname !== "/ubicaciones") {
+      router.push("/ubicaciones");
       setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 200);
     } else {
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -47,18 +47,18 @@ export function Footer() {
   };
 
   return (
-    <footer className="py-2 lg:py-3 bg-white border-t border-gray-200/80">
+    <footer className="py-2 lg:py-3 bg-secondary border-t border-feriado-red/20">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gray-50/90 backdrop-blur-sm rounded-2xl px-16 pt-8 pb-8 lg:px-32 lg:pt-10 lg:pb-10 mx-4 lg:mx-8 border border-gray-200/60">
+        <div className="bg-feriado-red/90 backdrop-blur-sm rounded-2xl px-16 pt-8 pb-8 lg:px-32 lg:pt-10 lg:pb-10 mx-4 lg:mx-8 border border-white/10">
           <div className="grid grid-cols-1 lg:grid-cols-6 gap-8 lg:gap-4 lg:items-start">
             <div className="lg:col-span-1 flex justify-center lg:justify-start">
               <ResponsiveImage
-                src="/image/OH-Mexico.png"
-                alt="OH! Mexico Restaurant & Tequileria"
+                src="/image/feriado/logo-cantina.png"
+                alt="Feriado Cantina"
                 width={260}
                 height={80}
-                mobileSrc="/image/OH-Mexico.png"
-                className="h-16 w-auto object-contain lg:h-20 min-w-[200px] lg:min-w-[260px]"
+                mobileSrc="/image/feriado/logo-cantina.png"
+                className="h-16 w-auto object-contain lg:h-20 min-w-[200px] lg:min-w-[260px] brightness-0 invert"
               />
             </div>
             <div className="lg:col-span-5 flex flex-col">
@@ -66,78 +66,54 @@ export function Footer() {
                 <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 lg:gap-8 mb-4 lg:mb-0">
                   <button
                     onClick={handleScrollToHome}
-                    aria-label="Scroll to home section"
-                    className="text-foreground hover:opacity-90 transition-colors font-medium cursor-pointer"
+                    aria-label="Ir al inicio"
+                    className="text-white hover:opacity-90 transition-colors font-medium cursor-pointer"
                   >
-                    Home
+                    Inicio
                   </button>
                   <button
                     onClick={handleScrollToLocations}
-                    aria-label="Scroll to locations section"
-                    className="text-foreground hover:opacity-90 transition-colors font-medium cursor-pointer"
+                    aria-label="Ir a ubicación"
+                    className="text-white hover:opacity-90 transition-colors font-medium cursor-pointer"
                   >
-                    Locations
+                    Ubicación
                   </button>
                 </div>
                 <div className="flex justify-center lg:justify-end items-center">
                   <button
                     onClick={handleScrollToReservar}
-                    aria-label="Scroll to reservations section"
+                    aria-label="Ir a reservas"
                     className="relative flex items-center justify-between pl-3 pr-4 py-1.5 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl transition-colors text-base font-medium cursor-pointer"
                   >
-                    <span>Reservations</span>
+                    <span>Reservar</span>
                     <span className="ml-2 text-lg font-light">›</span>
                   </button>
                 </div>
               </div>
-              <div className="border-t border-gray-200 mt-4 mb-12" />
+              <div className="border-t border-white/20 mt-4 mb-12" />
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6">
                 <button
                   onClick={() => handleNavigateTop("/terminos-y-politicas")}
-                  aria-label="Navigate to Terms & Policies page"
-                  className="text-muted-foreground hover:text-foreground transition-colors text-sm cursor-pointer"
+                  aria-label="Ir a Términos y Políticas"
+                  className="text-white/70 hover:text-white transition-colors text-sm cursor-pointer"
                 >
-                  Terms & Policies
+                  Términos y Políticas
                 </button>
                 <a
-                  href="https://www.ohmexicorestaurant.com/newsroom/"
+                  href="https://feriadovermu.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+                  className="text-white/70 hover:text-white transition-colors text-sm"
                 >
-                  Newsroom
-                </a>
-                <a
-                  href="https://www.ohmexicorestaurant.com/privacy-policy-2/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors text-sm"
-                >
-                  Privacy Policy
+                  Feriado Vermú
                 </a>
                 <button
                   onClick={() => handleNavigateTop("/accessibility-statement")}
-                  aria-label="Navigate to Accessibility Statement page"
-                  className="text-muted-foreground hover:text-foreground transition-colors text-sm cursor-pointer"
+                  aria-label="Ir a Accesibilidad"
+                  className="text-white/70 hover:text-white transition-colors text-sm cursor-pointer"
                 >
-                  Accessibility Statement
+                  Accesibilidad
                 </button>
-                <a
-                  href="https://www.verestaurants.com/careers/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors text-sm"
-                >
-                  Careers
-                </a>
-                <a
-                  href="https://www.vidayestilo.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors text-sm"
-                >
-                  Affiliated with Vida y Estilo
-                </a>
               </div>
             </div>
           </div>
@@ -146,10 +122,10 @@ export function Footer() {
         <div className="mt-4 mx-8 sm:mx-16 lg:mx-24 flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-4">
             <a
-              href="https://www.instagram.com/ohmexico/"
+              href="https://www.instagram.com/feriadocantina/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground hover:opacity-90 transition-colors cursor-pointer"
+              className="text-white hover:opacity-90 transition-colors cursor-pointer"
               aria-label="Instagram"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -157,18 +133,18 @@ export function Footer() {
               </svg>
             </a>
           </div>
-          <div className="text-foreground text-sm text-center">
-            © {new Date().getFullYear()} OH MÉXICO. All rights reserved.
+          <div className="text-white text-sm text-center">
+            © {new Date().getFullYear()} Feriado Cantina. Todos los derechos reservados.
           </div>
           <div className="flex items-center gap-2">
             <a
               href="https://www.rayapp.io/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center pl-2 pr-2 py-0.5 border-2 border-gray-300 text-foreground rounded-xl hover:bg-gray-100 transition-colors cursor-pointer"
+              className="flex items-center pl-2 pr-2 py-0.5 border-2 border-white/30 text-white rounded-xl hover:bg-white/10 transition-colors cursor-pointer"
             >
               <span className="text-sm mr-1">Powered by</span>
-              <ResponsiveImage src="/raylogo.png" alt="RAY logo" width={24} height={24} mobileSrc="/raylogo.png" className="h-6 w-auto" />
+              <ResponsiveImage src="/raylogo.png" alt="RAY logo" width={24} height={24} mobileSrc="/raylogo.png" className="h-6 w-auto brightness-0 invert" />
             </a>
           </div>
         </div>

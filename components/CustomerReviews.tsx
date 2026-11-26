@@ -15,45 +15,45 @@ interface Review {
 const reviews: Review[] = [
   {
     id: 1,
-    name: "Diego G.",
+    name: "Martín G.",
     rating: 5,
-    text: "Amazing food and atmosphere. The al pastor tacos and micheladas are unbelievable. Every time I come to OH México I leave happy — there's nothing like it.",
-    location: "Miami",
+    text: "Un lugar espectacular en Coghlan. La tortilla babé es increíble y el vermú Feriado es lo mejor que probé. Ambiente de barrio perfecto para ir con amigos.",
+    location: "Coghlan",
   },
   {
     id: 2,
-    name: "Carmen Z.",
+    name: "Lucía P.",
     rating: 5,
-    text: "The loaded fries with cheese and bacon are incredible. The drinks are perfectly made and the music sets just the right mood. Never left disappointed.",
-    location: "Brickell",
+    text: "Me encanta Feriado Cantina, la comida es casera y abundante. Las pastas del jueves son imperdibles. Gran atención y la vereda es ideal para las tardes de sol.",
+    location: "Belgrano",
   },
   {
     id: 3,
-    name: "Miguel C.",
+    name: "Santiago R.",
     rating: 5,
-    text: "Best spot for a night out. The quesadillas and cocktails are top-notch. Pet friendly too — huge plus!",
-    location: "Wynwood",
+    text: "La mejor cantina de barrio de Buenos Aires. El vermú con soda y las aceitunas son el combo perfecto. Siempre volvemos.",
+    location: "Saavedra",
   },
   {
     id: 4,
-    name: "Santiago M.",
+    name: "Camila D.",
     rating: 5,
-    text: "Great food, great service, never misses. The tequila tacos and the drink selection are outstanding. Highly recommend.",
-    location: "Coral Gables",
+    text: "Feriado Cantina tiene esa onda de bodegón porteño que tanto se extrañaba. La milanesa napolitana es un viaje de ida. Recomendadísimo.",
+    location: "Villa Urquiza",
   },
   {
     id: 5,
-    name: "Roberto R.",
+    name: "Federico M.",
     rating: 5,
-    text: "I come here often and it never disappoints. The micheladas are spectacular and the guacamole is next level. Great vibes all around.",
-    location: "South Beach",
+    text: "Vinimos por el vermú y nos quedamos por todo. Pizzas de media masa espectaculares, postres caseros y una atención de diez. Barrio Coghlan tiene su joya.",
+    location: "Núñez",
   },
   {
     id: 6,
-    name: "Ana L.",
+    name: "Valentina S.",
     rating: 5,
-    text: "Love this place! The food is delicious and the service is always excellent. Happy hour is a must. 100% recommended!",
-    location: "Midtown",
+    text: "Pet friendly, buena música, comida riquísima y precios justos. ¿Qué más se puede pedir? Feriado Cantina es nuestro lugar favorito del barrio.",
+    location: "Coghlan",
   },
 ];
 
@@ -111,15 +111,15 @@ export default function CustomerReviews() {
 
   const renderStars = (rating: number) =>
     Array.from({ length: rating }, (_, i) => (
-      <Star key={i} className="w-4 h-4 fill-occre text-occre" />
+      <Star key={i} className="w-4 h-4 fill-feriado-yellow text-feriado-yellow" />
     ));
 
   return (
-    <section className="py-16 lg:py-24 bg-white">
+    <section className="py-16 lg:py-24 bg-background">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
-            What our guests say
+            Lo que dicen nuestros clientes
           </h2>
         </div>
 
@@ -127,15 +127,15 @@ export default function CustomerReviews() {
           <div className="flex justify-center gap-4 mb-8">
             <button
               onClick={goToPrevious}
-              className="p-3 rounded-full bg-accent hover:bg-accent/90 text-white transition-colors duration-200 shadow-md"
-              aria-label="Previous review"
+              className="p-3 rounded-full bg-primary hover:bg-primary/90 text-white transition-colors duration-200 shadow-md"
+              aria-label="Reseña anterior"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
               onClick={goToNext}
-              className="p-3 rounded-full bg-accent hover:bg-accent/90 text-white transition-colors duration-200 shadow-md"
-              aria-label="Next review"
+              className="p-3 rounded-full bg-primary hover:bg-primary/90 text-white transition-colors duration-200 shadow-md"
+              aria-label="Reseña siguiente"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
@@ -146,7 +146,7 @@ export default function CustomerReviews() {
               {getVisibleReviews().map((review, index) => (
                 <div
                   key={`${review.id}-${currentIndex}-${index}`}
-                  className="bg-white rounded-2xl p-8 shadow-md transition-shadow duration-300 hover:shadow-lg flex flex-col min-h-[260px] border border-foreground/10 border-l-4 border-l-accent"
+                  className="bg-white rounded-2xl p-8 shadow-md transition-shadow duration-300 hover:shadow-lg flex flex-col min-h-[260px] border border-foreground/10 border-l-4 border-l-feriado-red"
                 >
                   <div className="flex items-center gap-1 mb-4">
                     {renderStars(review.rating)}
@@ -155,7 +155,7 @@ export default function CustomerReviews() {
                     {review.text}
                   </p>
                   <div className="flex items-center gap-3 mt-auto">
-                    <div className="w-10 h-10 rounded-full overflow-hidden bg-pale-chestnut/40 ring-2 ring-accent/30">
+                    <div className="w-10 h-10 rounded-full overflow-hidden bg-feriado-cream ring-2 ring-feriado-blue/30">
                       <ResponsiveImage
                         src={avatarImages[(review.id - 1) % avatarImages.length]}
                         alt={`${review.name} avatar`}
@@ -187,11 +187,11 @@ export default function CustomerReviews() {
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentIndex
-                    ? "bg-accent w-6"
+                    ? "bg-feriado-blue w-6"
                     : "bg-foreground/20 hover:bg-foreground/40"
                   }`}
-                aria-label={`Go to review slide ${index + 1}`}
-                title={`Go to review slide ${index + 1}`}
+                aria-label={`Ir a reseña ${index + 1}`}
+                title={`Ir a reseña ${index + 1}`}
               />
             ))}
           </div>

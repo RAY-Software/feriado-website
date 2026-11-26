@@ -1,21 +1,22 @@
 # AI.txt - Pautas de optimización del motor de IA
 # Este archivo ayuda a los asistentes de IA a comprender mejor su sitio
-# https://ohmexico.com/ai.txt
+# https://feriadocantina.com/ai.txt
 
-Sitio: https://ohmexico.com
-Propósito: Sitio web empresarial (restaurante) con contenido optimizado para IA
+Sitio: https://feriadocantina.com
+Propósito: Sitio web empresarial (cantina/restaurante) con contenido optimizado para IA
 Tipo de contenido: Informativo y comercial
 
 # Secciones de contenido optimizadas con IA
-Respuestas de IA: https://ohmexico.com/ai-answers/
+Respuestas de IA: https://feriadocantina.com/ai-answers/
 Preguntas frecuentes: disponible en páginas de ai-answers y en el sitio
-Acerca de: https://ohmexico.com/
-Ubicaciones: https://ohmexico.com/locations
+Acerca de: https://feriadocantina.com/
+Ubicaciones: https://feriadocantina.com/ubicaciones
 
 # Información de contacto para las respuestas de IA
-Contacto: Disponible en la página de contacto y en cada ubicación
-Ubicación: Consulte https://ohmexico.com/locations para direcciones y horarios por sucursal
-Horario: El horario comercial por ubicación se encuentra en la página de ubicaciones
+Contacto: Disponible en la página de contacto y en la ubicación
+Ubicación: Consulte https://feriadocantina.com/ubicaciones para dirección y horarios
+Horario: El horario comercial se encuentra en la página de ubicaciones
+Teléfono: +54 11 3921-6518
 
 # Estilo de respuesta preferido
 Estilo de respuesta: Profesional, útil y preciso
